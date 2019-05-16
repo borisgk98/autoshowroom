@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+
+  db:
+    image: microsoft/mssql-server-linux
+    restart: always
+    environment:
+      SA_PASSWORD: "SA_PASS"
+      ACCEPT_EULA: "Y"

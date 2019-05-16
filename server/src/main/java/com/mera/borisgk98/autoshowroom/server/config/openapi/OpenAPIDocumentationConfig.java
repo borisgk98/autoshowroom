@@ -1,4 +1,4 @@
-package org.openapitools.configuration;
+package com.mera.borisgk98.autoshowroom.server.config.openapi;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.servlet.ServletContext;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T20:46:24.441+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T21:46:42.902+03:00[Europe/Moscow]")
 
 @Configuration
 @EnableSwagger2

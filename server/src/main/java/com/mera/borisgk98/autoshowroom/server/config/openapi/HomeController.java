@@ -1,4 +1,4 @@
-package org.openapitools.configuration;
+package com.mera.borisgk98.autoshowroom.server.config.openapi;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

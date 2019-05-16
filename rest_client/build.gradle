@@ -57,20 +57,20 @@ dependencies {
 
 
 openApiGenerate {
-    generatorName = "spring"
+    generatorName = "java"
     inputSpec = "$projectDir/../autoshowroom.yaml".toString()
     outputDir = "$projectDir".toString()
-    apiPackage = ("com.mera.borisgk98.autoshowroom.server.rest.api").toString()
+    apiPackage = ("com.mera.borisgk98.autoshowroom.client.rest.api").toString()
     skipOverwrite = true
-    invokerPackage = ("com.mera.borisgk98.autoshowroom.server.rest.invoker").toString()
-    modelPackage = ("com.mera.borisgk98.autoshowroom.server.models").toString()
-    groupId = ("com.mera.borisgk98.autoshowroom.server").toString()
+    invokerPackage = ("com.mera.borisgk98.autoshowroom.client.rest.invoker").toString()
+    modelPackage = ("com.mera.borisgk98.autoshowroom.client.models").toString()
+//    groupId = ("com.mera.borisgk98.autoshowroom.server").toString()
+//    configPackage = ("com.mera.borisgk98.autoshowroom.server.config.openapi").toString()
     modelFilesConstrainedTo = [
             "Error"
     ]
     configOptions = [
-            dateLibrary: "java8",
-            configPackage: "com.mera.borisgk98.autoshowroom.server.config.openapi"
+            dateLibrary: "java8"
     ]
     systemProperties = [
             apis           : "",

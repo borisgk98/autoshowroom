@@ -1,6 +1,6 @@
 package com.mera.borisgk98.autoshowroom.server;
 
-import com.mera.borisgk98.autoshowroom.server.models1.Auto;
+import com.mera.borisgk98.autoshowroom.server.models.Auto;
 import com.mera.borisgk98.autoshowroom.server.services.AutoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

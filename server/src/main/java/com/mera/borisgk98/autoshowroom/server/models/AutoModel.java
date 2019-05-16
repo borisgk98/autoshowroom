@@ -1,6 +1,8 @@
 package com.mera.borisgk98.autoshowroom.server.models;
 
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.mera.borisgk98.autoshowroom.server.models.Auto;
@@ -30,6 +32,7 @@ public class AutoModel   {
   @JsonProperty("autos")
   @Valid
   @OneToMany(fetch = FetchType.LAZY)
+  @JsonBackReference
   private List<Auto> autos = null;
 
   public AutoModel id(Integer id) {

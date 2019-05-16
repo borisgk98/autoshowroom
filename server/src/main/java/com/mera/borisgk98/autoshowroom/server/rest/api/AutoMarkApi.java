@@ -5,7 +5,7 @@
  */
 package com.mera.borisgk98.autoshowroom.server.rest.api;
 
-import com.mera.borisgk98.autoshowroom.server.models.Auto;
+import com.mera.borisgk98.autoshowroom.server.models.AutoMark;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -26,27 +26,27 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T18:25:16.054+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T18:56:41.211+03:00[Europe/Moscow]")
 
 @Validated
-@Api(value = "auto", description = "the auto API")
-public interface AutoApi {
+@Api(value = "auto_mark", description = "the auto_mark API")
+public interface AutoMarkApi {
 
     default Optional<NativeWebRequest> getRequest() {
         return Optional.empty();
     }
 
-    @ApiOperation(value = "", nickname = "autoAutoIdGet", notes = "Get information about auto by auto id", response = Auto.class, tags={  })
+    @ApiOperation(value = "", nickname = "autoMarkAutoMarkIdGet", notes = "Get information about auto by auto_mark id", response = AutoMark.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Successful getting", response = Auto.class) })
-    @RequestMapping(value = "/auto/{auto_id}",
+        @ApiResponse(code = 200, message = "Successful getting", response = AutoMark.class) })
+    @RequestMapping(value = "/auto_mark/{auto_mark_id}",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    default ResponseEntity<Auto> autoAutoIdGet(@ApiParam(value = "",required=true) @PathVariable("auto_id") Integer autoId) {
+    default ResponseEntity<AutoMark> autoMarkAutoMarkIdGet(@ApiParam(value = "",required=true) @PathVariable("auto_mark_id") Integer autoMarkId) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"options\" : [ {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 5  }, {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 5  } ],  \"model\" : {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 1  },  \"id\" : 0,  \"mark\" : {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 6  }}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"name\" : \"name\",  \"autos\" : [ null, null ],  \"id\" : 6}");
                     break;
                 }
             }
@@ -56,18 +56,18 @@ public interface AutoApi {
     }
 
 
-    @ApiOperation(value = "", nickname = "autoPost", notes = "Add new auto", response = Auto.class, tags={  })
+    @ApiOperation(value = "", nickname = "autoMarkPost", notes = "Add new auto_mark", response = AutoMark.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Successful adding", response = Auto.class) })
-    @RequestMapping(value = "/auto",
+        @ApiResponse(code = 200, message = "Successful adding", response = AutoMark.class) })
+    @RequestMapping(value = "/auto_mark",
         produces = { "application/json" }, 
         consumes = { "application/json" },
         method = RequestMethod.POST)
-    default ResponseEntity<Auto> autoPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody Auto auto) {
+    default ResponseEntity<AutoMark> autoMarkPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody AutoMark autoMark) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"options\" : [ {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 5  }, {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 5  } ],  \"model\" : {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 1  },  \"id\" : 0,  \"mark\" : {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 6  }}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"name\" : \"name\",  \"autos\" : [ null, null ],  \"id\" : 6}");
                     break;
                 }
             }

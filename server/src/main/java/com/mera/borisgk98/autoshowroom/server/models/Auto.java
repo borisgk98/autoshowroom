@@ -1,6 +1,9 @@
 package com.mera.borisgk98.autoshowroom.server.models;
 
 import java.util.Objects;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.mera.borisgk98.autoshowroom.server.models.AutoMark;
@@ -19,7 +22,7 @@ import javax.validation.constraints.*;
  */
 @ApiModel(description = "Contains information about automobiles")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T17:07:29.290+03:00[Europe/Moscow]")
-
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
 public class Auto   {
   @JsonProperty("id")
@@ -29,15 +32,18 @@ public class Auto   {
 
   @JsonProperty("mark")
   @ManyToOne
+  @JsonManagedReference
   private AutoMark mark = null;
 
   @JsonProperty("model")
   @ManyToOne
+  @JsonManagedReference
   private AutoModel model = null;
 
   @JsonProperty("options")
   @Valid
   @ManyToMany
+  @JsonManagedReference
   private List<AutoOption> options = null;
 
   public Auto id(Integer id) {

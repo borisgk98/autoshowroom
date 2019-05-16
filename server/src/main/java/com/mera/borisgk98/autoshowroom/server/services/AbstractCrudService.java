@@ -3,6 +3,8 @@ package com.mera.borisgk98.autoshowroom.server.services;
 import com.mera.borisgk98.autoshowroom.server.services.CrudService;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
+
 public abstract class AbstractCrudService<T, F> implements CrudService<T, F> {
     protected JpaRepository<T, F> repository;
 
@@ -15,8 +17,8 @@ public abstract class AbstractCrudService<T, F> implements CrudService<T, F> {
     }
 
     @Override
-    public T read(F id) {
-        return repository.getOne(id);
+    public Optional<T> read(F id) {
+        return Optional.of(repository.getOne(id));
     }
 
     @Override

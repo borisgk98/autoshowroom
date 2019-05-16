@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T18:56:41.211+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T19:54:39.278+03:00[Europe/Moscow]")
 
 @Validated
 @Api(value = "auto_mark", description = "the auto_mark API")
@@ -38,7 +38,8 @@ public interface AutoMarkApi {
 
     @ApiOperation(value = "", nickname = "autoMarkAutoMarkIdGet", notes = "Get information about auto by auto_mark id", response = AutoMark.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Successful getting", response = AutoMark.class) })
+        @ApiResponse(code = 200, message = "Successful getting", response = AutoMark.class),
+        @ApiResponse(code = 404, message = "Not found auto_mark by this auto_mark_id") })
     @RequestMapping(value = "/auto_mark/{auto_mark_id}",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
@@ -46,7 +47,7 @@ public interface AutoMarkApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"name\" : \"name\",  \"autos\" : [ null, null ],  \"id\" : 6}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"name\" : \"audi\",  \"autos\" : [ null, null ],  \"id\" : 6}");
                     break;
                 }
             }
@@ -67,7 +68,7 @@ public interface AutoMarkApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"name\" : \"name\",  \"autos\" : [ null, null ],  \"id\" : 6}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"name\" : \"audi\",  \"autos\" : [ null, null ],  \"id\" : 6}");
                     break;
                 }
             }

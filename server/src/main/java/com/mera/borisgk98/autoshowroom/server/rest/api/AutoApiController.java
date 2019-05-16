@@ -3,6 +3,7 @@ package com.mera.borisgk98.autoshowroom.server.rest.api;
 import com.mera.borisgk98.autoshowroom.server.models.Auto;
 import com.mera.borisgk98.autoshowroom.server.services.AutoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +28,8 @@ public class AutoApiController implements AutoApi {
 
     @Override
     public ResponseEntity<Auto> autoAutoIdGet(Integer autoId) {
-        return ResponseEntity.ok(autoService.read(autoId));
+        Optional<Auto> auto = autoService.read(autoId);
+        return auto.isPresent() ? ResponseEntity.ok(auto.get()) : new ResponseEntity<Auto>(HttpStatus.NOT_FOUND);
     }
 
     @Override

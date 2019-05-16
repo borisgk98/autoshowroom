@@ -84,3 +84,24 @@ openApiValidate {
 springBoot {
     mainClassName = 'ru.merann.bopopov.autoshowroom.server.ServerApp'
 }
+
+task openApiRestClientGenerator (type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask){
+    generatorName = "java"
+    inputSpec = "$projectDir/src/main/resources/autoshowroom.yaml".toString()
+    outputDir = "$projectDir".toString()
+    apiPackage = ("com.mera.borisgk98.autoshowroom.server.rest.api").toString()
+    skipOverwrite = true
+    invokerPackage = ("com.mera.borisgk98.autoshowroom.server.rest.invoker").toString()
+    modelPackage = ("com.mera.borisgk98.autoshowroom.server.models").toString()
+    modelFilesConstrainedTo = [
+            "Error"
+    ]
+    configOptions = [
+            dateLibrary: "java8"
+    ]
+    systemProperties = [
+            apis           : "",
+            models         : "",
+            supportingFiles: ""
+    ]
+}

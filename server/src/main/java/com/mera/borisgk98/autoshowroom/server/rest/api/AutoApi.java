@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T18:25:16.054+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T19:54:39.278+03:00[Europe/Moscow]")
 
 @Validated
 @Api(value = "auto", description = "the auto API")
@@ -38,7 +38,8 @@ public interface AutoApi {
 
     @ApiOperation(value = "", nickname = "autoAutoIdGet", notes = "Get information about auto by auto id", response = Auto.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Successful getting", response = Auto.class) })
+        @ApiResponse(code = 200, message = "Successful getting", response = Auto.class),
+        @ApiResponse(code = 404, message = "Not found auto by this auto_id") })
     @RequestMapping(value = "/auto/{auto_id}",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
@@ -46,7 +47,7 @@ public interface AutoApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"options\" : [ {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 5  }, {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 5  } ],  \"model\" : {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 1  },  \"id\" : 0,  \"mark\" : {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 6  }}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"options\" : [ {    \"name\" : \"4x4\",    \"autos\" : [ null, null ],    \"id\" : 5  }, {    \"name\" : \"4x4\",    \"autos\" : [ null, null ],    \"id\" : 5  } ],  \"model\" : {    \"name\" : \"q5\",    \"autos\" : [ null, null ],    \"id\" : 1  },  \"id\" : 0,  \"mark\" : {    \"name\" : \"audi\",    \"autos\" : [ null, null ],    \"id\" : 6  }}");
                     break;
                 }
             }
@@ -67,7 +68,7 @@ public interface AutoApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"options\" : [ {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 5  }, {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 5  } ],  \"model\" : {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 1  },  \"id\" : 0,  \"mark\" : {    \"name\" : \"name\",    \"autos\" : [ null, null ],    \"id\" : 6  }}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"options\" : [ {    \"name\" : \"4x4\",    \"autos\" : [ null, null ],    \"id\" : 5  }, {    \"name\" : \"4x4\",    \"autos\" : [ null, null ],    \"id\" : 5  } ],  \"model\" : {    \"name\" : \"q5\",    \"autos\" : [ null, null ],    \"id\" : 1  },  \"id\" : 0,  \"mark\" : {    \"name\" : \"audi\",    \"autos\" : [ null, null ],    \"id\" : 6  }}");
                     break;
                 }
             }

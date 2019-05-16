@@ -1,0 +1,207 @@
+openapi: 3.0.0
+info:
+  version: '0.1'
+  title: 'Autoshowroom API'
+  description: 'An API that allows clients to obtain existing information of orders, create, edit and delete orders'
+  contact:
+    name: Boris Kozhuhovskij
+    email: borisgk98@ya.ru
+
+servers:
+  - url: http://localhost:9000/
+    description: local server
+
+
+paths:
+
+  ### Auto
+  /auto/{auto_id}:
+    get:
+      parameters:
+        - name: auto_id
+          in: path
+          schema:
+            type: integer
+      description: Get information about auto by auto id
+      responses:
+        200:
+          description: Successful getting
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auto'
+        404:
+          description: Not found auto by this auto_id
+  /auto:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auto'
+      description: Add new auto
+      responses:
+        200:
+          description: Successful adding
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auto'
+
+
+  ### AutoMark
+  /auto_mark/{auto_mark_id}:
+    get:
+      parameters:
+        - name: auto_mark_id
+          in: path
+          schema:
+            type: integer
+      description: Get information about auto by auto_mark id
+      responses:
+        200:
+          description: Successful getting
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutoMark'
+        404:
+          description: Not found auto_mark by this auto_mark_id
+  /auto_mark:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AutoMark'
+      description: Add new auto_mark
+      responses:
+        200:
+          description: Successful adding
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AutoMark'
+
+
+components:
+  schemas:
+
+    Auto:
+      description: Contains information about automobiles
+      properties:
+        id:
+          type: integer
+        mark:
+          type: object
+          $ref: '#/components/schemas/AutoMark'
+        model:
+          type: object
+          $ref: '#/components/schemas/AutoModel'
+        options:
+          type: array
+          items:
+            $ref: '#/components/schemas/AutoOption'
+
+    AutoMark:
+      description: Contains information about automobiles' marks
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          example:
+            audi
+        autos:
+          type: array
+          items:
+            $ref: '#/components/schemas/Auto'
+
+    AutoModel:
+      description: Contains information about automobiles' models1
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          example:
+            q5
+        autos:
+          type: array
+          items:
+            $ref: '#/components/schemas/Auto'
+
+    AutoOption:
+      description: Contains information about automobiles' options
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          example:
+            4x4
+        autos:
+          type: array
+          items:
+            $ref: '#/components/schemas/Auto'
+
+    Customer:
+      description: Contains information about
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          example:
+            Boris
+        surname:
+          type: string
+          example:
+            Kozhuhovskij
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/Order'
+
+    Order:
+      description: Contains information about
+      properties:
+        id:
+          type: integer
+        seller:
+          type: object
+          $ref: '#/components/schemas/Seller'
+        customer:
+          type: object
+          $ref: '#/components/schemas/Customer'
+        auto:
+          type: object
+          $ref: '#/components/schemas/Auto'
+        status:
+          type: object
+          $ref: '#/components/schemas/OrderStatus'
+
+    OrderStatus:
+      description: Contains information about
+      enum:
+        - ACCEPTED
+        - IN_PROCESSING
+        - DONE
+      example:
+        DONE
+
+    Seller:
+      description: Contains information about
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          example:
+            SallerName
+        orders:
+          type: array
+          items:
+            $ref: '#/components/schemas/Order'

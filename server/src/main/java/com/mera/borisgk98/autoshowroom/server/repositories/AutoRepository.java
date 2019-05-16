@@ -1,6 +1,6 @@
 package com.mera.borisgk98.autoshowroom.server.repositories;
 
-import com.mera.borisgk98.autoshowroom.server.models.Auto;
+import com.mera.borisgk98.autoshowroom.server.models1.Auto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

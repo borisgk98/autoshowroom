@@ -61,7 +61,7 @@ openApiGenerate {
     inputSpec = "$projectDir/../autoshowroom.yaml".toString()
     outputDir = "$projectDir".toString()
     apiPackage = ("com.mera.borisgk98.autoshowroom.client.rest.api").toString()
-    skipOverwrite = true
+//    skipOverwrite = true
     invokerPackage = ("com.mera.borisgk98.autoshowroom.client.rest.invoker").toString()
     modelPackage = ("com.mera.borisgk98.autoshowroom.client.models").toString()
 //    groupId = ("com.mera.borisgk98.autoshowroom.server").toString()
@@ -70,7 +70,8 @@ openApiGenerate {
             "Error"
     ]
     configOptions = [
-            dateLibrary: "java8"
+            dateLibrary: "java8",
+            library: "webclient"
     ]
     systemProperties = [
             apis           : "",

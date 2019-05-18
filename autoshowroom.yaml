@@ -47,8 +47,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Auto'
-
-
   ### AutoMark
   /auto_mark/{auto_mark_id}:
     get:
@@ -83,6 +81,23 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AutoMark'
+  /test:
+    post:
+      requestBody:
+        required: true
+        content:
+          text/plain:
+            schema:
+              type: string
+      responses:
+        200:
+          description: Successful
+          content:
+            text/plain:
+              schema:
+                type: string
+              
+              
 
 
 components:

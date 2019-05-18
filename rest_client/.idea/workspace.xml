@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="504d8e6f-0fdd-4416-936b-dd90b47a5bd2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../autoshowroom.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../autoshowroom.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/config/openapi/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/config/openapi/OpenAPIDocumentationConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/rest/api/ApiUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/rest/api/AutoApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/rest/api/AutoApiController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/rest/api/AutoMarkApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/rest/api/AutoMarkApiController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/rest/invoker/OpenAPI2SpringBoot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/rest/invoker/RFC3339DateFormat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/services/AbstractCrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/services/AbstractCrudService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -82,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16">
-              <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -90,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="128">
               <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -223,6 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,7 +259,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -416,17 +405,18 @@
       <workItem from="1558180085951" duration="933000" />
       <workItem from="1558181848588" duration="1973000" />
       <workItem from="1558184850105" duration="2588000" />
+      <workItem from="1558195008213" duration="533000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13208000" />
+    <option name="totallyTimeSpent" value="13741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1924" height="1174" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18463181" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18676628" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -521,6 +511,23 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/models/AutoMark.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -570,25 +577,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="4" column="37" lean-forward="true" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
     </entry>
   </component>
   <component name="masterDetails">

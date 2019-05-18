@@ -93,9 +93,9 @@ paths:
         200:
           description: Successful
           content:
-            text/plain:
+            application/json:
               schema:
-                type: string
+                $ref: '#/components/schemas/Kek'
               
               
 
@@ -219,3 +219,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Order'
+
+    Kek:
+      description: for test
+      properties:
+        kek:
+          type: string

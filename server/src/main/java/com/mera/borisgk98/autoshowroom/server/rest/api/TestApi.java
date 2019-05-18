@@ -5,6 +5,7 @@
  */
 package com.mera.borisgk98.autoshowroom.server.rest.api;
 
+import com.mera.borisgk98.autoshowroom.server.models.Kek;
 import io.swagger.annotations.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -25,7 +26,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-18T19:05:22.902+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-18T19:46:18.540+03:00[Europe/Moscow]")
 
 @Validated
 @Api(value = "test", description = "the test API")
@@ -35,14 +36,22 @@ public interface TestApi {
         return Optional.empty();
     }
 
-    @ApiOperation(value = "", nickname = "testPost", notes = "", response = String.class, tags={  })
+    @ApiOperation(value = "", nickname = "testPost", notes = "", response = Kek.class, tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "Successful", response = String.class) })
+        @ApiResponse(code = 200, message = "Successful", response = Kek.class) })
     @RequestMapping(value = "/test",
-        produces = { "text/plain" }, 
+        produces = { "application/json" }, 
         consumes = { "text/plain" },
         method = RequestMethod.POST)
-    default ResponseEntity<String> testPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody String body) {
+    default ResponseEntity<Kek> testPost(@ApiParam(value = "" ,required=true )  @Valid @RequestBody String body) {
+        getRequest().ifPresent(request -> {
+            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
+                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"kek\" : \"kek\"}");
+                    break;
+                }
+            }
+        });
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
 
     }

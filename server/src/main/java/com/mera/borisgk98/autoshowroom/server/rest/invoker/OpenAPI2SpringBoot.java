@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.mera.borisgk98.autoshowroom.server.rest.invoker", "com.mera.borisgk98.autoshowroom.server.rest.api" , "org.openapitools.configuration"})
+@ComponentScan(basePackages = {"com.mera.borisgk98.autoshowroom.server.rest.invoker", "com.mera.borisgk98.autoshowroom.server.rest.api" , "com.mera.borisgk98.autoshowroom.server.config.openapi"})
 public class OpenAPI2SpringBoot implements CommandLineRunner {
 
     @Override

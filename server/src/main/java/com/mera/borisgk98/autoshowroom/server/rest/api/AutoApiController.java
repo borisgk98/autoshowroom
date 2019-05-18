@@ -11,7 +11,7 @@ import org.springframework.web.context.request.NativeWebRequest;
 
 import javax.validation.Valid;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T18:25:16.054+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-18T17:15:41.019+03:00[Europe/Moscow]")
 
 @Controller
 @RequestMapping("${openapi.autoshowroom.base-path:}")

@@ -11,7 +11,6 @@ servers:
   - url: http://localhost:9000/
     description: local server
 
-
 paths:
 
   ### Auto

@@ -4,8 +4,6 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'org.openapi.generator'
 
-apply plugin: 'io.spring.dependency-management'
-
 group = 'com.mera.borisgk98.autoshowroom'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
@@ -19,6 +17,10 @@ configurations {
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
     }
 }
+
+//task wrapper (type: Wrapper) {
+//    gradleVersion = '5.2'
+//}
 
 repositories {
     mavenCentral()
@@ -42,6 +44,10 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("org.springframework.boot:spring-boot-starter-web-services")
+    compile("org.springframework.boot:spring-boot-starter-webflux")
+    compile("junit:junit")
+    // https://mvnrepository.com/artifact/io.projectreactor/reactor-core
+    compile group: 'io.projectreactor', name: 'reactor-core', version: '3.2.9.RELEASE'
 //    compile("org.apache.cxf:cxf-spring-boot-starter-jaxws:3.3.1")
 //    compile("wsdl4j:wsdl4j")
     compile("org.projectlombok:lombok")
@@ -58,10 +64,11 @@ dependencies {
 
 openApiGenerate {
     generatorName = "java"
+    // TODO обращаться к спецификации по url
     inputSpec = "$projectDir/../autoshowroom.yaml".toString()
     outputDir = "$projectDir".toString()
     apiPackage = ("com.mera.borisgk98.autoshowroom.client.rest.api").toString()
-//    skipOverwrite = true
+    skipOverwrite = true
     invokerPackage = ("com.mera.borisgk98.autoshowroom.client.rest.invoker").toString()
     modelPackage = ("com.mera.borisgk98.autoshowroom.client.models").toString()
 //    groupId = ("com.mera.borisgk98.autoshowroom.server").toString()
@@ -82,8 +89,4 @@ openApiGenerate {
 
 openApiValidate {
     inputSpec = "$projectDir/../autoshowroom.yaml".toString()
-}
-
-springBoot {
-    mainClassName = 'com.mera.borisgk98.autoshowroom.server.ServerApplication'
 }

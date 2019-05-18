@@ -13,7 +13,6 @@
 
 package com.mera.borisgk98.autoshowroom.client.rest.api;
 
-import com.mera.borisgk98.autoshowroom.client.rest.invoker.ApiException;
 import com.mera.borisgk98.autoshowroom.client.models.Auto;
 import com.mera.borisgk98.autoshowroom.client.models.AutoMark;
 import org.junit.Test;
@@ -37,14 +36,11 @@ public class DefaultApiTest {
      * 
      *
      * Get information about auto by auto id
-     *
-     * @throws ApiException
-     *          if the Api call fails
      */
     @Test
-    public void autoAutoIdGetTest() throws ApiException {
+    public void autoAutoIdGetTest()  {
         Integer autoId = null;
-        Auto response = api.autoAutoIdGet(autoId);
+        Auto response = api.autoAutoIdGet(autoId).block();
 
         // TODO: test validations
     }
@@ -53,14 +49,11 @@ public class DefaultApiTest {
      * 
      *
      * Get information about auto by auto_mark id
-     *
-     * @throws ApiException
-     *          if the Api call fails
      */
     @Test
-    public void autoMarkAutoMarkIdGetTest() throws ApiException {
+    public void autoMarkAutoMarkIdGetTest()  {
         Integer autoMarkId = null;
-        AutoMark response = api.autoMarkAutoMarkIdGet(autoMarkId);
+        AutoMark response = api.autoMarkAutoMarkIdGet(autoMarkId).block();
 
         // TODO: test validations
     }
@@ -69,14 +62,11 @@ public class DefaultApiTest {
      * 
      *
      * Add new auto_mark
-     *
-     * @throws ApiException
-     *          if the Api call fails
      */
     @Test
-    public void autoMarkPostTest() throws ApiException {
+    public void autoMarkPostTest()  {
         AutoMark autoMark = null;
-        AutoMark response = api.autoMarkPost(autoMark);
+        AutoMark response = api.autoMarkPost(autoMark).block();
 
         // TODO: test validations
     }
@@ -85,14 +75,11 @@ public class DefaultApiTest {
      * 
      *
      * Add new auto
-     *
-     * @throws ApiException
-     *          if the Api call fails
      */
     @Test
-    public void autoPostTest() throws ApiException {
+    public void autoPostTest()  {
         Auto auto = null;
-        Auto response = api.autoPost(auto);
+        Auto response = api.autoPost(auto).block();
 
         // TODO: test validations
     }

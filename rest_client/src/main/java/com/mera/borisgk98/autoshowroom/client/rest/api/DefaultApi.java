@@ -25,7 +25,7 @@ import org.springframework.http.MediaType;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-16T22:06:49.880+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-17T00:02:23.096+03:00[Europe/Moscow]")
 public class DefaultApi {
     private ApiClient apiClient;
 

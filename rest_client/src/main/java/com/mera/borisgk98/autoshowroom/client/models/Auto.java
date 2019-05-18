@@ -23,14 +23,17 @@ import com.mera.borisgk98.autoshowroom.client.models.AutoModel;
 import com.mera.borisgk98.autoshowroom.client.models.AutoOption;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Contains information about automobiles
  */
+@Builder
 @ApiModel(description = "Contains information about automobiles")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-16T22:06:49.880+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-17T00:02:23.096+03:00[Europe/Moscow]")
 public class Auto {
   @JsonProperty("id")
   private Integer id;

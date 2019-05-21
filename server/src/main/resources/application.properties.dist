@@ -4,9 +4,9 @@ spring.jackson.date-format=com.mera.borisgk98.autoshowroom.server.rest.invoker.R
 spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS=false
 
 #DB properties:
-spring.datasource.url=jdbc:sqlserver://localhost
-spring.datasource.username=sa
-spring.datasource.password=SA_PASS12
+spring.datasource.url=jdbc:sqlserver://
+spring.datasource.username=
+spring.datasource.password=
 spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 # The SQL dialect makes Hibernate generate better SQL for the chosen database

@@ -4,7 +4,15 @@ services:
 
   db:
     image: microsoft/mssql-server-linux
-    restart: always
+#    restart: always
     environment:
-      SA_PASSWORD: "SA_PASS"
+      SA_PASSWORD: "SA_PASS12"
       ACCEPT_EULA: "Y"
+
+  app:
+    image: merann/autoshowroom
+#    restart: always
+    depends_on:
+      - db
+    ports:
+      - 8080:8080

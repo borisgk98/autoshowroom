@@ -1,4 +1,5 @@
-  ### $model$
+
+  ### $Model$
   /$model$/{$model$_id}:
     get:
       parameters:
@@ -13,7 +14,7 @@
           content:
             application/json:
               schema:
-                \$ref: '#/components/schemas/$model$'
+                \$ref: '#/components/schemas/$Model$'
         404:
           description: Not found $model$ by this $model$_id
     put:
@@ -22,7 +23,7 @@
         content:
           application/json:
             schema:
-              \$ref: '#/components/schemas/$model$'
+              \$ref: '#/components/schemas/$Model$'
       description: Change information about $model$
       responses:
         200:
@@ -30,7 +31,7 @@
           content:
             application/json:
               schema:
-                \$ref: '#/components/schemas/$model$'
+                \$ref: '#/components/schemas/$Model$'
     delete:
       parameters:
         - name: $model$_id
@@ -66,14 +67,14 @@
               schema:
                 type: array
                 items:
-                  \$ref: '#/components/schemas/$model$'
+                  \$ref: '#/components/schemas/$Model$'
     post:
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              \$ref: '#/components/schemas/$model$'
+              \$ref: '#/components/schemas/$Model$'
       description: Create information about $model$
       responses:
         200:
@@ -81,4 +82,4 @@
           content:
             application/json:
               schema:
-                \$ref: '#/components/schemas/$model$'
+                \$ref: '#/components/schemas/$Model$'

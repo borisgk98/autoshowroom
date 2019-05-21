@@ -1,7 +1,8 @@
-package com.mera.borisgk98.autoshowroom.server.rest.api;
+package com.mera.borisgk98.autoshowroom.server.rest.api.controller;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Auto;
+import com.mera.borisgk98.autoshowroom.server.rest.api.AutoApi;
 import com.mera.borisgk98.autoshowroom.server.services.AutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

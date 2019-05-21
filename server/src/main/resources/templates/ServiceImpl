@@ -1,0 +1,17 @@
+package com.mera.borisgk98.autoshowroom.server.services;
+
+import com.mera.borisgk98.autoshowroom.server.models.$Model$;
+import com.mera.borisgk98.autoshowroom.server.repositories.$Model$Repository;
+import org.springframework.beans.factory.annotation.$Model$wired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class $Model$ServiceImpl
+        extends AbstractPaginableService<$Model$>
+        implements $Model$Service {
+
+    @$Model$wired
+    public $Model$ServiceImpl($Model$Repository repository) {
+        this.repository = repository;
+    }
+}

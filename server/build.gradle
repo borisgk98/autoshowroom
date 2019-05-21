@@ -73,7 +73,8 @@ openApiGenerate {
     ]
     configOptions = [
             dateLibrary: "java8",
-            configPackage: "com.mera.borisgk98.autoshowroom.server.config.openapi"
+            configPackage: "com.mera.borisgk98.autoshowroom.server.config.openapi",
+//            interfaceOnly: true
     ]
     systemProperties = [
             apis           : "",
@@ -92,12 +93,20 @@ springBoot {
 
 crudGenerationSetting {
     srcRoot = "$projectDir/src/main/java"
-    apiPackage = "com.mera.borisgk98.autoshowroom.server.rest.api"
-    generationRoot = "$projectDir/src/main/resources/templates/paths"
+    modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/server/models"
+    generationRoot = "$projectDir/src/main/java"
+    yamlPathTemplateSrc = "$projectDir/src/main/resources/templates/Path"
+    yamlGenerationOut = "$projectDir/src/main/resources/paths.yaml"
     generationPackages = [
-            ""
+            "com.mera.borisgk98.autoshowroom.server.rest.api",
+            "com.mera.borisgk98.autoshowroom.server.repositories",
+            "com.mera.borisgk98.autoshowroom.server.services",
+            "com.mera.borisgk98.autoshowroom.server.services"
     ]
     generationTemplates = [
-            "$projectDir/src/main/resources/templates/Path"
+            "$projectDir/src/main/resources/ApiController",
+            "$projectDir/src/main/resources/Repository",
+            "$projectDir/src/main/resources/Service",
+            "$projectDir/src/main/resources/ServiceImpl"
     ]
 }

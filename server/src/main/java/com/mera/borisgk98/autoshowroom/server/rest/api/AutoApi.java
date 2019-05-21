@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-18T17:21:26.988+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-21T12:09:40.272+03:00[Europe/Moscow]")
 
 @Validated
 @Api(value = "auto", description = "the auto API")
@@ -35,6 +35,18 @@ public interface AutoApi {
     default Optional<NativeWebRequest> getRequest() {
         return Optional.empty();
     }
+
+    @ApiOperation(value = "", nickname = "autoAutoIdDelete", notes = "Delate information about auto by auto id", tags={  })
+    @ApiResponses(value = { 
+        @ApiResponse(code = 200, message = "Successful deletting"),
+        @ApiResponse(code = 404, message = "Not found auto by this auto_id") })
+    @RequestMapping(value = "/auto/{auto_id}",
+        method = RequestMethod.DELETE)
+    default ResponseEntity<Void> autoAutoIdDelete(@ApiParam(value = "",required=true) @PathVariable("auto_id") Integer autoId) {
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+
+    }
+
 
     @ApiOperation(value = "", nickname = "autoAutoIdGet", notes = "Get information about auto by auto id", response = Auto.class, tags={  })
     @ApiResponses(value = { 
@@ -57,7 +69,28 @@ public interface AutoApi {
     }
 
 
-    @ApiOperation(value = "", nickname = "autoPost", notes = "Add new auto", response = Auto.class, tags={  })
+    @ApiOperation(value = "", nickname = "autoAutoIdPut", notes = "Change information about auto", response = Auto.class, tags={  })
+    @ApiResponses(value = { 
+        @ApiResponse(code = 200, message = "Successful changing", response = Auto.class) })
+    @RequestMapping(value = "/auto/{auto_id}",
+        produces = { "application/json" }, 
+        consumes = { "application/json" },
+        method = RequestMethod.PUT)
+    default ResponseEntity<Auto> autoAutoIdPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody Auto auto) {
+        getRequest().ifPresent(request -> {
+            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
+                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"options\" : [ {    \"name\" : \"4x4\",    \"autos\" : [ null, null ],    \"id\" : 5  }, {    \"name\" : \"4x4\",    \"autos\" : [ null, null ],    \"id\" : 5  } ],  \"model\" : {    \"name\" : \"q5\",    \"autos\" : [ null, null ],    \"id\" : 1  },  \"id\" : 0,  \"mark\" : {    \"name\" : \"audi\",    \"autos\" : [ null, null ],    \"id\" : 6  }}");
+                    break;
+                }
+            }
+        });
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+
+    }
+
+
+    @ApiOperation(value = "", nickname = "autoPost", notes = "Create information about auto", response = Auto.class, tags={  })
     @ApiResponses(value = { 
         @ApiResponse(code = 200, message = "Successful adding", response = Auto.class) })
     @RequestMapping(value = "/auto",

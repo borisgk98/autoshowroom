@@ -32,18 +32,15 @@ public class Auto   {
 
   @JsonProperty("mark")
   @ManyToOne
-  @JsonManagedReference
   private AutoMark mark = null;
 
   @JsonProperty("model")
   @ManyToOne
-  @JsonManagedReference
   private AutoModel model = null;
 
   @JsonProperty("options")
   @Valid
   @ManyToMany
-  @JsonManagedReference
   private List<AutoOption> options = null;
 
   public Auto id(Integer id) {

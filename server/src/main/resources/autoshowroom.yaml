@@ -31,6 +31,33 @@ paths:
                 $ref: '#/components/schemas/Auto'
         404:
           description: Not found auto by this auto_id
+    put:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auto'
+      description: Change information about auto
+      responses:
+        200:
+          description: Successful changing
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auto'
+    delete:
+      parameters:
+        - name: auto_id
+          in: path
+          schema:
+            type: integer
+      description: Delate information about auto by auto id
+      responses:
+        200:
+          description: Successful deletting
+        404:
+          description: Not found auto by this auto_id
   /auto:
     post:
       requestBody:
@@ -39,7 +66,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/Auto'
-      description: Add new auto
+      description: Create information about auto
       responses:
         200:
           description: Successful adding
@@ -47,42 +74,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Auto'
-
-
-  ### AutoMark
-  /auto_mark/{auto_mark_id}:
-    get:
-      parameters:
-        - name: auto_mark_id
-          in: path
-          schema:
-            type: integer
-      description: Get information about auto by auto_mark id
-      responses:
-        200:
-          description: Successful getting
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/AutoMark'
-        404:
-          description: Not found auto_mark by this auto_mark_id
-  /auto_mark:
-    post:
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/AutoMark'
-      description: Add new auto_mark
-      responses:
-        200:
-          description: Successful adding
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/AutoMark'
 
 
 components:
@@ -204,3 +195,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Order'
+
+    Kek:
+      description: for test
+      properties:
+        kek:
+          type: string

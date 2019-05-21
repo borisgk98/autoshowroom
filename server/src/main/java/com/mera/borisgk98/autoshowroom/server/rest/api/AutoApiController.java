@@ -1,5 +1,6 @@
 package com.mera.borisgk98.autoshowroom.server.rest.api;
 
+import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Auto;
 import com.mera.borisgk98.autoshowroom.server.services.AutoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +28,19 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
+    public Optional<NativeWebRequest> getRequest() {
+        return Optional.ofNullable(request);
+    }
+
+    @Override
     public ResponseEntity<Auto> autoAutoIdGet(Integer autoId) {
-        Optional<Auto> auto = autoService.read(autoId);
-        return auto.isPresent() ? ResponseEntity.ok(auto.get()) : new ResponseEntity<Auto>(HttpStatus.NOT_FOUND);
+        try {
+            Auto auto = autoService.read(autoId);
+            return ResponseEntity.ok(auto);
+        }
+        catch (ModelNotFound e) {
+            return new ResponseEntity<Auto>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @Override
@@ -38,8 +49,24 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    public Optional<NativeWebRequest> getRequest() {
-        return Optional.ofNullable(request);
+    public ResponseEntity<Void> autoAutoIdDelete(Integer autoId) {
+        try {
+            autoService.delete(autoId);
+            return new ResponseEntity<Void>(HttpStatus.OK);
+        }
+        catch (ModelNotFound e) {
+            return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+        }
     }
 
+    @Override
+    public ResponseEntity<Auto> autoAutoIdPut(@Valid Auto auto) {
+        try {
+            Auto newAuto = autoService.update(auto);
+            return ResponseEntity.ok(newAuto);
+        }
+        catch (ModelNotFound e) {
+            return new ResponseEntity<Auto>(HttpStatus.NOT_FOUND);
+        }
+    }
 }

@@ -58,7 +58,7 @@ dependencies {
 
 openApiGenerate {
     generatorName = "spring"
-    inputSpec = "$projectDir/../autoshowroom.yaml".toString()
+    inputSpec = "$projectDir/src/main/resources/autoshowroom.yaml".toString()
     outputDir = "$projectDir".toString()
     apiPackage = ("com.mera.borisgk98.autoshowroom.server.rest.api").toString()
     skipOverwrite = true

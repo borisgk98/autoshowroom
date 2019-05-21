@@ -4,6 +4,7 @@ import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Auto;
 import com.mera.borisgk98.autoshowroom.server.services.AutoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.Optional;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-18T17:15:41.019+03:00[Europe/Moscow]")
 
@@ -21,6 +23,8 @@ public class AutoApiController implements AutoApi {
     private final NativeWebRequest request;
     @Autowired
     protected AutoService autoService;
+    @Value("${defaultoffset}")
+    protected Integer defaultOffset;
 
     @org.springframework.beans.factory.annotation.Autowired
     public AutoApiController(NativeWebRequest request) {
@@ -68,5 +72,16 @@ public class AutoApiController implements AutoApi {
         catch (ModelNotFound e) {
             return new ResponseEntity<Auto>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @Override
+    public ResponseEntity<List<Auto>> autoGet(Integer limit, Integer offset) {
+        if (limit == null) {
+            return ResponseEntity.ok(autoService.getAll());
+        }
+        if (offset == null) {
+            offset = defaultOffset;
+        }
+        return ResponseEntity.ok(autoService.getRange(offset, limit));
     }
 }

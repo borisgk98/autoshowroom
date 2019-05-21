@@ -59,6 +59,29 @@ paths:
         404:
           description: Not found auto by this auto_id
   /auto:
+    get:
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: Limit for number of returnig values
+        - name: offset
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: Offset for number of returnig values
+      responses:
+        200:
+          description: List of autos
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Auto'
     post:
       requestBody:
         required: true

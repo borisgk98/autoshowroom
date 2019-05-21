@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-21T12:09:40.272+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-21T13:11:35.299+03:00[Europe/Moscow]")
 
 @Validated
 @Api(value = "auto", description = "the auto API")
@@ -77,6 +77,26 @@ public interface AutoApi {
         consumes = { "application/json" },
         method = RequestMethod.PUT)
     default ResponseEntity<Auto> autoAutoIdPut(@ApiParam(value = "" ,required=true )  @Valid @RequestBody Auto auto) {
+        getRequest().ifPresent(request -> {
+            for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
+                if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"options\" : [ {    \"name\" : \"4x4\",    \"autos\" : [ null, null ],    \"id\" : 5  }, {    \"name\" : \"4x4\",    \"autos\" : [ null, null ],    \"id\" : 5  } ],  \"model\" : {    \"name\" : \"q5\",    \"autos\" : [ null, null ],    \"id\" : 1  },  \"id\" : 0,  \"mark\" : {    \"name\" : \"audi\",    \"autos\" : [ null, null ],    \"id\" : 6  }}");
+                    break;
+                }
+            }
+        });
+        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+
+    }
+
+
+    @ApiOperation(value = "", nickname = "autoGet", notes = "", response = Auto.class, responseContainer = "List", tags={  })
+    @ApiResponses(value = { 
+        @ApiResponse(code = 200, message = "List of autos", response = Auto.class, responseContainer = "List") })
+    @RequestMapping(value = "/auto",
+        produces = { "application/json" }, 
+        method = RequestMethod.GET)
+    default ResponseEntity<List<Auto>> autoGet(@ApiParam(value = "Limit for number of returnig values") @Valid @RequestParam(value = "limit", required = false) Integer limit,@ApiParam(value = "Offset for number of returnig values") @Valid @RequestParam(value = "offset", required = false) Integer offset) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {

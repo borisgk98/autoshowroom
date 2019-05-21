@@ -4,9 +4,11 @@ import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Auto;
 import com.mera.borisgk98.autoshowroom.server.services.CrudService;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.List;
 import java.util.Optional;
 
 public abstract class AbstractCrudService<T, F> implements CrudService<T, F> {
@@ -53,6 +55,11 @@ public abstract class AbstractCrudService<T, F> implements CrudService<T, F> {
     @Override
     public boolean existById(F id) {
         return repository.existsById(id);
+    }
+
+    @Override
+    public List<T> getAll() {
+        return repository.findAll();
     }
 }
 

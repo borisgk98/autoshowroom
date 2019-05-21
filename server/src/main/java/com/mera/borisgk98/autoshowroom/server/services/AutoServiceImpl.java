@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AutoServiceImpl
-        extends AbstractCrudService<Auto, Integer>
+        extends AbstractPaginableService<Auto>
         implements AutoService {
 
     @Autowired

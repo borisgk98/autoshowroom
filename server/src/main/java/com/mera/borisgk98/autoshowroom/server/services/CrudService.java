@@ -2,6 +2,7 @@ package com.mera.borisgk98.autoshowroom.server.services;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface CrudService<T, F> {
@@ -11,4 +12,6 @@ public interface CrudService<T, F> {
     void delete(F id) throws ModelNotFound;
     boolean existById(F id);
     boolean exist(T m);
+    List<T> getAll();
+    List<T> getRange(F offset, F limit);
 }

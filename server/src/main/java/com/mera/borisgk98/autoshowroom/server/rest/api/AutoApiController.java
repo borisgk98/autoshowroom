@@ -1,9 +1,9 @@
 package com.mera.borisgk98.autoshowroom.server.rest.api;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.server.models.Seller;
-import com.mera.borisgk98.autoshowroom.server.rest.api.SellerApi;
-import com.mera.borisgk98.autoshowroom.server.services.SellerService;
+import com.mera.borisgk98.autoshowroom.server.models.Auto;
+import com.mera.borisgk98.autoshowroom.server.rest.api.AutoApi;
+import com.mera.borisgk98.autoshowroom.server.services.AutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -18,17 +18,17 @@ import java.util.Optional;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-18T17:15:41.019+03:00[Europe/Moscow]")
 
 @Controller
-@RequestMapping("${openapi.sellershowroom.base-path:}")
-public class SellerApiController implements SellerApi {
+@RequestMapping("${openapi.autoshowroom.base-path:}")
+public class AutoApiController implements AutoApi {
 
     private final NativeWebRequest request;
     @Autowired
-    protected SellerService sellerService;
+    protected AutoService autoService;
     @Value("${defaultoffset}")
     protected Integer defaultOffset;
 
     @org.springframework.beans.factory.annotation.Autowired
-    public SellerApiController(NativeWebRequest request) {
+    public AutoApiController(NativeWebRequest request) {
         this.request = request;
     }
 
@@ -38,25 +38,25 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    public ResponseEntity<Seller> sellerSellerIdGet(Integer sellerId) {
+    public ResponseEntity<Auto> autoAutoIdGet(Integer autoId) {
         try {
-            Seller seller = sellerService.read(sellerId);
-            return ResponseEntity.ok(seller);
+            Auto auto = autoService.read(autoId);
+            return ResponseEntity.ok(auto);
         }
         catch (ModelNotFound e) {
-            return new ResponseEntity<Seller>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<Auto>(HttpStatus.NOT_FOUND);
         }
     }
 
     @Override
-    public ResponseEntity<Seller> sellerPost(@Valid Seller seller) {
-        return ResponseEntity.ok(sellerService.create(seller));
+    public ResponseEntity<Auto> autoPost(@Valid Auto auto) {
+        return ResponseEntity.ok(autoService.create(auto));
     }
 
     @Override
-    public ResponseEntity<Void> sellerSellerIdDelete(Integer sellerId) {
+    public ResponseEntity<Void> autoAutoIdDelete(Integer autoId) {
         try {
-            sellerService.delete(sellerId);
+            autoService.delete(autoId);
             return new ResponseEntity<Void>(HttpStatus.OK);
         }
         catch (ModelNotFound e) {
@@ -65,24 +65,24 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    public ResponseEntity<Seller> sellerSellerIdPut(@Valid Seller seller) {
+    public ResponseEntity<Auto> autoAutoIdPut(@Valid Auto auto) {
         try {
-            Seller newSeller = sellerService.update(seller);
-            return ResponseEntity.ok(newSeller);
+            Auto newAuto = autoService.update(auto);
+            return ResponseEntity.ok(newAuto);
         }
         catch (ModelNotFound e) {
-            return new ResponseEntity<Seller>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<Auto>(HttpStatus.NOT_FOUND);
         }
     }
 
     @Override
-    public ResponseEntity<List<Seller>> sellerGet(Integer limit, Integer offset) {
+    public ResponseEntity<List<Auto>> autoGet(Integer limit, Integer offset) {
         if (limit == null) {
-            return ResponseEntity.ok(sellerService.getAll());
+            return ResponseEntity.ok(autoService.getAll());
         }
         if (offset == null) {
             offset = defaultOffset;
         }
-        return ResponseEntity.ok(sellerService.getRange(offset, limit));
+        return ResponseEntity.ok(autoService.getRange(offset, limit));
     }
 }

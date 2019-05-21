@@ -14,6 +14,7 @@ servers:
 paths:
 
 
+
   ### Auto
   /auto/{auto_id}:
     get:
@@ -182,90 +183,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AutoOption'
-  ### OrderStatus
-  /orderstatus/{orderstatus_id}:
-    get:
-      parameters:
-        - name: orderstatus_id
-          in: path
-          schema:
-            type: integer
-      description: Get information about orderstatus by orderstatus id
-      responses:
-        200:
-          description: Successful getting
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/OrderStatus'
-        404:
-          description: Not found orderstatus by this orderstatus_id
-    put:
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/OrderStatus'
-      description: Change information about orderstatus
-      responses:
-        200:
-          description: Successful changing
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/OrderStatus'
-    delete:
-      parameters:
-        - name: orderstatus_id
-          in: path
-          schema:
-            type: integer
-      description: Delate information about orderstatus by orderstatus id
-      responses:
-        200:
-          description: Successful deletting
-        404:
-          description: Not found orderstatus by this orderstatus_id
-  /orderstatus:
-    get:
-      parameters:
-        - name: limit
-          in: query
-          required: false
-          schema:
-            type: integer
-          description: Limit for number of returnig values
-        - name: offset
-          in: query
-          required: false
-          schema:
-            type: integer
-          description: Offset for number of returnig values
-      responses:
-        200:
-          description: List of orderstatuss
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/OrderStatus'
-    post:
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/OrderStatus'
-      description: Create information about orderstatus
-      responses:
-        200:
-          description: Successful adding
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/OrderStatus'
   ### Order
   /order/{order_id}:
     get:
@@ -686,6 +603,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AutoMark'
+
 
 components:
   schemas:

@@ -1,9 +1,9 @@
 package com.mera.borisgk98.autoshowroom.server.rest.api;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.server.models.Seller;
-import com.mera.borisgk98.autoshowroom.server.rest.api.SellerApi;
-import com.mera.borisgk98.autoshowroom.server.services.SellerService;
+import com.mera.borisgk98.autoshowroom.server.models.AutoMark;
+import com.mera.borisgk98.autoshowroom.server.rest.api.AutomarkApi;
+import com.mera.borisgk98.autoshowroom.server.services.AutoMarkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -18,17 +18,17 @@ import java.util.Optional;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-18T17:15:41.019+03:00[Europe/Moscow]")
 
 @Controller
-@RequestMapping("${openapi.sellershowroom.base-path:}")
-public class SellerApiController implements SellerApi {
+@RequestMapping("${openapi.automarkshowroom.base-path:}")
+public class AutoMarkApiController implements AutomarkApi {
 
     private final NativeWebRequest request;
     @Autowired
-    protected SellerService sellerService;
+    protected AutoMarkService automarkService;
     @Value("${defaultoffset}")
     protected Integer defaultOffset;
 
     @org.springframework.beans.factory.annotation.Autowired
-    public SellerApiController(NativeWebRequest request) {
+    public AutoMarkApiController(NativeWebRequest request) {
         this.request = request;
     }
 
@@ -38,25 +38,25 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    public ResponseEntity<Seller> sellerSellerIdGet(Integer sellerId) {
+    public ResponseEntity<AutoMark> automarkAutomarkIdGet(Integer automarkId) {
         try {
-            Seller seller = sellerService.read(sellerId);
-            return ResponseEntity.ok(seller);
+            AutoMark automark = automarkService.read(automarkId);
+            return ResponseEntity.ok(automark);
         }
         catch (ModelNotFound e) {
-            return new ResponseEntity<Seller>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<AutoMark>(HttpStatus.NOT_FOUND);
         }
     }
 
     @Override
-    public ResponseEntity<Seller> sellerPost(@Valid Seller seller) {
-        return ResponseEntity.ok(sellerService.create(seller));
+    public ResponseEntity<AutoMark> automarkPost(@Valid AutoMark automark) {
+        return ResponseEntity.ok(automarkService.create(automark));
     }
 
     @Override
-    public ResponseEntity<Void> sellerSellerIdDelete(Integer sellerId) {
+    public ResponseEntity<Void> automarkAutomarkIdDelete(Integer automarkId) {
         try {
-            sellerService.delete(sellerId);
+            automarkService.delete(automarkId);
             return new ResponseEntity<Void>(HttpStatus.OK);
         }
         catch (ModelNotFound e) {
@@ -65,24 +65,24 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    public ResponseEntity<Seller> sellerSellerIdPut(@Valid Seller seller) {
+    public ResponseEntity<AutoMark> automarkAutomarkIdPut(@Valid AutoMark automark) {
         try {
-            Seller newSeller = sellerService.update(seller);
-            return ResponseEntity.ok(newSeller);
+            AutoMark newAutoMark = automarkService.update(automark);
+            return ResponseEntity.ok(newAutoMark);
         }
         catch (ModelNotFound e) {
-            return new ResponseEntity<Seller>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<AutoMark>(HttpStatus.NOT_FOUND);
         }
     }
 
     @Override
-    public ResponseEntity<List<Seller>> sellerGet(Integer limit, Integer offset) {
+    public ResponseEntity<List<AutoMark>> automarkGet(Integer limit, Integer offset) {
         if (limit == null) {
-            return ResponseEntity.ok(sellerService.getAll());
+            return ResponseEntity.ok(automarkService.getAll());
         }
         if (offset == null) {
             offset = defaultOffset;
         }
-        return ResponseEntity.ok(sellerService.getRange(offset, limit));
+        return ResponseEntity.ok(automarkService.getRange(offset, limit));
     }
 }

@@ -104,9 +104,12 @@ crudGenerationSetting {
             "com.mera.borisgk98.autoshowroom.server.services"
     ]
     generationTemplates = [
-            "$projectDir/src/main/resources/ApiController",
-            "$projectDir/src/main/resources/Repository",
-            "$projectDir/src/main/resources/Service",
-            "$projectDir/src/main/resources/ServiceImpl"
+            "$projectDir/src/main/resources/templates/ApiController".toString(),
+            "$projectDir/src/main/resources/templates/Repository".toString(),
+            "$projectDir/src/main/resources/templates/Service".toString(),
+            "$projectDir/src/main/resources/templates/ServiceImpl".toString()
+    ]
+    excludeModels = [
+            "OrderStatus"
     ]
 }

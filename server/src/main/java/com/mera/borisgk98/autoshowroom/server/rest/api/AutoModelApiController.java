@@ -1,9 +1,9 @@
-package com.mera.borisgk98.autoshowroom.server.rest.api.controller;
+package com.mera.borisgk98.autoshowroom.server.rest.api;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.server.models.Auto;
-import com.mera.borisgk98.autoshowroom.server.rest.api.AutoApi;
-import com.mera.borisgk98.autoshowroom.server.services.AutoService;
+import com.mera.borisgk98.autoshowroom.server.models.AutoModel;
+import com.mera.borisgk98.autoshowroom.server.rest.api.AutomodelApi;
+import com.mera.borisgk98.autoshowroom.server.services.AutoModelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -18,17 +18,17 @@ import java.util.Optional;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-18T17:15:41.019+03:00[Europe/Moscow]")
 
 @Controller
-@RequestMapping("${openapi.autoshowroom.base-path:}")
-public class AutoApiController implements AutoApi {
+@RequestMapping("${openapi.automodelshowroom.base-path:}")
+public class AutoModelApiController implements AutomodelApi {
 
     private final NativeWebRequest request;
     @Autowired
-    protected AutoService autoService;
+    protected AutoModelService automodelService;
     @Value("${defaultoffset}")
     protected Integer defaultOffset;
 
     @org.springframework.beans.factory.annotation.Autowired
-    public AutoApiController(NativeWebRequest request) {
+    public AutoModelApiController(NativeWebRequest request) {
         this.request = request;
     }
 
@@ -38,25 +38,25 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    public ResponseEntity<Auto> autoAutoIdGet(Integer autoId) {
+    public ResponseEntity<AutoModel> automodelAutomodelIdGet(Integer automodelId) {
         try {
-            Auto auto = autoService.read(autoId);
-            return ResponseEntity.ok(auto);
+            AutoModel automodel = automodelService.read(automodelId);
+            return ResponseEntity.ok(automodel);
         }
         catch (ModelNotFound e) {
-            return new ResponseEntity<Auto>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<AutoModel>(HttpStatus.NOT_FOUND);
         }
     }
 
     @Override
-    public ResponseEntity<Auto> autoPost(@Valid Auto auto) {
-        return ResponseEntity.ok(autoService.create(auto));
+    public ResponseEntity<AutoModel> automodelPost(@Valid AutoModel automodel) {
+        return ResponseEntity.ok(automodelService.create(automodel));
     }
 
     @Override
-    public ResponseEntity<Void> autoAutoIdDelete(Integer autoId) {
+    public ResponseEntity<Void> automodelAutomodelIdDelete(Integer automodelId) {
         try {
-            autoService.delete(autoId);
+            automodelService.delete(automodelId);
             return new ResponseEntity<Void>(HttpStatus.OK);
         }
         catch (ModelNotFound e) {
@@ -65,24 +65,24 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    public ResponseEntity<Auto> autoAutoIdPut(@Valid Auto auto) {
+    public ResponseEntity<AutoModel> automodelAutomodelIdPut(@Valid AutoModel automodel) {
         try {
-            Auto newAuto = autoService.update(auto);
-            return ResponseEntity.ok(newAuto);
+            AutoModel newAutoModel = automodelService.update(automodel);
+            return ResponseEntity.ok(newAutoModel);
         }
         catch (ModelNotFound e) {
-            return new ResponseEntity<Auto>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<AutoModel>(HttpStatus.NOT_FOUND);
         }
     }
 
     @Override
-    public ResponseEntity<List<Auto>> autoGet(Integer limit, Integer offset) {
+    public ResponseEntity<List<AutoModel>> automodelGet(Integer limit, Integer offset) {
         if (limit == null) {
-            return ResponseEntity.ok(autoService.getAll());
+            return ResponseEntity.ok(automodelService.getAll());
         }
         if (offset == null) {
             offset = defaultOffset;
         }
-        return ResponseEntity.ok(autoService.getRange(offset, limit));
+        return ResponseEntity.ok(automodelService.getRange(offset, limit));
     }
 }

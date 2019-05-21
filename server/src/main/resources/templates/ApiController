@@ -2,9 +2,9 @@ package com.mera.borisgk98.autoshowroom.server.rest.api;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.$Model$;
-import com.mera.borisgk98.autoshowroom.server.rest.api.$Model$Api;
+import com.mera.borisgk98.autoshowroom.server.rest.api.$Modelufl$Api;
 import com.mera.borisgk98.autoshowroom.server.services.$Model$Service;
-import org.springframework.beans.factory.annotation.$Model$wired;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,15 +19,15 @@ import java.util.Optional;
 
 @Controller
 @RequestMapping("\${openapi.$model$showroom.base-path:}")
-public class $Model$ApiController implements $Model$Api {
+public class $Model$ApiController implements $Modelufl$Api {
 
     private final NativeWebRequest request;
-    @$Model$wired
+    @Autowired
     protected $Model$Service $model$Service;
     @Value("\${defaultoffset}")
     protected Integer defaultOffset;
 
-    @org.springframework.beans.factory.annotation.$Model$wired
+    @org.springframework.beans.factory.annotation.Autowired
     public $Model$ApiController(NativeWebRequest request) {
         this.request = request;
     }
@@ -38,7 +38,7 @@ public class $Model$ApiController implements $Model$Api {
     }
 
     @Override
-    public ResponseEntity<$Model$> $model$$Model$IdGet(Integer $model$Id) {
+    public ResponseEntity<$Model$> $model$$Modelufl$IdGet(Integer $model$Id) {
         try {
             $Model$ $model$ = $model$Service.read($model$Id);
             return ResponseEntity.ok($model$);
@@ -54,7 +54,7 @@ public class $Model$ApiController implements $Model$Api {
     }
 
     @Override
-    public ResponseEntity<Void> $model$$Model$IdDelete(Integer $model$Id) {
+    public ResponseEntity<Void> $model$$Modelufl$IdDelete(Integer $model$Id) {
         try {
             $model$Service.delete($model$Id);
             return new ResponseEntity<Void>(HttpStatus.OK);
@@ -65,7 +65,7 @@ public class $Model$ApiController implements $Model$Api {
     }
 
     @Override
-    public ResponseEntity<$Model$> $model$$Model$IdPut(@Valid $Model$ $model$) {
+    public ResponseEntity<$Model$> $model$$Modelufl$IdPut(@Valid $Model$ $model$) {
         try {
             $Model$ new$Model$ = $model$Service.update($model$);
             return ResponseEntity.ok(new$Model$);

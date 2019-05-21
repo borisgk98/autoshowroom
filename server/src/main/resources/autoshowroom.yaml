@@ -98,7 +98,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/Auto'
 
-
 components:
   schemas:
 
@@ -218,9 +217,3 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Order'
-
-    Kek:
-      description: for test
-      properties:
-        kek:
-          type: string

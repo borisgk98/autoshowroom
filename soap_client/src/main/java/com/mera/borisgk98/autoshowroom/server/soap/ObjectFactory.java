@@ -24,18 +24,18 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Create_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "create");
-    private final static QName _CreateResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "createResponse");
-    private final static QName _Delete_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "delete");
-    private final static QName _DeleteResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "deleteResponse");
-    private final static QName _GetAll_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "getAll");
-    private final static QName _GetAllResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "getAllResponse");
-    private final static QName _GetRange_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "getRange");
-    private final static QName _GetRangeResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "getRangeResponse");
-    private final static QName _Read_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "read");
-    private final static QName _ReadResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "readResponse");
-    private final static QName _Update_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "update");
-    private final static QName _UpdateResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "updateResponse");
+    private final static QName _CreateAutoMark_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "createAutoMark");
+    private final static QName _CreateAutoMarkResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "createAutoMarkResponse");
+    private final static QName _DeleteAutoMark_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "deleteAutoMark");
+    private final static QName _DeleteAutoMarkResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "deleteAutoMarkResponse");
+    private final static QName _GetAllAutoMark_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "getAllAutoMark");
+    private final static QName _GetAllAutoMarkResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "getAllAutoMarkResponse");
+    private final static QName _GetRangeAutoMark_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "getRangeAutoMark");
+    private final static QName _GetRangeAutoMarkResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "getRangeAutoMarkResponse");
+    private final static QName _ReadAutoMark_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "readAutoMark");
+    private final static QName _ReadAutoMarkResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "readAutoMarkResponse");
+    private final static QName _UpdateAutoMark_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "updateAutoMark");
+    private final static QName _UpdateAutoMarkResponse_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "updateAutoMarkResponse");
     private final static QName _ModelNotFound_QNAME = new QName("http://soap.server.autoshowroom.borisgk98.mera.com/", "ModelNotFound");
 
     /**
@@ -46,99 +46,99 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Create }
+     * Create an instance of {@link CreateAutoMark }
      * 
      */
-    public Create createCreate() {
-        return new Create();
+    public CreateAutoMark createCreateAutoMark() {
+        return new CreateAutoMark();
     }
 
     /**
-     * Create an instance of {@link CreateResponse }
+     * Create an instance of {@link CreateAutoMarkResponse }
      * 
      */
-    public CreateResponse createCreateResponse() {
-        return new CreateResponse();
+    public CreateAutoMarkResponse createCreateAutoMarkResponse() {
+        return new CreateAutoMarkResponse();
     }
 
     /**
-     * Create an instance of {@link Delete }
+     * Create an instance of {@link DeleteAutoMark }
      * 
      */
-    public Delete createDelete() {
-        return new Delete();
+    public DeleteAutoMark createDeleteAutoMark() {
+        return new DeleteAutoMark();
     }
 
     /**
-     * Create an instance of {@link DeleteResponse }
+     * Create an instance of {@link DeleteAutoMarkResponse }
      * 
      */
-    public DeleteResponse createDeleteResponse() {
-        return new DeleteResponse();
+    public DeleteAutoMarkResponse createDeleteAutoMarkResponse() {
+        return new DeleteAutoMarkResponse();
     }
 
     /**
-     * Create an instance of {@link GetAll }
+     * Create an instance of {@link GetAllAutoMark }
      * 
      */
-    public GetAll createGetAll() {
-        return new GetAll();
+    public GetAllAutoMark createGetAllAutoMark() {
+        return new GetAllAutoMark();
     }
 
     /**
-     * Create an instance of {@link GetAllResponse }
+     * Create an instance of {@link GetAllAutoMarkResponse }
      * 
      */
-    public GetAllResponse createGetAllResponse() {
-        return new GetAllResponse();
+    public GetAllAutoMarkResponse createGetAllAutoMarkResponse() {
+        return new GetAllAutoMarkResponse();
     }
 
     /**
-     * Create an instance of {@link GetRange }
+     * Create an instance of {@link GetRangeAutoMark }
      * 
      */
-    public GetRange createGetRange() {
-        return new GetRange();
+    public GetRangeAutoMark createGetRangeAutoMark() {
+        return new GetRangeAutoMark();
     }
 
     /**
-     * Create an instance of {@link GetRangeResponse }
+     * Create an instance of {@link GetRangeAutoMarkResponse }
      * 
      */
-    public GetRangeResponse createGetRangeResponse() {
-        return new GetRangeResponse();
+    public GetRangeAutoMarkResponse createGetRangeAutoMarkResponse() {
+        return new GetRangeAutoMarkResponse();
     }
 
     /**
-     * Create an instance of {@link Read }
+     * Create an instance of {@link ReadAutoMark }
      * 
      */
-    public Read createRead() {
-        return new Read();
+    public ReadAutoMark createReadAutoMark() {
+        return new ReadAutoMark();
     }
 
     /**
-     * Create an instance of {@link ReadResponse }
+     * Create an instance of {@link ReadAutoMarkResponse }
      * 
      */
-    public ReadResponse createReadResponse() {
-        return new ReadResponse();
+    public ReadAutoMarkResponse createReadAutoMarkResponse() {
+        return new ReadAutoMarkResponse();
     }
 
     /**
-     * Create an instance of {@link Update }
+     * Create an instance of {@link UpdateAutoMark }
      * 
      */
-    public Update createUpdate() {
-        return new Update();
+    public UpdateAutoMark createUpdateAutoMark() {
+        return new UpdateAutoMark();
     }
 
     /**
-     * Create an instance of {@link UpdateResponse }
+     * Create an instance of {@link UpdateAutoMarkResponse }
      * 
      */
-    public UpdateResponse createUpdateResponse() {
-        return new UpdateResponse();
+    public UpdateAutoMarkResponse createUpdateAutoMarkResponse() {
+        return new UpdateAutoMarkResponse();
     }
 
     /**
@@ -158,159 +158,159 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Create }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateAutoMark }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Create }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link CreateAutoMark }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "create")
-    public JAXBElement<Create> createCreate(Create value) {
-        return new JAXBElement<Create>(_Create_QNAME, Create.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "createAutoMark")
+    public JAXBElement<CreateAutoMark> createCreateAutoMark(CreateAutoMark value) {
+        return new JAXBElement<CreateAutoMark>(_CreateAutoMark_QNAME, CreateAutoMark.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateAutoMarkResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link CreateResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link CreateAutoMarkResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "createResponse")
-    public JAXBElement<CreateResponse> createCreateResponse(CreateResponse value) {
-        return new JAXBElement<CreateResponse>(_CreateResponse_QNAME, CreateResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "createAutoMarkResponse")
+    public JAXBElement<CreateAutoMarkResponse> createCreateAutoMarkResponse(CreateAutoMarkResponse value) {
+        return new JAXBElement<CreateAutoMarkResponse>(_CreateAutoMarkResponse_QNAME, CreateAutoMarkResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Delete }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteAutoMark }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Delete }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link DeleteAutoMark }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "delete")
-    public JAXBElement<Delete> createDelete(Delete value) {
-        return new JAXBElement<Delete>(_Delete_QNAME, Delete.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "deleteAutoMark")
+    public JAXBElement<DeleteAutoMark> createDeleteAutoMark(DeleteAutoMark value) {
+        return new JAXBElement<DeleteAutoMark>(_DeleteAutoMark_QNAME, DeleteAutoMark.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteAutoMarkResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link DeleteResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link DeleteAutoMarkResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "deleteResponse")
-    public JAXBElement<DeleteResponse> createDeleteResponse(DeleteResponse value) {
-        return new JAXBElement<DeleteResponse>(_DeleteResponse_QNAME, DeleteResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "deleteAutoMarkResponse")
+    public JAXBElement<DeleteAutoMarkResponse> createDeleteAutoMarkResponse(DeleteAutoMarkResponse value) {
+        return new JAXBElement<DeleteAutoMarkResponse>(_DeleteAutoMarkResponse_QNAME, DeleteAutoMarkResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAll }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllAutoMark }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetAll }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetAllAutoMark }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "getAll")
-    public JAXBElement<GetAll> createGetAll(GetAll value) {
-        return new JAXBElement<GetAll>(_GetAll_QNAME, GetAll.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "getAllAutoMark")
+    public JAXBElement<GetAllAutoMark> createGetAllAutoMark(GetAllAutoMark value) {
+        return new JAXBElement<GetAllAutoMark>(_GetAllAutoMark_QNAME, GetAllAutoMark.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllAutoMarkResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetAllResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetAllAutoMarkResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "getAllResponse")
-    public JAXBElement<GetAllResponse> createGetAllResponse(GetAllResponse value) {
-        return new JAXBElement<GetAllResponse>(_GetAllResponse_QNAME, GetAllResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "getAllAutoMarkResponse")
+    public JAXBElement<GetAllAutoMarkResponse> createGetAllAutoMarkResponse(GetAllAutoMarkResponse value) {
+        return new JAXBElement<GetAllAutoMarkResponse>(_GetAllAutoMarkResponse_QNAME, GetAllAutoMarkResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetRange }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetRangeAutoMark }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetRange }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetRangeAutoMark }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "getRange")
-    public JAXBElement<GetRange> createGetRange(GetRange value) {
-        return new JAXBElement<GetRange>(_GetRange_QNAME, GetRange.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "getRangeAutoMark")
+    public JAXBElement<GetRangeAutoMark> createGetRangeAutoMark(GetRangeAutoMark value) {
+        return new JAXBElement<GetRangeAutoMark>(_GetRangeAutoMark_QNAME, GetRangeAutoMark.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetRangeResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetRangeAutoMarkResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetRangeResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link GetRangeAutoMarkResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "getRangeResponse")
-    public JAXBElement<GetRangeResponse> createGetRangeResponse(GetRangeResponse value) {
-        return new JAXBElement<GetRangeResponse>(_GetRangeResponse_QNAME, GetRangeResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "getRangeAutoMarkResponse")
+    public JAXBElement<GetRangeAutoMarkResponse> createGetRangeAutoMarkResponse(GetRangeAutoMarkResponse value) {
+        return new JAXBElement<GetRangeAutoMarkResponse>(_GetRangeAutoMarkResponse_QNAME, GetRangeAutoMarkResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Read }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadAutoMark }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Read }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link ReadAutoMark }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "read")
-    public JAXBElement<Read> createRead(Read value) {
-        return new JAXBElement<Read>(_Read_QNAME, Read.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "readAutoMark")
+    public JAXBElement<ReadAutoMark> createReadAutoMark(ReadAutoMark value) {
+        return new JAXBElement<ReadAutoMark>(_ReadAutoMark_QNAME, ReadAutoMark.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReadResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReadAutoMarkResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link ReadResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link ReadAutoMarkResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "readResponse")
-    public JAXBElement<ReadResponse> createReadResponse(ReadResponse value) {
-        return new JAXBElement<ReadResponse>(_ReadResponse_QNAME, ReadResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "readAutoMarkResponse")
+    public JAXBElement<ReadAutoMarkResponse> createReadAutoMarkResponse(ReadAutoMarkResponse value) {
+        return new JAXBElement<ReadAutoMarkResponse>(_ReadAutoMarkResponse_QNAME, ReadAutoMarkResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Update }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateAutoMark }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Update }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link UpdateAutoMark }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "update")
-    public JAXBElement<Update> createUpdate(Update value) {
-        return new JAXBElement<Update>(_Update_QNAME, Update.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "updateAutoMark")
+    public JAXBElement<UpdateAutoMark> createUpdateAutoMark(UpdateAutoMark value) {
+        return new JAXBElement<UpdateAutoMark>(_UpdateAutoMark_QNAME, UpdateAutoMark.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateAutoMarkResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link UpdateResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link UpdateAutoMarkResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "updateResponse")
-    public JAXBElement<UpdateResponse> createUpdateResponse(UpdateResponse value) {
-        return new JAXBElement<UpdateResponse>(_UpdateResponse_QNAME, UpdateResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.server.autoshowroom.borisgk98.mera.com/", name = "updateAutoMarkResponse")
+    public JAXBElement<UpdateAutoMarkResponse> createUpdateAutoMarkResponse(UpdateAutoMarkResponse value) {
+        return new JAXBElement<UpdateAutoMarkResponse>(_UpdateAutoMarkResponse_QNAME, UpdateAutoMarkResponse.class, null, value);
     }
 
     /**

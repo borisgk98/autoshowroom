@@ -19,32 +19,32 @@ public class AutoWebServiceImpl implements AutoWebService {
     protected AutoService service;
 
     @Override
-    public Auto create(Auto m) {
+    public Auto createAuto(Auto m) {
         return service.create(m);
     }
 
     @Override
-    public Auto read(Integer id) throws ModelNotFound {
+    public Auto readAuto(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    public Auto update(Auto m) throws ModelNotFound {
+    public Auto updateAuto(Auto m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void deleteAuto(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    public List<Auto> getAll() {
+    public List<Auto> getAllAuto() {
         return service.getAll();
     }
 
     @Override
-    public List<Auto> getRange(Integer offset, Integer limit) {
+    public List<Auto> getRangeAuto(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }
 }

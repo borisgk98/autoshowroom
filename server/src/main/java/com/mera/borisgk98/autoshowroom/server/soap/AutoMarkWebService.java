@@ -8,10 +8,10 @@ import java.util.List;
 
 @WebService
 public interface AutoMarkWebService {
-    AutoMark create(AutoMark m);
-    AutoMark read(Integer id) throws ModelNotFound;
-    AutoMark update(AutoMark m) throws ModelNotFound;
-    void delete(Integer id) throws ModelNotFound;
-    List<AutoMark> getAll();
-    List<AutoMark> getRange(Integer offset, Integer limit);
+    AutoMark createAutoMark(AutoMark m);
+    AutoMark readAutoMark(Integer id) throws ModelNotFound;
+    AutoMark updateAutoMark(AutoMark m) throws ModelNotFound;
+    void deleteAutoMark(Integer id) throws ModelNotFound;
+    List<AutoMark> getAllAutoMark();
+    List<AutoMark> getRangeAutoMark(Integer offset, Integer limit);
 }

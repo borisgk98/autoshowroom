@@ -19,32 +19,32 @@ public class AutoMarkWebServiceImpl implements AutoMarkWebService {
     protected AutoMarkService service;
 
     @Override
-    public AutoMark create(AutoMark m) {
+    public AutoMark createAutoMark(AutoMark m) {
         return service.create(m);
     }
 
     @Override
-    public AutoMark read(Integer id) throws ModelNotFound {
+    public AutoMark readAutoMark(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    public AutoMark update(AutoMark m) throws ModelNotFound {
+    public AutoMark updateAutoMark(AutoMark m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void deleteAutoMark(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    public List<AutoMark> getAll() {
+    public List<AutoMark> getAllAutoMark() {
         return service.getAll();
     }
 
     @Override
-    public List<AutoMark> getRange(Integer offset, Integer limit) {
+    public List<AutoMark> getRangeAutoMark(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }
 }

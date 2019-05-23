@@ -19,32 +19,32 @@ public class OrderWebServiceImpl implements OrderWebService {
     protected OrderService service;
 
     @Override
-    public Order create(Order m) {
+    public Order createOrder(Order m) {
         return service.create(m);
     }
 
     @Override
-    public Order read(Integer id) throws ModelNotFound {
+    public Order readOrder(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    public Order update(Order m) throws ModelNotFound {
+    public Order updateOrder(Order m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void deleteOrder(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    public List<Order> getAll() {
+    public List<Order> getAllOrder() {
         return service.getAll();
     }
 
     @Override
-    public List<Order> getRange(Integer offset, Integer limit) {
+    public List<Order> getRangeOrder(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }
 }

@@ -19,32 +19,32 @@ public class AutoModelWebServiceImpl implements AutoModelWebService {
     protected AutoModelService service;
 
     @Override
-    public AutoModel create(AutoModel m) {
+    public AutoModel createAutoModel(AutoModel m) {
         return service.create(m);
     }
 
     @Override
-    public AutoModel read(Integer id) throws ModelNotFound {
+    public AutoModel readAutoModel(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    public AutoModel update(AutoModel m) throws ModelNotFound {
+    public AutoModel updateAutoModel(AutoModel m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void deleteAutoModel(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    public List<AutoModel> getAll() {
+    public List<AutoModel> getAllAutoModel() {
         return service.getAll();
     }
 
     @Override
-    public List<AutoModel> getRange(Integer offset, Integer limit) {
+    public List<AutoModel> getRangeAutoModel(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }
 }

@@ -8,10 +8,10 @@ import java.util.List;
 
 @WebService
 public interface $Model$WebService {
-    $Model$ create($Model$ m);
-    $Model$ read(Integer id) throws ModelNotFound;
-    $Model$ update($Model$ m) throws ModelNotFound;
-    void delete(Integer id) throws ModelNotFound;
-    List<$Model$> getAll();
-    List<$Model$> getRange(Integer offset, Integer limit);
+    $Model$ create$Model$($Model$ m);
+    $Model$ read$Model$(Integer id) throws ModelNotFound;
+    $Model$ update$Model$($Model$ m) throws ModelNotFound;
+    void delete$Model$(Integer id) throws ModelNotFound;
+    List<$Model$> getAll$Model$();
+    List<$Model$> getRange$Model$(Integer offset, Integer limit);
 }

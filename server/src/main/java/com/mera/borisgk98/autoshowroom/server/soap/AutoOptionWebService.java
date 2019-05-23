@@ -8,10 +8,10 @@ import java.util.List;
 
 @WebService
 public interface AutoOptionWebService {
-    AutoOption create(AutoOption m);
-    AutoOption read(Integer id) throws ModelNotFound;
-    AutoOption update(AutoOption m) throws ModelNotFound;
-    void delete(Integer id) throws ModelNotFound;
-    List<AutoOption> getAll();
-    List<AutoOption> getRange(Integer offset, Integer limit);
+    AutoOption createAutoOption(AutoOption m);
+    AutoOption readAutoOption(Integer id) throws ModelNotFound;
+    AutoOption updateAutoOption(AutoOption m) throws ModelNotFound;
+    void deleteAutoOption(Integer id) throws ModelNotFound;
+    List<AutoOption> getAllAutoOption();
+    List<AutoOption> getRangeAutoOption(Integer offset, Integer limit);
 }

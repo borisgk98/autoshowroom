@@ -19,32 +19,32 @@ public class $Model$WebServiceImpl implements $Model$WebService {
     protected $Model$Service service;
 
     @Override
-    public $Model$ create($Model$ m) {
+    public $Model$ create$Model$($Model$ m) {
         return service.create(m);
     }
 
     @Override
-    public $Model$ read(Integer id) throws ModelNotFound {
+    public $Model$ read$Model$(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    public $Model$ update($Model$ m) throws ModelNotFound {
+    public $Model$ update$Model$($Model$ m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void delete$Model$(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    public List<$Model$> getAll() {
+    public List<$Model$> getAll$Model$() {
         return service.getAll();
     }
 
     @Override
-    public List<$Model$> getRange(Integer offset, Integer limit) {
+    public List<$Model$> getRange$Model$(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }
 }

@@ -21,15 +21,6 @@ public class Config {
         return new SpringBus();
     }
 
-    @Bean
-    public Endpoint autoModelEndpoint(
-            @Autowired SpringBus springBus,
-            @Autowired AutoModelWebService service
-    ) {
-        EndpointImpl endpoint = new EndpointImpl(springBus, service);
-        endpoint.publish("/autoModel");
-        return endpoint;
-    }
 
     @Bean
     public Endpoint autoEndpoint(

@@ -8,10 +8,10 @@ import java.util.List;
 
 @WebService
 public interface AutoModelWebService {
-    AutoModel create(AutoModel m);
-    AutoModel read(Integer id) throws ModelNotFound;
-    AutoModel update(AutoModel m) throws ModelNotFound;
-    void delete(Integer id) throws ModelNotFound;
-    List<AutoModel> getAll();
-    List<AutoModel> getRange(Integer offset, Integer limit);
+    AutoModel createAutoModel(AutoModel m);
+    AutoModel readAutoModel(Integer id) throws ModelNotFound;
+    AutoModel updateAutoModel(AutoModel m) throws ModelNotFound;
+    void deleteAutoModel(Integer id) throws ModelNotFound;
+    List<AutoModel> getAllAutoModel();
+    List<AutoModel> getRangeAutoModel(Integer offset, Integer limit);
 }

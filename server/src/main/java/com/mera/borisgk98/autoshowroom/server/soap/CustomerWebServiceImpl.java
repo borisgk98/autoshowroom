@@ -19,32 +19,32 @@ public class CustomerWebServiceImpl implements CustomerWebService {
     protected CustomerService service;
 
     @Override
-    public Customer create(Customer m) {
+    public Customer createCustomer(Customer m) {
         return service.create(m);
     }
 
     @Override
-    public Customer read(Integer id) throws ModelNotFound {
+    public Customer readCustomer(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    public Customer update(Customer m) throws ModelNotFound {
+    public Customer updateCustomer(Customer m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void deleteCustomer(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    public List<Customer> getAll() {
+    public List<Customer> getAllCustomer() {
         return service.getAll();
     }
 
     @Override
-    public List<Customer> getRange(Integer offset, Integer limit) {
+    public List<Customer> getRangeCustomer(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }
 }

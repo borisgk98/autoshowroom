@@ -19,32 +19,32 @@ public class SellerWebServiceImpl implements SellerWebService {
     protected SellerService service;
 
     @Override
-    public Seller create(Seller m) {
+    public Seller createSeller(Seller m) {
         return service.create(m);
     }
 
     @Override
-    public Seller read(Integer id) throws ModelNotFound {
+    public Seller readSeller(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    public Seller update(Seller m) throws ModelNotFound {
+    public Seller updateSeller(Seller m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void deleteSeller(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    public List<Seller> getAll() {
+    public List<Seller> getAllSeller() {
         return service.getAll();
     }
 
     @Override
-    public List<Seller> getRange(Integer offset, Integer limit) {
+    public List<Seller> getRangeSeller(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }
 }

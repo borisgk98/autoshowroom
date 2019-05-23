@@ -8,10 +8,10 @@ import java.util.List;
 
 @WebService
 public interface OrderWebService {
-    Order create(Order m);
-    Order read(Integer id) throws ModelNotFound;
-    Order update(Order m) throws ModelNotFound;
-    void delete(Integer id) throws ModelNotFound;
-    List<Order> getAll();
-    List<Order> getRange(Integer offset, Integer limit);
+    Order createOrder(Order m);
+    Order readOrder(Integer id) throws ModelNotFound;
+    Order updateOrder(Order m) throws ModelNotFound;
+    void deleteOrder(Integer id) throws ModelNotFound;
+    List<Order> getAllOrder();
+    List<Order> getRangeOrder(Integer offset, Integer limit);
 }

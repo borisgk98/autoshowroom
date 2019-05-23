@@ -19,32 +19,32 @@ public class AutoOptionWebServiceImpl implements AutoOptionWebService {
     protected AutoOptionService service;
 
     @Override
-    public AutoOption create(AutoOption m) {
+    public AutoOption createAutoOption(AutoOption m) {
         return service.create(m);
     }
 
     @Override
-    public AutoOption read(Integer id) throws ModelNotFound {
+    public AutoOption readAutoOption(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    public AutoOption update(AutoOption m) throws ModelNotFound {
+    public AutoOption updateAutoOption(AutoOption m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void deleteAutoOption(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    public List<AutoOption> getAll() {
+    public List<AutoOption> getAllAutoOption() {
         return service.getAll();
     }
 
     @Override
-    public List<AutoOption> getRange(Integer offset, Integer limit) {
+    public List<AutoOption> getRangeAutoOption(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }
 }

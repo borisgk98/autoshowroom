@@ -1,0 +1,161 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet author="boris (generated)" id="1558614754091-1">
+        <createTable tableName="seller_orders">
+            <column name="seller_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="orders_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-2">
+        <createTable tableName="auto_model">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" primaryKeyName="PK__auto_mod__3213E83FB52131A9"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-3">
+        <createTable tableName="customer">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" primaryKeyName="PK__customer__3213E83F61121226"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+            <column name="surname" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-4">
+        <createTable tableName="auto_model_autos">
+            <column name="auto_model_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autos_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-5">
+        <createTable tableName="auto_option_autos">
+            <column name="auto_option_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autos_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-6">
+        <createTable tableName="auto_mark_autos">
+            <column name="auto_mark_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="autos_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-7">
+        <createTable tableName="auto_options">
+            <column name="auto_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="options_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-8">
+        <createTable tableName="auto_option">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" primaryKeyName="PK__auto_opt__3213E83F769EAEC8"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-9">
+        <createTable tableName="auto_mark">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" primaryKeyName="PK__auto_mar__3213E83F35D1DDDF"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-10">
+        <createTable tableName="customer_orders">
+            <column name="customer_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="orders_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-11">
+        <createTable tableName="auto">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" primaryKeyName="PK__auto__3213E83F7F209DF4"/>
+            </column>
+            <column name="mark_id" type="int"/>
+            <column name="model_id" type="int"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-12">
+        <createTable tableName="seller">
+            <column autoIncrement="true" name="id" type="int">
+                <constraints primaryKey="true" primaryKeyName="PK__seller__3213E83F4DCC2E00"/>
+            </column>
+            <column name="name" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-13">
+        <addUniqueConstraint columnNames="orders_id" constraintName="UK_kobah8cq244njb13ny1op6g7b" tableName="seller_orders"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-14">
+        <addForeignKeyConstraint baseColumnNames="auto_model_id" baseTableName="auto_model_autos" constraintName="FKr8g2wvxxyaqh5tmr2kotq29xp" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto_model" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-15">
+        <addUniqueConstraint columnNames="autos_id" constraintName="UK_9xe9tmj772jnb1s5x6e43uqi3" tableName="auto_model_autos"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-16">
+        <addUniqueConstraint columnNames="autos_id" constraintName="UK_i9ruax0wopdxxk8f94bxq9rcw" tableName="auto_mark_autos"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-17">
+        <addForeignKeyConstraint baseColumnNames="customer_id" baseTableName="customer_orders" constraintName="FK7ntkighomv9fa5287rev8a3wy" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="customer" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-18">
+        <addUniqueConstraint columnNames="orders_id" constraintName="UK_4m0sjmnfkb97mpn89e5xnw3v3" tableName="customer_orders"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-19">
+        <addForeignKeyConstraint baseColumnNames="model_id" baseTableName="auto" constraintName="FKg643w6x3fclfmrk8ccteqc4a4" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto_model" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-20">
+        <addForeignKeyConstraint baseColumnNames="mark_id" baseTableName="auto" constraintName="FKkxs5ujtn697j5xofcbu4ll8b8" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto_mark" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-21">
+        <addForeignKeyConstraint baseColumnNames="seller_id" baseTableName="seller_orders" constraintName="FKn25vva0ihuerakv28i33w8t17" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="seller" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-22">
+        <addForeignKeyConstraint baseColumnNames="autos_id" baseTableName="auto_model_autos" constraintName="FK6jxbchmrycgfgt2ajqswbyc9g" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-23">
+        <addForeignKeyConstraint baseColumnNames="auto_option_id" baseTableName="auto_option_autos" constraintName="FKcd14fovwut32v3mdsiab0eq8e" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto_option" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-24">
+        <addForeignKeyConstraint baseColumnNames="autos_id" baseTableName="auto_option_autos" constraintName="FKmai13182u7phajiqhlc5jd4qo" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-25">
+        <addForeignKeyConstraint baseColumnNames="autos_id" baseTableName="auto_mark_autos" constraintName="FK2rxgjbthvx1rkqfe1a5jewrr9" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-26">
+        <addForeignKeyConstraint baseColumnNames="auto_mark_id" baseTableName="auto_mark_autos" constraintName="FKn7bn7no317w1pc5p1uf4f8faw" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto_mark" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-27">
+        <addForeignKeyConstraint baseColumnNames="options_id" baseTableName="auto_options" constraintName="FK9gh15ve8hk01nvpr4p2wb8uxq" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto_option" validate="true"/>
+    </changeSet>
+    <changeSet author="boris (generated)" id="1558614754091-28">
+        <addForeignKeyConstraint baseColumnNames="auto_id" baseTableName="auto_options" constraintName="FKsv0o7mwul66uv4j6xc99t9kce" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="auto" validate="true"/>
+    </changeSet>
+</databaseChangeLog>

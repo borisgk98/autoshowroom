@@ -12,7 +12,7 @@ import javax.jws.WebService;
 import java.util.List;
 
 @Component
-@WebService(serviceName = "autoModelService", portName = "autoModelServicePort")
+@WebService(serviceName = "automodelService", portName = "automodelServicePort")
 public class AutoModelWebServiceImpl implements AutoModelWebService {
 
     @Autowired

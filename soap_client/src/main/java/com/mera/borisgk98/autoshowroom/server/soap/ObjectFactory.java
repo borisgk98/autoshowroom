@@ -150,11 +150,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AutoModel }
+     * Create an instance of {@link AutoMark }
      * 
      */
-    public AutoModel createAutoModel() {
-        return new AutoModel();
+    public AutoMark createAutoMark() {
+        return new AutoMark();
     }
 
     /**

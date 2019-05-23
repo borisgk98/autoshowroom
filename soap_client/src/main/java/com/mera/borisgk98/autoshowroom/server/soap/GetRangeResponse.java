@@ -31,7 +31,7 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="return" type="{http://soap.server.autoshowroom.borisgk98.mera.com/}autoModel" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="return" type="{http://soap.server.autoshowroom.borisgk98.mera.com/}autoMark" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -44,13 +44,13 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "getRangeResponse", propOrder = {
     "_return"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
 public class GetRangeResponse implements Equals2, HashCode2
 {
 
     @XmlElement(name = "return")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    protected List<AutoModel> _return;
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
+    protected List<AutoMark> _return;
 
     /**
      * Gets the value of the return property.
@@ -70,30 +70,30 @@ public class GetRangeResponse implements Equals2, HashCode2
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link AutoModel }
+     * {@link AutoMark }
      * 
      * 
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public List<AutoModel> getReturn() {
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
+    public List<AutoMark> getReturn() {
         if (_return == null) {
-            _return = new ArrayList<AutoModel>();
+            _return = new ArrayList<AutoMark>();
         }
         return this._return;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public GetRangeResponse withReturn(AutoModel... values) {
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
+    public GetRangeResponse withReturn(AutoMark... values) {
         if (values!= null) {
-            for (AutoModel value: values) {
+            for (AutoMark value: values) {
                 getReturn().add(value);
             }
         }
         return this;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public GetRangeResponse withReturn(Collection<AutoModel> values) {
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
+    public GetRangeResponse withReturn(Collection<AutoMark> values) {
         if (values!= null) {
             getReturn().addAll(values);
         }
@@ -106,29 +106,29 @@ public class GetRangeResponse implements Equals2, HashCode2
      * 
      */
     @Override
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public String toString() {
         return ToStringBuilder.reflectionToString(this, JAXBToStringStyle.DEFAULT_STYLE);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
-            List<AutoModel> theReturn;
+            List<AutoMark> theReturn;
             theReturn = (((this._return!= null)&&(!this._return.isEmpty()))?this.getReturn():null);
             currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_return", theReturn), currentHashCode, theReturn, ((this._return!= null)&&(!this._return.isEmpty())));
         }
         return currentHashCode;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode() {
         final HashCodeStrategy2 strategy = JAXBHashCodeStrategy.INSTANCE;
         return this.hashCode(null, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
@@ -138,9 +138,9 @@ public class GetRangeResponse implements Equals2, HashCode2
         }
         final GetRangeResponse that = ((GetRangeResponse) object);
         {
-            List<AutoModel> lhsReturn;
+            List<AutoMark> lhsReturn;
             lhsReturn = (((this._return!= null)&&(!this._return.isEmpty()))?this.getReturn():null);
-            List<AutoModel> rhsReturn;
+            List<AutoMark> rhsReturn;
             rhsReturn = (((that._return!= null)&&(!that._return.isEmpty()))?that.getReturn():null);
             if (!strategy.equals(LocatorUtils.property(thisLocator, "_return", lhsReturn), LocatorUtils.property(thatLocator, "_return", rhsReturn), lhsReturn, rhsReturn, ((this._return!= null)&&(!this._return.isEmpty())), ((that._return!= null)&&(!that._return.isEmpty())))) {
                 return false;
@@ -149,7 +149,7 @@ public class GetRangeResponse implements Equals2, HashCode2
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(Object object) {
         final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE;
         return equals(null, null, object, strategy);

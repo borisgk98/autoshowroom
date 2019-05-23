@@ -36,7 +36,7 @@ import org.jvnet.jaxb2_commons.locator.ObjectLocator;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "getAll")
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
 public class GetAll implements Equals2, HashCode2
 {
 
@@ -47,24 +47,24 @@ public class GetAll implements Equals2, HashCode2
      * 
      */
     @Override
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public String toString() {
         return ToStringBuilder.reflectionToString(this, JAXBToStringStyle.DEFAULT_STYLE);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         return currentHashCode;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode() {
         final HashCodeStrategy2 strategy = JAXBHashCodeStrategy.INSTANCE;
         return this.hashCode(null, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
@@ -75,7 +75,7 @@ public class GetAll implements Equals2, HashCode2
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(Object object) {
         final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE;
         return equals(null, null, object, strategy);

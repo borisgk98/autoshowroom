@@ -1,0 +1,11 @@
+    @Bean
+    public Endpoint $model$Endpoint(
+            @Autowired SpringBus springBus,
+            @Autowired $Model$WebService service
+    ) {
+        EndpointImpl endpoint = new EndpointImpl(springBus, service);
+        endpoint.publish("/$model$");
+        return endpoint;
+    }
+
+    

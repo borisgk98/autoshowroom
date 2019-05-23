@@ -1,7 +1,6 @@
 package com.mera.borisgk98.autoshowroom.server.config;
 
-import com.mera.borisgk98.autoshowroom.server.soap.AutoModelWebService;
-import com.mera.borisgk98.autoshowroom.server.soap.AutoModelWebServiceImpl;
+import com.mera.borisgk98.autoshowroom.server.soap.*;
 import org.apache.cxf.bus.spring.SpringBus;
 import org.apache.cxf.jaxws.EndpointImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,11 +31,75 @@ public class Config {
         return endpoint;
     }
 
-//    @Bean
-//    public Jaxb2Marshaller marshaller() {
-//        Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-//        String[] packagesToScan= {"com.mera.borisgk98.autoshowroom.server.models"};
-//        marshaller.setPackagesToScan(packagesToScan);
-//        return marshaller;
-//    }
+    @Bean
+    public Endpoint autoEndpoint(
+            @Autowired SpringBus springBus,
+            @Autowired AutoWebService service
+    ) {
+        EndpointImpl endpoint = new EndpointImpl(springBus, service);
+        endpoint.publish("/auto");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint autooptionEndpoint(
+            @Autowired SpringBus springBus,
+            @Autowired AutoOptionWebService service
+    ) {
+        EndpointImpl endpoint = new EndpointImpl(springBus, service);
+        endpoint.publish("/autooption");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint orderEndpoint(
+            @Autowired SpringBus springBus,
+            @Autowired OrderWebService service
+    ) {
+        EndpointImpl endpoint = new EndpointImpl(springBus, service);
+        endpoint.publish("/order");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint customerEndpoint(
+            @Autowired SpringBus springBus,
+            @Autowired CustomerWebService service
+    ) {
+        EndpointImpl endpoint = new EndpointImpl(springBus, service);
+        endpoint.publish("/customer");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint automodelEndpoint(
+            @Autowired SpringBus springBus,
+            @Autowired AutoModelWebService service
+    ) {
+        EndpointImpl endpoint = new EndpointImpl(springBus, service);
+        endpoint.publish("/automodel");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint sellerEndpoint(
+            @Autowired SpringBus springBus,
+            @Autowired SellerWebService service
+    ) {
+        EndpointImpl endpoint = new EndpointImpl(springBus, service);
+        endpoint.publish("/seller");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint automarkEndpoint(
+            @Autowired SpringBus springBus,
+            @Autowired AutoMarkWebService service
+    ) {
+        EndpointImpl endpoint = new EndpointImpl(springBus, service);
+        endpoint.publish("/automark");
+        return endpoint;
+    }
+
+
 }

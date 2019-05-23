@@ -28,7 +28,7 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="return" type="{http://soap.server.autoshowroom.borisgk98.mera.com/}autoModel" minOccurs="0"/&gt;
+ *         &lt;element name="return" type="{http://soap.server.autoshowroom.borisgk98.mera.com/}autoMark" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -41,24 +41,24 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "updateResponse", propOrder = {
     "_return"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
 public class UpdateResponse implements Equals2, HashCode2
 {
 
     @XmlElement(name = "return")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    protected AutoModel _return;
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
+    protected AutoMark _return;
 
     /**
      * Gets the value of the return property.
      * 
      * @return
      *     possible object is
-     *     {@link AutoModel }
+     *     {@link AutoMark }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public AutoModel getReturn() {
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
+    public AutoMark getReturn() {
         return _return;
     }
 
@@ -67,16 +67,16 @@ public class UpdateResponse implements Equals2, HashCode2
      * 
      * @param value
      *     allowed object is
-     *     {@link AutoModel }
+     *     {@link AutoMark }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public void setReturn(AutoModel value) {
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
+    public void setReturn(AutoMark value) {
         this._return = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public UpdateResponse withReturn(AutoModel value) {
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
+    public UpdateResponse withReturn(AutoMark value) {
         setReturn(value);
         return this;
     }
@@ -87,29 +87,29 @@ public class UpdateResponse implements Equals2, HashCode2
      * 
      */
     @Override
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public String toString() {
         return ToStringBuilder.reflectionToString(this, JAXBToStringStyle.DEFAULT_STYLE);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
-            AutoModel theReturn;
+            AutoMark theReturn;
             theReturn = this.getReturn();
             currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_return", theReturn), currentHashCode, theReturn, (this._return!= null));
         }
         return currentHashCode;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode() {
         final HashCodeStrategy2 strategy = JAXBHashCodeStrategy.INSTANCE;
         return this.hashCode(null, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
@@ -119,9 +119,9 @@ public class UpdateResponse implements Equals2, HashCode2
         }
         final UpdateResponse that = ((UpdateResponse) object);
         {
-            AutoModel lhsReturn;
+            AutoMark lhsReturn;
             lhsReturn = this.getReturn();
-            AutoModel rhsReturn;
+            AutoMark rhsReturn;
             rhsReturn = that.getReturn();
             if (!strategy.equals(LocatorUtils.property(thisLocator, "_return", lhsReturn), LocatorUtils.property(thatLocator, "_return", rhsReturn), lhsReturn, rhsReturn, (this._return!= null), (that._return!= null))) {
                 return false;
@@ -130,7 +130,7 @@ public class UpdateResponse implements Equals2, HashCode2
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-24T12:38:52+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(Object object) {
         final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE;
         return equals(null, null, object, strategy);

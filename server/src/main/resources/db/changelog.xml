@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
 
-    <include file="changelog/1558631598135.xml" relativeToChangelogFile="true"></include>
-    <include file="data/1558631598135/load.xml" relativeToChangelogFile="true"></include>
+    <include file="changelog/changelog.xml" relativeToChangelogFile="true"></include>
+    <include file="data/load.xml" relativeToChangelogFile="true"></include>
 </databaseChangeLog>

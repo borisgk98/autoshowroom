@@ -633,10 +633,6 @@ components:
           type: string
           example:
             audi
-        autos:
-          type: array
-          items:
-            $ref: '#/components/schemas/Auto'
 
     AutoModel:
       description: Contains information about automobiles' models1
@@ -647,10 +643,6 @@ components:
           type: string
           example:
             q5
-        autos:
-          type: array
-          items:
-            $ref: '#/components/schemas/Auto'
 
     AutoOption:
       description: Contains information about automobiles' options
@@ -661,10 +653,6 @@ components:
           type: string
           example:
             4x4
-        autos:
-          type: array
-          items:
-            $ref: '#/components/schemas/Auto'
 
     Customer:
       description: Contains information about
@@ -679,10 +667,6 @@ components:
           type: string
           example:
             Kozhuhovskij
-        orders:
-          type: array
-          items:
-            $ref: '#/components/schemas/Order'
 
     Order:
       description: Contains information about
@@ -720,7 +704,3 @@ components:
           type: string
           example:
             SallerName
-        orders:
-          type: array
-          items:
-            $ref: '#/components/schemas/Order'

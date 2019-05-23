@@ -3,12 +3,13 @@ package com.mera.borisgk98.autoshowroom.server.models;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.mera.borisgk98.autoshowroom.server.models.Order;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,7 +17,7 @@ import javax.validation.constraints.*;
  * Contains information about
  */
 @ApiModel(description = "Contains information about")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T17:07:29.290+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-23T20:03:23.425+03:00[Europe/Moscow]")
 @Entity
 public class Seller   {
   @JsonProperty("id")
@@ -26,11 +27,6 @@ public class Seller   {
 
   @JsonProperty("name")
   private String name;
-
-  @JsonProperty("orders")
-  @Valid
-  @OneToMany(fetch = FetchType.LAZY)
-  private List<Order> orders = null;
 
   public Seller id(Integer id) {
     this.id = id;
@@ -61,7 +57,7 @@ public class Seller   {
    * Get name
    * @return name
   */
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "SallerName", value = "")
 
 
   public String getName() {
@@ -70,35 +66,6 @@ public class Seller   {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public Seller orders(List<Order> orders) {
-    this.orders = orders;
-    return this;
-  }
-
-  public Seller addOrdersItem(Order ordersItem) {
-    if (this.orders == null) {
-      this.orders = new ArrayList<>();
-    }
-    this.orders.add(ordersItem);
-    return this;
-  }
-
-  /**
-   * Get orders
-   * @return orders
-  */
-  @ApiModelProperty(value = "")
-
-  @Valid
-
-  public List<Order> getOrders() {
-    return orders;
-  }
-
-  public void setOrders(List<Order> orders) {
-    this.orders = orders;
   }
 
 
@@ -112,13 +79,12 @@ public class Seller   {
     }
     Seller seller = (Seller) o;
     return Objects.equals(this.id, seller.id) &&
-        Objects.equals(this.name, seller.name) &&
-        Objects.equals(this.orders, seller.orders);
+        Objects.equals(this.name, seller.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, orders);
+    return Objects.hash(id, name);
   }
 
   @Override
@@ -128,7 +94,6 @@ public class Seller   {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    orders: ").append(toIndentedString(orders)).append("\n");
     sb.append("}");
     return sb.toString();
   }

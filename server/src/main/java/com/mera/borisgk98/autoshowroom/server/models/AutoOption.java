@@ -1,16 +1,15 @@
 package com.mera.borisgk98.autoshowroom.server.models;
 
 import java.util.Objects;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.mera.borisgk98.autoshowroom.server.models.Auto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,7 +17,7 @@ import javax.validation.constraints.*;
  * Contains information about automobiles&#39; options
  */
 @ApiModel(description = "Contains information about automobiles' options")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T17:07:29.290+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-23T19:55:48.511+03:00[Europe/Moscow]")
 @Entity
 public class AutoOption   {
   @JsonProperty("id")
@@ -28,12 +27,6 @@ public class AutoOption   {
 
   @JsonProperty("name")
   private String name;
-
-  @JsonProperty("autos")
-  @Valid
-  @ManyToMany
-  @JsonBackReference
-  private List<Auto> autos = null;
 
   public AutoOption id(Integer id) {
     this.id = id;
@@ -64,7 +57,7 @@ public class AutoOption   {
    * Get name
    * @return name
   */
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "4x4", value = "")
 
 
   public String getName() {
@@ -73,35 +66,6 @@ public class AutoOption   {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public AutoOption autos(List<Auto> autos) {
-    this.autos = autos;
-    return this;
-  }
-
-  public AutoOption addAutosItem(Auto autosItem) {
-    if (this.autos == null) {
-      this.autos = new ArrayList<>();
-    }
-    this.autos.add(autosItem);
-    return this;
-  }
-
-  /**
-   * Get autos
-   * @return autos
-  */
-  @ApiModelProperty(value = "")
-
-  @Valid
-
-  public List<Auto> getAutos() {
-    return autos;
-  }
-
-  public void setAutos(List<Auto> autos) {
-    this.autos = autos;
   }
 
 
@@ -115,13 +79,12 @@ public class AutoOption   {
     }
     AutoOption autoOption = (AutoOption) o;
     return Objects.equals(this.id, autoOption.id) &&
-        Objects.equals(this.name, autoOption.name) &&
-        Objects.equals(this.autos, autoOption.autos);
+        Objects.equals(this.name, autoOption.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, autos);
+    return Objects.hash(id, name);
   }
 
   @Override
@@ -131,7 +94,6 @@ public class AutoOption   {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    autos: ").append(toIndentedString(autos)).append("\n");
     sb.append("}");
     return sb.toString();
   }

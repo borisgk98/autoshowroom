@@ -3,19 +3,13 @@ package com.mera.borisgk98.autoshowroom.server.models;
 import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.mera.borisgk98.autoshowroom.server.models.AutoMark;
-import com.mera.borisgk98.autoshowroom.server.models.AutoModel;
-import com.mera.borisgk98.autoshowroom.server.models.AutoOption;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 import javax.validation.Valid;
-import javax.validation.constraints.*;
 
 /**
  * Contains information about automobiles
@@ -31,16 +25,16 @@ public class Auto   {
   private Integer id;
 
   @JsonProperty("mark")
-  @ManyToOne
+  @OneToOne
   private AutoMark mark = null;
 
   @JsonProperty("model")
-  @ManyToOne
+  @OneToOne
   private AutoModel model = null;
 
   @JsonProperty("options")
   @Valid
-  @ManyToMany
+  @OneToMany
   private List<AutoOption> options = null;
 
   public Auto id(Integer id) {

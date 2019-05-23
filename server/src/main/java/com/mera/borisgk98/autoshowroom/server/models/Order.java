@@ -27,15 +27,15 @@ public class Order   {
   private Integer id;
 
   @JsonProperty("seller")
-  @ManyToOne
+  @OneToOne
   private Seller seller = null;
 
   @JsonProperty("customer")
-  @ManyToOne
+  @OneToOne
   private Customer customer = null;
 
   @JsonProperty("auto")
-  @ManyToOne
+  @OneToOne
   private Auto auto = null;
 
   @JsonProperty("status")

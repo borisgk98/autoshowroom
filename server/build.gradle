@@ -39,8 +39,9 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
         classpath "org.openapitools:openapi-generator-gradle-plugin:3.3.4"
-        classpath 'space.borisgk:crudgeneration:0.1'
+        classpath 'space.borisgk:crudgeneration:0.2'
         classpath "org.liquibase:liquibase-gradle-plugin:2.0.1"
+        classpath 'org.antlr:stringtemplate:3.2'
     }
 }
 
@@ -108,36 +109,34 @@ crudGenerationSetting {
     srcRoot = "$projectDir/src/main/java"
     modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/server/models"
     generationRoot = "$projectDir/src/main/java"
-    yamlPathTemplateSrc = "$projectDir/src/main/resources/templates/Path"
-    yamlGenerationOut = "$projectDir/src/main/resources/paths.yaml"
     generationPackages = [
             "com.mera.borisgk98.autoshowroom.server.rest.api",
             "com.mera.borisgk98.autoshowroom.server.repositories",
             "com.mera.borisgk98.autoshowroom.server.services",
-            "com.mera.borisgk98.autoshowroom.server.services"
+            "com.mera.borisgk98.autoshowroom.server.services",
+            "com.mera.borisgk98.autoshowroom.server.soap",
+            "com.mera.borisgk98.autoshowroom.server.soap"
     ]
     generationTemplates = [
-            "$projectDir/src/main/resources/templates/ApiController".toString(),
+            "$projectDir/src/main/resources/templates/rest/ApiController".toString(),
             "$projectDir/src/main/resources/templates/Repository".toString(),
             "$projectDir/src/main/resources/templates/Service".toString(),
-            "$projectDir/src/main/resources/templates/ServiceImpl".toString()
+            "$projectDir/src/main/resources/templates/ServiceImpl".toString(),
+            "$projectDir/src/main/resources/templates/soap/WebService".toString(),
+            "$projectDir/src/main/resources/templates/soap/WebServiceImpl".toString()
+    ]
+    generationConcatOuts = [
+            "$projectDir/src/main/resources/generated/paths.yaml".toString(),
+            "$projectDir/src/main/resources/generated/soapbeans.java".toString()
+    ]
+    generationConcatTemplates = [
+            "$projectDir/src/main/resources/templates/Path".toString(),
+            "$projectDir/src/main/resources/templates/soap/Bean".toString()
     ]
     excludeModels = [
             "OrderStatus"
     ]
 }
-
-//task generateChangelogFromDb(type: JavaExec) {
-//    group = "Liquibase"
-//    classpath configurations.liquibase
-//    main = "liquibase.integration.commandline.Main"
-//    args "--changeLogFile=db.change.log.generated.xml"
-//    args "--username=sa"
-//    args "--password=SA_PASS12"
-//    args "--url=jdbc:sqlserver://localhost"
-//    args "--driver=com.microsoft.sqlserver.jdbc.SQLServerDriver"
-//    args "generatedChangeLog"
-//}
 
 liquibase {
     activities {

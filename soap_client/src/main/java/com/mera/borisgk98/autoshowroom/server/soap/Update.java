@@ -18,16 +18,16 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for read complex type.
+ * <p>Java class for update complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="read"&gt;
+ * &lt;complexType name="update"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+ *         &lt;element name="arg0" type="{http://soap.server.autoshowroom.borisgk98.mera.com/}autoModel" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -37,26 +37,26 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "read", propOrder = {
+@XmlType(name = "update", propOrder = {
     "arg0"
 })
 @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-public class Read implements Equals2, HashCode2
+public class Update implements Equals2, HashCode2
 {
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    protected Integer arg0;
+    protected AutoModel arg0;
 
     /**
      * Gets the value of the arg0 property.
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link AutoModel }
      *     
      */
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public Integer getArg0() {
+    public AutoModel getArg0() {
         return arg0;
     }
 
@@ -65,16 +65,16 @@ public class Read implements Equals2, HashCode2
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link AutoModel }
      *     
      */
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public void setArg0(Integer value) {
+    public void setArg0(AutoModel value) {
         this.arg0 = value;
     }
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public Read withArg0(Integer value) {
+    public Update withArg0(AutoModel value) {
         setArg0(value);
         return this;
     }
@@ -94,7 +94,7 @@ public class Read implements Equals2, HashCode2
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
-            Integer theArg0;
+            AutoModel theArg0;
             theArg0 = this.getArg0();
             currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "arg0", theArg0), currentHashCode, theArg0, (this.arg0 != null));
         }
@@ -115,11 +115,11 @@ public class Read implements Equals2, HashCode2
         if (this == object) {
             return true;
         }
-        final Read that = ((Read) object);
+        final Update that = ((Update) object);
         {
-            Integer lhsArg0;
+            AutoModel lhsArg0;
             lhsArg0 = this.getArg0();
-            Integer rhsArg0;
+            AutoModel rhsArg0;
             rhsArg0 = that.getArg0();
             if (!strategy.equals(LocatorUtils.property(thisLocator, "arg0", lhsArg0), LocatorUtils.property(thatLocator, "arg0", rhsArg0), lhsArg0, rhsArg0, (this.arg0 != null), (that.arg0 != null))) {
                 return false;

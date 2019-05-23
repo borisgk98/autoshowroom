@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CustomerServiceImpl
-        extends AbstractPaginableService<Customer>
+        extends AbstractCrudService<Customer>
         implements CustomerService {
 
     @Autowired

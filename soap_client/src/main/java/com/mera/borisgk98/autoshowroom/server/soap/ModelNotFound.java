@@ -18,16 +18,16 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for read complex type.
+ * <p>Java class for ModelNotFound complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="read"&gt;
+ * &lt;complexType name="ModelNotFound"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -37,45 +37,45 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "read", propOrder = {
-    "arg0"
+@XmlType(name = "ModelNotFound", propOrder = {
+    "message"
 })
 @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-public class Read implements Equals2, HashCode2
+public class ModelNotFound implements Equals2, HashCode2
 {
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    protected Integer arg0;
+    protected String message;
 
     /**
-     * Gets the value of the arg0 property.
+     * Gets the value of the message property.
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link String }
      *     
      */
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public Integer getArg0() {
-        return arg0;
+    public String getMessage() {
+        return message;
     }
 
     /**
-     * Sets the value of the arg0 property.
+     * Sets the value of the message property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link String }
      *     
      */
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public void setArg0(Integer value) {
-        this.arg0 = value;
+    public void setMessage(String value) {
+        this.message = value;
     }
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public Read withArg0(Integer value) {
-        setArg0(value);
+    public ModelNotFound withMessage(String value) {
+        setMessage(value);
         return this;
     }
 
@@ -94,9 +94,9 @@ public class Read implements Equals2, HashCode2
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
-            Integer theArg0;
-            theArg0 = this.getArg0();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "arg0", theArg0), currentHashCode, theArg0, (this.arg0 != null));
+            String theMessage;
+            theMessage = this.getMessage();
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "message", theMessage), currentHashCode, theMessage, (this.message!= null));
         }
         return currentHashCode;
     }
@@ -115,13 +115,13 @@ public class Read implements Equals2, HashCode2
         if (this == object) {
             return true;
         }
-        final Read that = ((Read) object);
+        final ModelNotFound that = ((ModelNotFound) object);
         {
-            Integer lhsArg0;
-            lhsArg0 = this.getArg0();
-            Integer rhsArg0;
-            rhsArg0 = that.getArg0();
-            if (!strategy.equals(LocatorUtils.property(thisLocator, "arg0", lhsArg0), LocatorUtils.property(thatLocator, "arg0", rhsArg0), lhsArg0, rhsArg0, (this.arg0 != null), (that.arg0 != null))) {
+            String lhsMessage;
+            lhsMessage = this.getMessage();
+            String rhsMessage;
+            rhsMessage = that.getMessage();
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "message", lhsMessage), LocatorUtils.property(thatLocator, "message", rhsMessage), lhsMessage, rhsMessage, (this.message!= null), (that.message!= null))) {
                 return false;
             }
         }

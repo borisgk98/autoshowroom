@@ -2,17 +2,19 @@ package com.mera.borisgk98.autoshowroom.server.services;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Auto;
+import com.mera.borisgk98.autoshowroom.server.models.HasId;
 import com.mera.borisgk98.autoshowroom.server.services.CrudService;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.Optional;
 
-public abstract class AbstractCrudService<T, F> implements CrudService<T, F> {
-    protected JpaRepository<T, F> repository;
+public abstract class AbstractCrudService<T extends HasId<Integer>> implements CrudService<T, Integer> {
+    protected JpaRepository<T, Integer> repository;
 
     public AbstractCrudService() {
     }
@@ -23,7 +25,7 @@ public abstract class AbstractCrudService<T, F> implements CrudService<T, F> {
     }
 
     @Override
-    public T read(F id) throws ModelNotFound{
+    public T read(Integer id) throws ModelNotFound{
         Optional<T> m = repository.findById(id);
         if (!m.isPresent()) {
             throw new ModelNotFound();
@@ -33,14 +35,14 @@ public abstract class AbstractCrudService<T, F> implements CrudService<T, F> {
 
     @Override
     public T update(T m) throws ModelNotFound{
-        if (!exist(m)) {
+        if (!existById(m.getId())) {
             throw new ModelNotFound();
         }
         return repository.save(m);
     }
 
     @Override
-    public void delete(F id) throws ModelNotFound {
+    public void delete(Integer id) throws ModelNotFound {
         if (!existById(id)) {
             throw new ModelNotFound();
         }
@@ -53,13 +55,19 @@ public abstract class AbstractCrudService<T, F> implements CrudService<T, F> {
     }
 
     @Override
-    public boolean existById(F id) {
+    public boolean existById(Integer id) {
         return repository.existsById(id);
     }
 
     @Override
     public List<T> getAll() {
         return repository.findAll();
+    }
+
+    @Override
+    public List<T> getRange(Integer offset, Integer limit) {
+        Pageable request = PageRequest.of(offset, limit);
+        return repository.findAll(request).getContent();
     }
 }
 

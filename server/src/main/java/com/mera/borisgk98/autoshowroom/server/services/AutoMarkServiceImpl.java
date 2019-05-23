@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AutoMarkServiceImpl
-        extends AbstractPaginableService<AutoMark>
+        extends AbstractCrudService<AutoMark>
         implements AutoMarkService {
 
     @Autowired

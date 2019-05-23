@@ -4,6 +4,7 @@ package com.mera.borisgk98.autoshowroom.server.soap;
 import javax.annotation.Generated;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.cxf.xjc.runtime.JAXBToStringStyle;
@@ -18,16 +19,16 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for read complex type.
+ * <p>Java class for createResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="read"&gt;
+ * &lt;complexType name="createResponse"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+ *         &lt;element name="return" type="{http://soap.server.autoshowroom.borisgk98.mera.com/}autoModel" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -37,45 +38,46 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "read", propOrder = {
-    "arg0"
+@XmlType(name = "createResponse", propOrder = {
+    "_return"
 })
 @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-public class Read implements Equals2, HashCode2
+public class CreateResponse implements Equals2, HashCode2
 {
 
+    @XmlElement(name = "return")
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    protected Integer arg0;
+    protected AutoModel _return;
 
     /**
-     * Gets the value of the arg0 property.
+     * Gets the value of the return property.
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link AutoModel }
      *     
      */
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public Integer getArg0() {
-        return arg0;
+    public AutoModel getReturn() {
+        return _return;
     }
 
     /**
-     * Sets the value of the arg0 property.
+     * Sets the value of the return property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link AutoModel }
      *     
      */
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public void setArg0(Integer value) {
-        this.arg0 = value;
+    public void setReturn(AutoModel value) {
+        this._return = value;
     }
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public Read withArg0(Integer value) {
-        setArg0(value);
+    public CreateResponse withReturn(AutoModel value) {
+        setReturn(value);
         return this;
     }
 
@@ -94,9 +96,9 @@ public class Read implements Equals2, HashCode2
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
-            Integer theArg0;
-            theArg0 = this.getArg0();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "arg0", theArg0), currentHashCode, theArg0, (this.arg0 != null));
+            AutoModel theReturn;
+            theReturn = this.getReturn();
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_return", theReturn), currentHashCode, theReturn, (this._return!= null));
         }
         return currentHashCode;
     }
@@ -115,13 +117,13 @@ public class Read implements Equals2, HashCode2
         if (this == object) {
             return true;
         }
-        final Read that = ((Read) object);
+        final CreateResponse that = ((CreateResponse) object);
         {
-            Integer lhsArg0;
-            lhsArg0 = this.getArg0();
-            Integer rhsArg0;
-            rhsArg0 = that.getArg0();
-            if (!strategy.equals(LocatorUtils.property(thisLocator, "arg0", lhsArg0), LocatorUtils.property(thatLocator, "arg0", rhsArg0), lhsArg0, rhsArg0, (this.arg0 != null), (that.arg0 != null))) {
+            AutoModel lhsReturn;
+            lhsReturn = this.getReturn();
+            AutoModel rhsReturn;
+            rhsReturn = that.getReturn();
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "_return", lhsReturn), LocatorUtils.property(thatLocator, "_return", rhsReturn), lhsReturn, rhsReturn, (this._return!= null), (that._return!= null))) {
                 return false;
             }
         }

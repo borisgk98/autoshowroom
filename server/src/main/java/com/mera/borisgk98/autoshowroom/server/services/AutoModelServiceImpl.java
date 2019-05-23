@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AutoModelServiceImpl
-        extends AbstractPaginableService<AutoModel>
+        extends AbstractCrudService<AutoModel>
         implements AutoModelService {
 
     @Autowired

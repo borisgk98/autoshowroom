@@ -18,7 +18,7 @@ import javax.validation.Valid;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-16T17:07:29.290+03:00[Europe/Moscow]")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Entity
-public class Auto   {
+public class Auto implements HasId<Integer> {
   @JsonProperty("id")
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class OrderServiceImpl
-        extends AbstractPaginableService<Order>
+        extends AbstractCrudService<Order>
         implements OrderService {
 
     @Autowired

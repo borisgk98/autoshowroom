@@ -18,12 +18,12 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for read complex type.
+ * <p>Java class for delete complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="read"&gt;
+ * &lt;complexType name="delete"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
@@ -37,11 +37,11 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "read", propOrder = {
+@XmlType(name = "delete", propOrder = {
     "arg0"
 })
 @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-public class Read implements Equals2, HashCode2
+public class Delete implements Equals2, HashCode2
 {
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
@@ -74,7 +74,7 @@ public class Read implements Equals2, HashCode2
     }
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-23T11:49:38+03:00", comments = "JAXB RI v2.3.2")
-    public Read withArg0(Integer value) {
+    public Delete withArg0(Integer value) {
         setArg0(value);
         return this;
     }
@@ -115,7 +115,7 @@ public class Read implements Equals2, HashCode2
         if (this == object) {
             return true;
         }
-        final Read that = ((Read) object);
+        final Delete that = ((Delete) object);
         {
             Integer lhsArg0;
             lhsArg0 = this.getArg0();

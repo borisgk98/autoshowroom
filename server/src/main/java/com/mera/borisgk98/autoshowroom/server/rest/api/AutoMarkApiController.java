@@ -2,6 +2,7 @@ package com.mera.borisgk98.autoshowroom.server.rest.api;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.AutoMark;
+import com.mera.borisgk98.autoshowroom.server.rest.api.AutomarkApi;
 import com.mera.borisgk98.autoshowroom.server.services.AutoMarkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

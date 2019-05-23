@@ -19,7 +19,7 @@ import javax.validation.constraints.*;
 @ApiModel(description = "Contains information about automobiles' models1")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-23T19:55:48.511+03:00[Europe/Moscow]")
 @Entity
-public class AutoModel   {
+public class AutoModel implements HasId<Integer> {
   @JsonProperty("id")
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)

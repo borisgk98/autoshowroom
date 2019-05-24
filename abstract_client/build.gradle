@@ -1,0 +1,73 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'space.borisgk.crudgeneration'
+
+group = 'com.mera.borisgk98.autoshowroom'
+version = '0.1'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url 'https://repo.spring.io/libs-snapshot'
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://raw.github.com/borisgk98/crudrepositorygenerator/mvn-repo'
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
+        classpath 'space.borisgk:crudgeneration:0.2'
+    }
+}
+
+dependencies {
+    compile("junit:junit")
+    implementation 'org.springframework.shell:spring-shell-starter:2.0.0.RELEASE'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compile("io.springfox:springfox-swagger2:2.9.2")
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.8'
+    // https://mvnrepository.com/artifact/javax.persistence/persistence-api
+    compile group: 'javax.persistence', name: 'persistence-api', version: '1.0'
+}
+
+springBoot {
+    mainClassName = 'com.mera.borisgk98.autoshowroom.client.Application'
+}
+
+crudGenerationSetting {
+    srcRoot = "$projectDir/src/main/java"
+    modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/client/models"
+    generationRoot = "$projectDir/src/main/java"
+    generationPackages = [
+            "com.mera.borisgk98.autoshowroom.client.services"
+    ]
+    generationTemplates = [
+            "$projectDir/src/main/resources/templates/Service".toString()
+    ]
+    generationConcatOuts = [
+    ]
+    generationConcatTemplates = [
+    ]
+    excludeModels = [
+            "OrderStatus",
+            "HasId"
+    ]
+}

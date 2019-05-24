@@ -1,0 +1,6 @@
+package com.mera.borisgk98.autoshowroom.client.services;
+
+import com.mera.borisgk98.autoshowroom.client.models.$Model$;
+
+public interface $Model$Service extends CrudService<$Model$, Integer>{
+}

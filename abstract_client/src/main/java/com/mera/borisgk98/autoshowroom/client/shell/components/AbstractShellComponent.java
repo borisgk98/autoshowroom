@@ -7,12 +7,12 @@ import com.mera.borisgk98.autoshowroom.client.tool.TableBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.table.Table;
 
-public abstract class AbstractReadShellComponent<T extends HasId<Integer>> implements ReadShellComponent<T> {
+public abstract class AbstractShellComponent<T extends HasId<Integer>> implements ReadDeleteShellComponent<T> {
     @Autowired
     protected CrudService<T, Integer> crudService;
     protected Class<T> modelClass;
 
-    public AbstractReadShellComponent(Class<T> modelClass) {
+    public AbstractShellComponent(Class<T> modelClass) {
         this.modelClass = modelClass;
     }
 
@@ -32,6 +32,17 @@ public abstract class AbstractReadShellComponent<T extends HasId<Integer>> imple
             return crudService.read(id).toString();
         }
         catch (ModelNotFound modelNotFound) {
+            return "Not found";
+        }
+    }
+
+    @Override
+    public String delete(Integer id) {
+        try {
+            crudService.delete(id);
+            return "Successful deleting";
+        }
+        catch (ModelNotFound e) {
             return "Not found";
         }
     }

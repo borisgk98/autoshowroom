@@ -22,3 +22,6 @@
 1558902424102:List<Method> getterMethods
 1558902430303:automark getall
 1558902441206:automark readall
+1558904924868:automark read 1
+1558905345375:automark delete --id 1
+1558905359117:automark create --name name

@@ -1,19 +1,13 @@
 package com.mera.borisgk98.autoshowroom.client.shell.components;
 
-import com.mera.borisgk98.autoshowroom.client.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.client.models.AutoMark;
-import com.mera.borisgk98.autoshowroom.client.services.AutoMarkService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import org.springframework.shell.table.Table;
-import org.springframework.shell.table.TableBuilder;
-import org.springframework.shell.table.TableModel;
-import org.springframework.shell.table.TableModelBuilder;
 
 @ShellComponent
-public class AutoMarkShellComponent extends AbstractReadShellComponent<AutoMark> implements ReadShellComponent<AutoMark> {
+public class AutoMarkShellComponent extends AbstractShellComponent<AutoMark> implements ReadDeleteShellComponent<AutoMark> {
 
     public AutoMarkShellComponent() {
         super(AutoMark.class);
@@ -24,7 +18,7 @@ public class AutoMarkShellComponent extends AbstractReadShellComponent<AutoMark>
             value = "automark",
             key = "automark create"
     )
-    public String create(@ShellOption("name") String name) {
+    public String create(@ShellOption String name) {
         return crudService.create(new AutoMark(){{
             setName(name);
         }}).toString();
@@ -56,7 +50,17 @@ public class AutoMarkShellComponent extends AbstractReadShellComponent<AutoMark>
             value = "automark",
             key = "automark read"
     )
-    public String read(@ShellOption("id") Integer id) {
+    public String read(@ShellOption Integer id) {
         return super.read(id);
+    }
+
+    @Override
+    @ShellMethod(
+            prefix = "--",
+            value = "automark",
+            key = "automark delete"
+    )
+    public String delete(@ShellOption Integer id) {
+        return super.delete(id);
     }
 }

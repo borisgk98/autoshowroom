@@ -6,10 +6,7 @@ import org.springframework.shell.table.Table;
 import org.springframework.shell.table.TableModelBuilder;
 
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -24,10 +21,7 @@ public class TableBuilder {
 
     public static <T> Table build(List<T> values, Class<T> c) {
 //         get "getter" methods' list
-        List<Method> getterMethods = Arrays.stream(c.getMethods())
-                .filter(x -> x.getName().length() > 3 && x.getName().substring(0, 3).equals("get"))
-                .filter(x -> !excludeGetters.contains(x.getName()))
-                .collect(Collectors.toList());
+        List<Method> getterMethods = getGetters(c);
         TableModelBuilder<String> modelBuilder = new TableModelBuilder<>();
         modelBuilder.addRow();
         for (Method getter : getterMethods) {
@@ -57,5 +51,22 @@ public class TableBuilder {
             }
         }
         return (new org.springframework.shell.table.TableBuilder(modelBuilder.build())).build();
+    }
+
+    private static List<Method> getGetters(Class c) {
+        List<Method> getterMethods = Arrays.stream(c.getMethods())
+                .filter(x -> x.getName().length() > 3 && x.getName().substring(0, 3).equals("get"))
+                .filter(x -> !excludeGetters.contains(x.getName()))
+                .collect(Collectors.toList());
+        Set<String> used = new HashSet<>();
+        List<Method> filtered = new ArrayList<>();
+        for (Method m : getterMethods) {
+            String name = m.getName();
+            if (!used.contains(name)) {
+                filtered.add(m);
+                used.add(name);
+            }
+        }
+        return filtered;
     }
 }

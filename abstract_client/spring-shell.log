@@ -19,3 +19,6 @@
 1558900640637:automark readall
 1558901156206:getter.getName().substring(0, 3)
 1558901161521:automark readall
+1558902424102:List<Method> getterMethods
+1558902430303:automark getall
+1558902441206:automark readall

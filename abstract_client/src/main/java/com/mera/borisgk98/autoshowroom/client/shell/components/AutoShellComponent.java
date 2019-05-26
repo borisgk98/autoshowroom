@@ -1,34 +1,23 @@
 package com.mera.borisgk98.autoshowroom.client.shell.components;
 
-import com.mera.borisgk98.autoshowroom.client.models.AutoMark;
+import com.mera.borisgk98.autoshowroom.client.models.Auto;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import org.springframework.shell.table.Table;
 
 @ShellComponent
-public class AutoMarkShellComponent extends AbstractShellComponent<AutoMark> implements ReadDeleteShellComponent<AutoMark> {
+public class AutoShellComponent extends AbstractShellComponent<Auto> implements ReadDeleteShellComponent<Auto> {
 
-    public AutoMarkShellComponent() {
-        super(AutoMark.class);
-    }
-
-    @ShellMethod(
-            prefix = "--",
-            value = "automark",
-            key = "automark create"
-    )
-    public String create(@ShellOption String name) {
-        return crudService.create(new AutoMark(){{
-            setName(name);
-        }}).toString();
+    public AutoShellComponent() {
+        super(Auto.class);
     }
 
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read all values of automark",
-            key = "automark readall"
+            value = "Read all values of auto",
+            key = "auto readall"
     )
     public Table readAll() {
         return super.readAll();
@@ -37,8 +26,8 @@ public class AutoMarkShellComponent extends AbstractShellComponent<AutoMark> imp
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read some values of automark with pagination",
-            key = "automark readrange"
+            value = "Read some values of auto with pagination",
+            key = "auto readrange"
     )
     public Table readWithLimitAndOffset(
             @ShellOption(
@@ -54,8 +43,8 @@ public class AutoMarkShellComponent extends AbstractShellComponent<AutoMark> imp
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read information about automark by id",
-            key = "automark read"
+            value = "Read information about auto by id",
+            key = "auto read"
     )
     public String read(@ShellOption Integer id) {
         return super.read(id);
@@ -64,8 +53,8 @@ public class AutoMarkShellComponent extends AbstractShellComponent<AutoMark> imp
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Delete automark by id",
-            key = "automark delete"
+            value = "Delete auto by id",
+            key = "auto delete"
     )
     public String delete(@ShellOption Integer id) {
         return super.delete(id);

@@ -1,9 +1,9 @@
 package com.mera.borisgk98.autoshowroom.client.services.impldefault;
 
 import com.mera.borisgk98.autoshowroom.client.exceptions.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.client.models.AutoMark;
+import com.mera.borisgk98.autoshowroom.client.models.Auto;
 import com.mera.borisgk98.autoshowroom.client.objectfabric.Fabric;
-import com.mera.borisgk98.autoshowroom.client.services.AutoMarkService;
+import com.mera.borisgk98.autoshowroom.client.services.AutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,24 +11,24 @@ import java.util.List;
 
 @Component
 @org.springframework.core.annotation.Order(org.springframework.core.Ordered.LOWEST_PRECEDENCE)
-public class AutoMarkDefaultImpl implements AutoMarkService {
+public class AutoDefaultImpl implements AutoService {
 
     @Autowired
     protected Fabric fabric;
 
     @Override
-    public AutoMark create(AutoMark m) {
-        return fabric.getObject(AutoMark.class);
+    public Auto create(Auto m) {
+        return fabric.getObject(Auto.class);
     }
 
     @Override
-    public AutoMark read(Integer id) throws ModelNotFound {
-        return fabric.getObject(AutoMark.class);
+    public Auto read(Integer id) throws ModelNotFound {
+        return fabric.getObject(Auto.class);
     }
 
     @Override
-    public AutoMark update(AutoMark m) throws ModelNotFound {
-        return fabric.getObject(AutoMark.class);
+    public Auto update(Auto m) throws ModelNotFound {
+        return fabric.getObject(Auto.class);
     }
 
     @Override
@@ -42,17 +42,17 @@ public class AutoMarkDefaultImpl implements AutoMarkService {
     }
 
     @Override
-    public boolean exist(AutoMark m) {
+    public boolean exist(Auto m) {
         return false;
     }
 
     @Override
-    public List<AutoMark> getAll() {
-        return fabric.getList(AutoMark.class);
+    public List<Auto> getAll() {
+        return fabric.getList(Auto.class);
     }
 
     @Override
-    public List<AutoMark> getRange(Integer offset, Integer limit) {
-        return fabric.getList(AutoMark.class);
+    public List<Auto> getRange(Integer offset, Integer limit) {
+        return fabric.getList(Auto.class);
     }
 }

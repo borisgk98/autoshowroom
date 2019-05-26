@@ -32,6 +32,7 @@ buildscript {
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
         classpath 'space.borisgk:crudgeneration:0.2'
+        classpath 'org.antlr:stringtemplate:3.2'
     }
 }
 
@@ -57,10 +58,15 @@ crudGenerationSetting {
     modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/client/models"
     generationRoot = "$projectDir/src/main/java"
     generationPackages = [
-            "com.mera.borisgk98.autoshowroom.client.services"
+            "com.mera.borisgk98.autoshowroom.client.services",
+            "com.mera.borisgk98.autoshowroom.client.shell.components",
+            "com.mera.borisgk98.autoshowroom.client.services.impldefault"
     ]
     generationTemplates = [
-            "$projectDir/src/main/resources/templates/Service".toString()
+            "$projectDir/src/main/resources/templates/Service".toString(),
+            "$projectDir/src/main/resources/templates/ShellComponent".toString(),
+            "$projectDir/src/main/resources/templates/DefaultImpl".toString()
+
     ]
     generationConcatOuts = [
     ]

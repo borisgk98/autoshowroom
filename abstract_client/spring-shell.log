@@ -25,3 +25,12 @@
 1558904924868:automark read 1
 1558905345375:automark delete --id 1
 1558905359117:automark create --name name
+1558905527154:help automark delete
+1558905544034:help automark
+1558905560704:help "automark delete"
+1558906539137:oreder readall
+1558906546715:order readall
+1558908029199:help "auto readall"
+1558908039395:help "auto readrange"
+1558908052766:auto readrange
+1558908069396:auto readrange --limit 2 --offset 1

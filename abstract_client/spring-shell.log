@@ -13,3 +13,9 @@
 1558665913479:automark create slgj;ls sg;js;l asgljl
 1558665940370:automark create lkjdsfg,js;lfj,sfd
 1558666009995:automark create a,b,c
+1558900189832:automark readall
+1558900629336:x.getName().substring(3).equals("get")
+1558900635692:automark getall
+1558900640637:automark readall
+1558901156206:getter.getName().substring(0, 3)
+1558901161521:automark readall

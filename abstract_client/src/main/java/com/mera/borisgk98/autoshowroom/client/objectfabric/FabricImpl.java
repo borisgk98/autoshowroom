@@ -3,6 +3,8 @@ package com.mera.borisgk98.autoshowroom.client.objectfabric;
 import com.mera.borisgk98.autoshowroom.client.models.AutoMark;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -12,6 +14,7 @@ import java.util.Map;
 public class FabricImpl implements Fabric {
 
     private Map<Class, Object> values;
+    private final Integer listSize = 5;
 
     public FabricImpl() {
         values = new HashMap<>();
@@ -25,11 +28,26 @@ public class FabricImpl implements Fabric {
         if (values.containsKey(c)) {
             return (T) values.get(c);
         }
-        return null;
+        try {
+            Constructor<T> constructor = c.getConstructor(null);
+            return constructor.newInstance(null);
+        }
+        catch (
+                NoSuchMethodException |
+                IllegalAccessException |
+                InvocationTargetException |
+                InstantiationException e
+        ) {
+            return null;
+        }
     }
 
     @Override
     public <T> List<T> getList(Class<T> c) {
-        return new ArrayList<>();
+        return new ArrayList<T>(){{
+            for (int i = 0; i < listSize; i++) {
+                add(getObject(c));
+            }
+        }};
     }
 }

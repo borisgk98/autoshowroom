@@ -5,6 +5,7 @@ import com.mera.borisgk98.autoshowroom.client.model.OrderStatus;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 
@@ -43,6 +44,17 @@ public class Converter {
                                     break label;
                                 }
                                 else {
+                                    try {
+                                        if (setterType.isEnum() && getterType.isEnum()) {
+                                            Method constructor = setterType.getMethod("fromValue", String.class);
+                                            Method toString = getterType.getMethod("toString");
+                                            setter.invoke(result, constructor.invoke(null, toString.invoke(getter.invoke(o))));
+                                            break label;
+                                        }
+                                    }
+                                    catch (Exception e) {
+                                        break label;
+                                    }
                                     setter.invoke(result, convert(getter.invoke(o), setterType));
                                     break label;
                                 }

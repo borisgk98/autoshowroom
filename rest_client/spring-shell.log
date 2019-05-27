@@ -74,3 +74,4 @@
 1558997801864:order readall
 1558997840899:automark create --name mark
 1558997854408:order create --auto-id 1 --customer-id 1 --seller-id 1
+1558998459714:order read 1

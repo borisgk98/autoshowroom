@@ -21,6 +21,7 @@ repositories {
     maven {
         url 'https://repo.spring.io/libs-snapshot'
     }
+    mavenLocal()
 }
 
 buildscript {
@@ -44,6 +45,8 @@ buildscript {
 }
 
 dependencies {
+    compile("com.mera.borisgk98.autoshowroom:abstractclient:0.1")
+
     compile("junit:junit")
     implementation 'org.springframework.shell:spring-shell-starter:2.0.0.RELEASE'
     compileOnly 'org.projectlombok:lombok'
@@ -72,14 +75,12 @@ springBoot {
 
 crudGenerationSetting {
     srcRoot = "$projectDir/src/main/java"
-    modelPackage = "/home/boris/progs/autoshowroom/abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models"
+    modelPackage = "/home/boris/progs/autoshowroom/abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/model"
     generationRoot = "$projectDir/src/main/java"
     generationPackages = [
-            "com.mera.borisgk98.autoshowroom.soapclient.services",
-            "com.mera.borisgk98.autoshowroom.soapclient.services.impl"
+            "com.mera.borisgk98.autoshowroom.soapclient.service"
     ]
     generationTemplates = [
-            "$projectDir/src/main/resources/templates/Service".toString(),
             "$projectDir/src/main/resources/templates/ServiceImpl".toString()
     ]
     generationConcatOuts = [

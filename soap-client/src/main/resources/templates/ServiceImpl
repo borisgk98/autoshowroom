@@ -1,13 +1,16 @@
-package com.mera.borisgk98.autoshowroom.soapclient.services.impl;
+package com.mera.borisgk98.autoshowroom.soapclient.service;
 
-import com.mera.borisgk98.autoshowroom.server.soap.*;
+import com.mera.borisgk98.autoshowroom.client.model.$Model$;
+import com.mera.borisgk98.autoshowroom.server.soap.$Model$WebService;
+import com.mera.borisgk98.autoshowroom.server.soap.$Modelufl$Service;
+import com.mera.borisgk98.autoshowroom.server.soap.ModelNotFound_Exception;
 import org.springframework.stereotype.Component;
-
+import com.mera.borisgk98.autoshowroom.client.service.*;
 import javax.xml.namespace.QName;
 import java.util.List;
 
 @Component
-public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.soapclient.services.$Model$Service {
+public class $Model$ServiceImpl implements $Model$Service {
 
     $Model$WebService port;
 
@@ -24,18 +27,33 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.soapc
     }
 
     @Override
-    public $Model$ read(Integer id) throws ModelNotFound_Exception {
-        return port.read$Model$(id);
+    public $Model$ read(Integer id) throws com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound {
+        try {
+            return port.read$Model$(id);
+        }
+        catch(ModelNotFound_Exception exc) {
+            throw new com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound();
+        }
     }
 
     @Override
-    public $Model$ update($Model$ m) throws ModelNotFound_Exception {
-        return port.update$Model$(m);
+    public $Model$ update($Model$ m) throws com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound {
+        try {
+            return port.update$Model$(m);
+        }
+        catch(ModelNotFound_Exception exc) {
+            throw new com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound();
+        }
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound_Exception {
-        port.delete$Model$(id);
+    public void delete(Integer id) throws com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound {
+        try {
+            port.delete$Model$(id);
+        }
+        catch(ModelNotFound_Exception exc) {
+            throw new com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound();
+        }
     }
 
     @Override

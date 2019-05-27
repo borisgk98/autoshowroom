@@ -6,7 +6,10 @@ import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import org.springframework.shell.table.Table;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @ShellComponent
@@ -23,7 +26,8 @@ public class AutoShellComponent extends AbstractShellComponent<Auto> implements 
     )
     public String create(
 			@ShellOption Integer markId,
-			@ShellOption Integer modelId) {
+			@ShellOption Integer modelId,
+            @ShellOption Integer[] optionIds) {
         Auto auto = new Auto();
         AutoMark automark = new AutoMark();
         		automark.setId(markId);
@@ -31,6 +35,13 @@ public class AutoShellComponent extends AbstractShellComponent<Auto> implements 
         AutoModel automodel = new AutoModel();
         		automodel.setId(modelId);
         auto.setModel(automodel);
+        List<AutoOption> options = new ArrayList<>();
+        for (Integer id : optionIds) {
+            options.add(new AutoOption(){{
+                setId(id);
+            }});
+        }
+        auto.setOptions(options);
 
         return crudService.create(auto).toString();
     }
@@ -43,7 +54,8 @@ public class AutoShellComponent extends AbstractShellComponent<Auto> implements 
     public String update(
             @ShellOption Integer id, 
 			@ShellOption Integer markId,
-			@ShellOption Integer modelId) {
+			@ShellOption Integer modelId,
+            @ShellOption Integer[] optionIds) {
         try {
             Auto auto = new Auto();
             auto.setId(id);
@@ -53,6 +65,13 @@ public class AutoShellComponent extends AbstractShellComponent<Auto> implements 
             AutoModel automodel = new AutoModel();
             		automodel.setId(modelId);
             auto.setModel(automodel);
+            List<AutoOption> options = new ArrayList<>();
+            for (Integer oid : optionIds) {
+                options.add(new AutoOption(){{
+                    setId(oid);
+                }});
+            }
+            auto.setOptions(options);
 
             return crudService.update(auto).toString();
         }

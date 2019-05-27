@@ -40,3 +40,6 @@
 1558924448004:auto readall
 1558924459448:auto create
 1558924476756:automodel create --name sdgsl
+1558990351447:auto create --markId 1 --modelId 1 --optionIds 1,2,3
+1558990376635:help "auto create"
+1558990929776:auto create --mark-id 1 --model-id 1 --option-ids 1,2,3

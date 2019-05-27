@@ -47,3 +47,6 @@
 1558989239773:exit
 1558989535210:auto readall
 1558989553054:exit
+1558991034234:auto create
+1558991292842:auto create --model-id 1 --mark-id 1 --option-ids 1,2
+1558992516185:auto readall

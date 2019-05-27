@@ -1,31 +1,55 @@
-2019-05-27 23:33:45.106  INFO 6206 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 6206 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
-2019-05-27 23:33:45.109  INFO 6206 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
-2019-05-27 23:33:46.362  WARN 6206 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
-2019-05-27 23:33:46.494  INFO 6206 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.145 seconds (JVM running for 3.546)
-2019-05-27 23:38:00.844  INFO 6684 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 6684 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
-2019-05-27 23:38:00.850  INFO 6684 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
-2019-05-27 23:38:01.772  WARN 6684 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'autoShellComponent': Unsatisfied dependency expressed through field 'crudService'; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'com.mera.borisgk98.autoshowroom.client.service.CrudService<com.mera.borisgk98.autoshowroom.client.model.Auto, java.lang.Integer>' available: expected single matching bean but found 2: autoServiceImpl,autoDefaultImpl
-2019-05-27 23:38:01.784  INFO 6684 --- [main] ConditionEvaluationReportLoggingListener : 
+2019-05-28 00:03:31.473  INFO 9784 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 9784 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-28 00:03:31.479  INFO 9784 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-28 00:03:33.561  WARN 9784 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-28 00:03:33.716  INFO 9784 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 3.292 seconds (JVM running for 4.421)
+2019-05-28 00:08:06.936  INFO 11022 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 11022 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-28 00:08:06.940  INFO 11022 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-28 00:08:08.809  WARN 11022 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-28 00:08:08.931  INFO 11022 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.584 seconds (JVM running for 3.522)
+2019-05-28 00:17:09.543  INFO 12063 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 12063 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-28 00:17:09.548  INFO 12063 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-28 00:17:10.930  WARN 12063 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-28 00:17:11.073  INFO 12063 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.244 seconds (JVM running for 3.155)
+2019-05-28 00:22:07.454  INFO 13510 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 13510 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-28 00:22:07.458  INFO 13510 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-28 00:22:08.766  WARN 13510 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-28 00:22:08.985  INFO 13510 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.262 seconds (JVM running for 3.139)
+2019-05-28 00:25:49.131  INFO 13510 --- [main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-05-27 23:38:01.792 ERROR 6684 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2019-05-28 00:25:49.142 ERROR 13510 --- [main] o.s.boot.SpringApplication               : Application run failed
 
-***************************
-APPLICATION FAILED TO START
-***************************
+java.io.IOError: java.io.IOException: Неправильный дескриптор файла
+	at org.jline.keymap.BindingReader.readCharacter(BindingReader.java:142) ~[jline-3.4.0.jar:na]
+	at org.jline.keymap.BindingReader.readBinding(BindingReader.java:109) ~[jline-3.4.0.jar:na]
+	at org.jline.keymap.BindingReader.readBinding(BindingReader.java:60) ~[jline-3.4.0.jar:na]
+	at org.jline.reader.impl.LineReaderImpl.readBinding(LineReaderImpl.java:720) ~[jline-3.4.0.jar:na]
+	at org.jline.reader.impl.LineReaderImpl.readLine(LineReaderImpl.java:522) ~[jline-3.4.0.jar:na]
+	at org.jline.reader.impl.LineReaderImpl.readLine(LineReaderImpl.java:390) ~[jline-3.4.0.jar:na]
+	at org.springframework.shell.jline.InteractiveShellApplicationRunner$JLineInputProvider.readInput(InteractiveShellApplicationRunner.java:115) ~[spring-shell-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.shell.Shell.run(Shell.java:125) ~[spring-shell-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.shell.jline.InteractiveShellApplicationRunner.run(InteractiveShellApplicationRunner.java:84) ~[spring-shell-core-2.0.0.RELEASE.jar:2.0.0.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:804) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:794) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.mera.borisgk98.autoshowroom.client.Application.main(Application.java:18) [classes/:na]
+Caused by: java.io.IOException: Неправильный дескриптор файла
+	at java.io.FileInputStream.read0(Native Method) ~[na:1.8.0_212]
+	at java.io.FileInputStream.read(FileInputStream.java:207) ~[na:1.8.0_212]
+	at org.jline.terminal.impl.DumbTerminal$1.read(DumbTerminal.java:48) ~[jline-3.4.0.jar:na]
+	at org.jline.terminal.impl.DumbTerminal$1.read(DumbTerminal.java:85) ~[jline-3.4.0.jar:na]
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284) ~[na:1.8.0_212]
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326) ~[na:1.8.0_212]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178) ~[na:1.8.0_212]
+	at sun.nio.cs.StreamDecoder.read0(StreamDecoder.java:127) ~[na:1.8.0_212]
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:112) ~[na:1.8.0_212]
+	at java.io.InputStreamReader.read(InputStreamReader.java:168) ~[na:1.8.0_212]
+	at org.jline.utils.NonBlockingReader.run(NonBlockingReader.java:276) ~[jline-3.4.0.jar:na]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_212]
 
-Description:
-
-Field crudService in com.mera.borisgk98.autoshowroom.client.component.AbstractShellComponent required a single bean, but 2 were found:
-	- autoServiceImpl: defined in file [/home/boris/progs/autoshowroom/rest_client/out/production/classes/com/mera/borisgk98/autoshowroom/client/service/AutoServiceImpl.class]
-	- autoDefaultImpl: defined in URL [jar:file:/home/boris/.m2/repository/com/mera/borisgk98/autoshowroom/abstractclient/0.1/abstractclient-0.1.jar!/com/mera/borisgk98/autoshowroom/client/service/impldefault/AutoDefaultImpl.class]
-
-
-Action:
-
-Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
-
-2019-05-27 23:38:48.740  INFO 6916 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 6916 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
-2019-05-27 23:38:48.746  INFO 6916 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
-2019-05-27 23:38:50.110  WARN 6916 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
-2019-05-27 23:38:50.250  INFO 6916 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.119 seconds (JVM running for 2.924)
+2019-05-28 00:27:14.152  INFO 14391 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 14391 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-28 00:27:14.156  INFO 14391 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-28 00:27:15.528  WARN 14391 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-28 00:27:15.648  INFO 14391 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.097 seconds (JVM running for 2.913)

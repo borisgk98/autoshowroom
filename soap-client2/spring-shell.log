@@ -43,3 +43,9 @@
 1558958023090:automark readall
 1558958028647:auto readalll
 1558958034673:auto readall
+1558958721443:automark getall
+1558958731135:automark readall
+1558958737319:automark read 1
+1558958749949:automark create --name BMW
+1558958756776:automark read 1
+1558958761104:automark readall

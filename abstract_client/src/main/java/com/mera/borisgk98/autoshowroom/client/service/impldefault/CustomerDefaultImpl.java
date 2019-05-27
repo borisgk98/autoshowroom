@@ -1,9 +1,9 @@
 package com.mera.borisgk98.autoshowroom.client.service.impldefault;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.client.model.$Model$;
+import com.mera.borisgk98.autoshowroom.client.model.Customer;
 import com.mera.borisgk98.autoshowroom.client.objectfabric.Fabric;
-import com.mera.borisgk98.autoshowroom.client.service.$Model$Service;
+import com.mera.borisgk98.autoshowroom.client.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,24 +11,24 @@ import java.util.List;
 
 @Component
 @org.springframework.core.annotation.Order(org.springframework.core.Ordered.LOWEST_PRECEDENCE)
-public class $Model$DefaultImpl implements $Model$Service {
+public class CustomerDefaultImpl implements CustomerService {
 
     @Autowired
     protected Fabric fabric;
 
     @Override
-    public $Model$ create($Model$ m) {
-        return fabric.getObject($Model$.class);
+    public Customer create(Customer m) {
+        return fabric.getObject(Customer.class);
     }
 
     @Override
-    public $Model$ read(Integer id) throws ModelNotFound {
-        return fabric.getObject($Model$.class);
+    public Customer read(Integer id) throws ModelNotFound {
+        return fabric.getObject(Customer.class);
     }
 
     @Override
-    public $Model$ update($Model$ m) throws ModelNotFound {
-        return fabric.getObject($Model$.class);
+    public Customer update(Customer m) throws ModelNotFound {
+        return fabric.getObject(Customer.class);
     }
 
     @Override
@@ -42,17 +42,17 @@ public class $Model$DefaultImpl implements $Model$Service {
     }
 
     @Override
-    public boolean exist($Model$ m) {
+    public boolean exist(Customer m) {
         return false;
     }
 
     @Override
-    public List<$Model$> getAll() {
-        return fabric.getList($Model$.class);
+    public List<Customer> getAll() {
+        return fabric.getList(Customer.class);
     }
 
     @Override
-    public List<$Model$> getRange(Integer offset, Integer limit) {
-        return fabric.getList($Model$.class);
+    public List<Customer> getRange(Integer offset, Integer limit) {
+        return fabric.getList(Customer.class);
     }
 }

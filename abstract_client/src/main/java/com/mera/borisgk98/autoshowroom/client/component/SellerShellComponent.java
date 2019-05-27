@@ -10,35 +10,41 @@ import java.util.List;
 
 
 @ShellComponent
-public class $Model$ShellComponent extends AbstractShellComponent<$Model$> implements ReadDeleteShellComponent<$Model$> {
+public class SellerShellComponent extends AbstractShellComponent<Seller> implements ReadDeleteShellComponent<Seller> {
 
-    public $Model$ShellComponent() {
-        super($Model$.class);
+    public SellerShellComponent() {
+        super(Seller.class);
     }
 
     @ShellMethod(
             prefix = "--",
-            value = "Create new $model$",
-            key = "$model$ create"
+            value = "Create new seller",
+            key = "seller create"
     )
-    public String create($paramsBlock$) {
-        $Model$ $model$ = new $Model$();
-        $settersBlock$
-        return crudService.create($model$).toString();
+    public String create(
+			@ShellOption String name
+) {
+        Seller seller = new Seller();
+        seller.setName(name);
+
+        return crudService.create(seller).toString();
     }
 
     @ShellMethod(
             prefix = "--",
-            value = "Update $model$",
-            key = "$model$ update"
+            value = "Update seller",
+            key = "seller update"
     )
     public String update(
-            @ShellOption Integer id, $paramsBlock$) {
+            @ShellOption Integer id, 
+			@ShellOption String name
+) {
         try {
-            $Model$ $model$ = new $Model$();
-            $model$.setId(id);
-            $settersBlock$
-            return crudService.update($model$).toString();
+            Seller seller = new Seller();
+            seller.setId(id);
+            seller.setName(name);
+
+            return crudService.update(seller).toString();
         }
         catch (ModelNotFound e) {
             return "Not found";
@@ -48,8 +54,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read all values of $model$",
-            key = "$model$ readall"
+            value = "Read all values of seller",
+            key = "seller readall"
     )
     public Table readAll() {
         return super.readAll();
@@ -58,8 +64,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read some values of $model$ with pagination",
-            key = "$model$ readrange"
+            value = "Read some values of seller with pagination",
+            key = "seller readrange"
     )
     public Table readWithLimitAndOffset(
             @ShellOption(
@@ -75,8 +81,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read information about $model$ by id",
-            key = "$model$ read"
+            value = "Read information about seller by id",
+            key = "seller read"
     )
     public String read(@ShellOption Integer id) {
         return super.read(id);
@@ -85,8 +91,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Delete $model$ by id",
-            key = "$model$ delete"
+            value = "Delete seller by id",
+            key = "seller delete"
     )
     public String delete(@ShellOption Integer id) {
         return super.delete(id);

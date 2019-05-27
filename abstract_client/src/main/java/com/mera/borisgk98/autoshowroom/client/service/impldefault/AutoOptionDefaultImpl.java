@@ -1,9 +1,9 @@
 package com.mera.borisgk98.autoshowroom.client.service.impldefault;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.client.model.$Model$;
+import com.mera.borisgk98.autoshowroom.client.model.AutoOption;
 import com.mera.borisgk98.autoshowroom.client.objectfabric.Fabric;
-import com.mera.borisgk98.autoshowroom.client.service.$Model$Service;
+import com.mera.borisgk98.autoshowroom.client.service.AutoOptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,24 +11,24 @@ import java.util.List;
 
 @Component
 @org.springframework.core.annotation.Order(org.springframework.core.Ordered.LOWEST_PRECEDENCE)
-public class $Model$DefaultImpl implements $Model$Service {
+public class AutoOptionDefaultImpl implements AutoOptionService {
 
     @Autowired
     protected Fabric fabric;
 
     @Override
-    public $Model$ create($Model$ m) {
-        return fabric.getObject($Model$.class);
+    public AutoOption create(AutoOption m) {
+        return fabric.getObject(AutoOption.class);
     }
 
     @Override
-    public $Model$ read(Integer id) throws ModelNotFound {
-        return fabric.getObject($Model$.class);
+    public AutoOption read(Integer id) throws ModelNotFound {
+        return fabric.getObject(AutoOption.class);
     }
 
     @Override
-    public $Model$ update($Model$ m) throws ModelNotFound {
-        return fabric.getObject($Model$.class);
+    public AutoOption update(AutoOption m) throws ModelNotFound {
+        return fabric.getObject(AutoOption.class);
     }
 
     @Override
@@ -42,17 +42,17 @@ public class $Model$DefaultImpl implements $Model$Service {
     }
 
     @Override
-    public boolean exist($Model$ m) {
+    public boolean exist(AutoOption m) {
         return false;
     }
 
     @Override
-    public List<$Model$> getAll() {
-        return fabric.getList($Model$.class);
+    public List<AutoOption> getAll() {
+        return fabric.getList(AutoOption.class);
     }
 
     @Override
-    public List<$Model$> getRange(Integer offset, Integer limit) {
-        return fabric.getList($Model$.class);
+    public List<AutoOption> getRange(Integer offset, Integer limit) {
+        return fabric.getList(AutoOption.class);
     }
 }

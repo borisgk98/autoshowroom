@@ -10,35 +10,41 @@ import java.util.List;
 
 
 @ShellComponent
-public class $Model$ShellComponent extends AbstractShellComponent<$Model$> implements ReadDeleteShellComponent<$Model$> {
+public class AutoMarkShellComponent extends AbstractShellComponent<AutoMark> implements ReadDeleteShellComponent<AutoMark> {
 
-    public $Model$ShellComponent() {
-        super($Model$.class);
+    public AutoMarkShellComponent() {
+        super(AutoMark.class);
     }
 
     @ShellMethod(
             prefix = "--",
-            value = "Create new $model$",
-            key = "$model$ create"
+            value = "Create new automark",
+            key = "automark create"
     )
-    public String create($paramsBlock$) {
-        $Model$ $model$ = new $Model$();
-        $settersBlock$
-        return crudService.create($model$).toString();
+    public String create(
+			@ShellOption String name
+) {
+        AutoMark automark = new AutoMark();
+        automark.setName(name);
+
+        return crudService.create(automark).toString();
     }
 
     @ShellMethod(
             prefix = "--",
-            value = "Update $model$",
-            key = "$model$ update"
+            value = "Update automark",
+            key = "automark update"
     )
     public String update(
-            @ShellOption Integer id, $paramsBlock$) {
+            @ShellOption Integer id, 
+			@ShellOption String name
+) {
         try {
-            $Model$ $model$ = new $Model$();
-            $model$.setId(id);
-            $settersBlock$
-            return crudService.update($model$).toString();
+            AutoMark automark = new AutoMark();
+            automark.setId(id);
+            automark.setName(name);
+
+            return crudService.update(automark).toString();
         }
         catch (ModelNotFound e) {
             return "Not found";
@@ -48,8 +54,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read all values of $model$",
-            key = "$model$ readall"
+            value = "Read all values of automark",
+            key = "automark readall"
     )
     public Table readAll() {
         return super.readAll();
@@ -58,8 +64,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read some values of $model$ with pagination",
-            key = "$model$ readrange"
+            value = "Read some values of automark with pagination",
+            key = "automark readrange"
     )
     public Table readWithLimitAndOffset(
             @ShellOption(
@@ -75,8 +81,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read information about $model$ by id",
-            key = "$model$ read"
+            value = "Read information about automark by id",
+            key = "automark read"
     )
     public String read(@ShellOption Integer id) {
         return super.read(id);
@@ -85,8 +91,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Delete $model$ by id",
-            key = "$model$ delete"
+            value = "Delete automark by id",
+            key = "automark delete"
     )
     public String delete(@ShellOption Integer id) {
         return super.delete(id);

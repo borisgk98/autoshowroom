@@ -10,35 +10,51 @@ import java.util.List;
 
 
 @ShellComponent
-public class $Model$ShellComponent extends AbstractShellComponent<$Model$> implements ReadDeleteShellComponent<$Model$> {
+public class AutoShellComponent extends AbstractShellComponent<Auto> implements ReadDeleteShellComponent<Auto> {
 
-    public $Model$ShellComponent() {
-        super($Model$.class);
+    public AutoShellComponent() {
+        super(Auto.class);
     }
 
     @ShellMethod(
             prefix = "--",
-            value = "Create new $model$",
-            key = "$model$ create"
+            value = "Create new auto",
+            key = "auto create"
     )
-    public String create($paramsBlock$) {
-        $Model$ $model$ = new $Model$();
-        $settersBlock$
-        return crudService.create($model$).toString();
+    public String create(
+			@ShellOption Integer markId,
+			@ShellOption Integer modelId) {
+        Auto auto = new Auto();
+        AutoMark automark = new AutoMark();
+        		automark.setId(markId);
+        auto.setMark(automark);
+        AutoModel automodel = new AutoModel();
+        		automodel.setId(modelId);
+        auto.setModel(automodel);
+
+        return crudService.create(auto).toString();
     }
 
     @ShellMethod(
             prefix = "--",
-            value = "Update $model$",
-            key = "$model$ update"
+            value = "Update auto",
+            key = "auto update"
     )
     public String update(
-            @ShellOption Integer id, $paramsBlock$) {
+            @ShellOption Integer id, 
+			@ShellOption Integer markId,
+			@ShellOption Integer modelId) {
         try {
-            $Model$ $model$ = new $Model$();
-            $model$.setId(id);
-            $settersBlock$
-            return crudService.update($model$).toString();
+            Auto auto = new Auto();
+            auto.setId(id);
+            AutoMark automark = new AutoMark();
+            		automark.setId(markId);
+            auto.setMark(automark);
+            AutoModel automodel = new AutoModel();
+            		automodel.setId(modelId);
+            auto.setModel(automodel);
+
+            return crudService.update(auto).toString();
         }
         catch (ModelNotFound e) {
             return "Not found";
@@ -48,8 +64,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read all values of $model$",
-            key = "$model$ readall"
+            value = "Read all values of auto",
+            key = "auto readall"
     )
     public Table readAll() {
         return super.readAll();
@@ -58,8 +74,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read some values of $model$ with pagination",
-            key = "$model$ readrange"
+            value = "Read some values of auto with pagination",
+            key = "auto readrange"
     )
     public Table readWithLimitAndOffset(
             @ShellOption(
@@ -75,8 +91,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read information about $model$ by id",
-            key = "$model$ read"
+            value = "Read information about auto by id",
+            key = "auto read"
     )
     public String read(@ShellOption Integer id) {
         return super.read(id);
@@ -85,8 +101,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Delete $model$ by id",
-            key = "$model$ delete"
+            value = "Delete auto by id",
+            key = "auto delete"
     )
     public String delete(@ShellOption Integer id) {
         return super.delete(id);

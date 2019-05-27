@@ -1,9 +1,9 @@
 package com.mera.borisgk98.autoshowroom.client.service.impldefault;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.client.model.$Model$;
+import com.mera.borisgk98.autoshowroom.client.model.Auto;
 import com.mera.borisgk98.autoshowroom.client.objectfabric.Fabric;
-import com.mera.borisgk98.autoshowroom.client.service.$Model$Service;
+import com.mera.borisgk98.autoshowroom.client.service.AutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,24 +11,24 @@ import java.util.List;
 
 @Component
 @org.springframework.core.annotation.Order(org.springframework.core.Ordered.LOWEST_PRECEDENCE)
-public class $Model$DefaultImpl implements $Model$Service {
+public class AutoDefaultImpl implements AutoService {
 
     @Autowired
     protected Fabric fabric;
 
     @Override
-    public $Model$ create($Model$ m) {
-        return fabric.getObject($Model$.class);
+    public Auto create(Auto m) {
+        return fabric.getObject(Auto.class);
     }
 
     @Override
-    public $Model$ read(Integer id) throws ModelNotFound {
-        return fabric.getObject($Model$.class);
+    public Auto read(Integer id) throws ModelNotFound {
+        return fabric.getObject(Auto.class);
     }
 
     @Override
-    public $Model$ update($Model$ m) throws ModelNotFound {
-        return fabric.getObject($Model$.class);
+    public Auto update(Auto m) throws ModelNotFound {
+        return fabric.getObject(Auto.class);
     }
 
     @Override
@@ -42,17 +42,17 @@ public class $Model$DefaultImpl implements $Model$Service {
     }
 
     @Override
-    public boolean exist($Model$ m) {
+    public boolean exist(Auto m) {
         return false;
     }
 
     @Override
-    public List<$Model$> getAll() {
-        return fabric.getList($Model$.class);
+    public List<Auto> getAll() {
+        return fabric.getList(Auto.class);
     }
 
     @Override
-    public List<$Model$> getRange(Integer offset, Integer limit) {
-        return fabric.getList($Model$.class);
+    public List<Auto> getRange(Integer offset, Integer limit) {
+        return fabric.getList(Auto.class);
     }
 }

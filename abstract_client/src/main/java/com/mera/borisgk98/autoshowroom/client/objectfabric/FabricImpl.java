@@ -1,6 +1,6 @@
 package com.mera.borisgk98.autoshowroom.client.objectfabric;
 
-import com.mera.borisgk98.autoshowroom.client.models.AutoMark;
+import com.mera.borisgk98.autoshowroom.client.model.AutoMark;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Constructor;

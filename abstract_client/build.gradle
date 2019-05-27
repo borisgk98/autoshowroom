@@ -55,12 +55,12 @@ springBoot {
 
 crudGenerationSetting {
     srcRoot = "$projectDir/src/main/java"
-    modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/client/models"
+    modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/client/model"
     generationRoot = "$projectDir/src/main/java"
     generationPackages = [
-            "com.mera.borisgk98.autoshowroom.client.services",
+            "com.mera.borisgk98.autoshowroom.client.service",
             "com.mera.borisgk98.autoshowroom.client.shell.components",
-            "com.mera.borisgk98.autoshowroom.client.services.impldefault"
+            "com.mera.borisgk98.autoshowroom.client.service.impldefault"
     ]
     generationTemplates = [
             "$projectDir/src/main/resources/templates/Service".toString(),

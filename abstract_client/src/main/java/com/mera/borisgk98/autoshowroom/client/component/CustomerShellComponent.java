@@ -10,35 +10,45 @@ import java.util.List;
 
 
 @ShellComponent
-public class $Model$ShellComponent extends AbstractShellComponent<$Model$> implements ReadDeleteShellComponent<$Model$> {
+public class CustomerShellComponent extends AbstractShellComponent<Customer> implements ReadDeleteShellComponent<Customer> {
 
-    public $Model$ShellComponent() {
-        super($Model$.class);
+    public CustomerShellComponent() {
+        super(Customer.class);
     }
 
     @ShellMethod(
             prefix = "--",
-            value = "Create new $model$",
-            key = "$model$ create"
+            value = "Create new customer",
+            key = "customer create"
     )
-    public String create($paramsBlock$) {
-        $Model$ $model$ = new $Model$();
-        $settersBlock$
-        return crudService.create($model$).toString();
+    public String create(
+			@ShellOption String name,
+			@ShellOption String surname
+) {
+        Customer customer = new Customer();
+        customer.setName(name);
+        customer.setSurname(surname);
+
+        return crudService.create(customer).toString();
     }
 
     @ShellMethod(
             prefix = "--",
-            value = "Update $model$",
-            key = "$model$ update"
+            value = "Update customer",
+            key = "customer update"
     )
     public String update(
-            @ShellOption Integer id, $paramsBlock$) {
+            @ShellOption Integer id, 
+			@ShellOption String name,
+			@ShellOption String surname
+) {
         try {
-            $Model$ $model$ = new $Model$();
-            $model$.setId(id);
-            $settersBlock$
-            return crudService.update($model$).toString();
+            Customer customer = new Customer();
+            customer.setId(id);
+            customer.setName(name);
+            customer.setSurname(surname);
+
+            return crudService.update(customer).toString();
         }
         catch (ModelNotFound e) {
             return "Not found";
@@ -48,8 +58,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read all values of $model$",
-            key = "$model$ readall"
+            value = "Read all values of customer",
+            key = "customer readall"
     )
     public Table readAll() {
         return super.readAll();
@@ -58,8 +68,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read some values of $model$ with pagination",
-            key = "$model$ readrange"
+            value = "Read some values of customer with pagination",
+            key = "customer readrange"
     )
     public Table readWithLimitAndOffset(
             @ShellOption(
@@ -75,8 +85,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Read information about $model$ by id",
-            key = "$model$ read"
+            value = "Read information about customer by id",
+            key = "customer read"
     )
     public String read(@ShellOption Integer id) {
         return super.read(id);
@@ -85,8 +95,8 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
     @Override
     @ShellMethod(
             prefix = "--",
-            value = "Delete $model$ by id",
-            key = "$model$ delete"
+            value = "Delete customer by id",
+            key = "customer delete"
     )
     public String delete(@ShellOption Integer id) {
         return super.delete(id);

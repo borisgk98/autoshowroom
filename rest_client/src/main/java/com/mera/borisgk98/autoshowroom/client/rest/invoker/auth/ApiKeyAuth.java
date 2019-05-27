@@ -18,7 +18,7 @@ import com.mera.borisgk98.autoshowroom.client.rest.invoker.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T23:31:58.178+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-28T01:07:05.018+03:00[Europe/Moscow]")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

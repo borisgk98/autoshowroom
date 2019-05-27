@@ -2,39 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163423e2-ce16-4eca-9a24-3d5e90c483d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../abstract_client/spring-shell.log" beforeDir="false" afterPath="$PROJECT_DIR$/../abstract_client/spring-shell.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/component/AutoShellComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/component/AutoShellComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/tool/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/tool/Converter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/soapclient_standard.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/soapclient_standard.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-shell.log" beforeDir="false" afterPath="$PROJECT_DIR$/spring-shell.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/api/DefaultApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/ApiCallback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/ApiClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/ApiException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/ApiResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/Configuration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/GzipRequestInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/JSON.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/Pair.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/ProgressRequestBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/ProgressResponseBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/StringUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/ApiKeyAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/Authentication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/HttpBasicAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/OAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/OAuthFlow.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/OAuthOkHttpClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/RetryingOAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Auto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/AutoMark.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/AutoModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/AutoOption.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/OrderStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Seller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/ApiException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/ApiKeyAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/ApiKeyAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/OAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/invoker/auth/OAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Auto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Auto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/AutoMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/AutoMark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/AutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/AutoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/AutoOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/AutoOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/model/Seller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../server/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/models/Auto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/models/Auto.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -44,6 +29,20 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
@@ -92,10 +91,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1200">
+            <state relative-caret-position="-1392">
               <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
             </state>
           </provider>
@@ -104,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/api/DefaultApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35808">
-              <caret line="2430" selection-start-line="2430" selection-end-line="2430" />
+            <state relative-caret-position="162">
+              <caret line="621" column="41" selection-start-line="621" selection-start-column="41" selection-end-line="621" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,17 +142,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/service/AutoServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="144">
+              <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/com/mera/borisgk98/autoshowroom/abstractclient/0.1/abstractclient-0.1.jar!/com/mera/borisgk98/autoshowroom/client/tool/Converter.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+            <state relative-caret-position="384">
+              <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -284,6 +283,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../server/build.gradle" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -405,8 +405,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.rest_client [bootJar]" />
         <item itemvalue="Gradle.rest_client [openApiGenerate]" />
+        <item itemvalue="Gradle.rest_client [bootJar]" />
         <item itemvalue="Gradle.rest_client [dependencies]" />
         <item itemvalue="Gradle.rest_client [crudGenerate]" />
         <item itemvalue="Gradle.rest_client [build]" />
@@ -423,12 +423,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1558988382422</updated>
-      <workItem from="1558988384027" duration="3213000" />
+      <workItem from="1558988384027" duration="5555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3213000" />
+    <option name="totallyTimeSpent" value="5555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1684" height="1024" extended-state="6" />
@@ -458,8 +458,8 @@
       <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Gradle" visible="true" weight="0.2129743" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Gradle" weight="0.2129743" />
+      <window_info anchor="right" id="Database" weight="0.2760098" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Bean Validation" />
@@ -472,16 +472,20 @@
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/service/AutoServiceImpl.java</url>
-          <line>25</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="api.autoAutoIdGet(id)" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>api.autoAutoIdGet(id)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/Main.java">
@@ -498,27 +502,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1200">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/mera/borisgk98/autoshowroom/client/rest/api/DefaultApiTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="521" selection-start-line="521" selection-end-line="521" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/api/DefaultApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35808">
-          <caret line="2430" selection-start-line="2430" selection-end-line="2430" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -560,17 +547,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/service/AutoServiceImpl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/mera/borisgk98/autoshowroom/abstractclient/0.1/abstractclient-0.1.jar!/com/mera/borisgk98/autoshowroom/client/tool/Converter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="384">
+          <caret line="45" column="72" selection-start-line="45" selection-start-column="72" selection-end-line="45" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/mera/borisgk98/autoshowroom/abstractclient/0.1/abstractclient-0.1.jar!/com/mera/borisgk98/autoshowroom/client/tool/Converter.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/service/AutoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+        <state relative-caret-position="144">
+          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/api/DefaultApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="621" column="41" selection-start-line="621" selection-start-column="41" selection-end-line="621" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1392">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
         </state>
       </provider>
     </entry>

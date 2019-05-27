@@ -13,7 +13,7 @@
 
 package com.mera.borisgk98.autoshowroom.client.rest.invoker;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T23:31:58.178+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-28T01:07:05.018+03:00[Europe/Moscow]")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).

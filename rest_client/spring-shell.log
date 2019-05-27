@@ -50,3 +50,23 @@
 1558991034234:auto create
 1558991292842:auto create --model-id 1 --mark-id 1 --option-ids 1,2
 1558992516185:auto readall
+1558992608809:auto create --model-id 1 --mark-id 1 --option-ids 1,2
+1558992661926:auto read 6
+1558992968893:autooption readall
+1558992974525:api.autoAutoIdGet(id)
+1558992987761:auto create --model-id 1 --mark-id 1 --option-ids 1
+1558993012345:auto readall
+1558993040256:auto create --model-id 1 --mark-id 1 --option-ids 1
+1558993306792:auto readall
+1558993329629:auto create --model-id 1 --mark-id 1 --option-ids 1
+1558993501035:create --name Audi
+1558993520378:automark create --name Audi
+1558993534787:automodel create --name Q5
+1558993552659:autoopition create --name sport
+1558993564702:autooption create --name sport
+1558993572329:auto create --model-id 1 --mark-id 1 --option-ids 1
+1558993578670:auto readall
+1558994276635:auto create --model-id 1 --mark-id 1 --option-ids 1
+1558994845609:auto read 1
+1558994855541:auto read 3
+1558994923367:auto read 9

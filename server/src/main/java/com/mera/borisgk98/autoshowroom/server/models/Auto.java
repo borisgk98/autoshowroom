@@ -34,7 +34,7 @@ public class Auto implements HasId<Integer> {
 
   @JsonProperty("options")
   @Valid
-  @OneToMany
+  @OneToMany(fetch = FetchType.EAGER)
   private List<AutoOption> options = null;
 
   public Auto id(Integer id) {

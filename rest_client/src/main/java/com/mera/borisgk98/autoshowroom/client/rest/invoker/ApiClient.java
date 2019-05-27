@@ -61,7 +61,7 @@ import com.mera.borisgk98.autoshowroom.client.rest.invoker.auth.HttpBasicAuth;
 import com.mera.borisgk98.autoshowroom.client.rest.invoker.auth.ApiKeyAuth;
 import com.mera.borisgk98.autoshowroom.client.rest.invoker.auth.OAuth;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-17T00:02:23.096+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T16:29:32.481+03:00[Europe/Moscow]")
 public class ApiClient {
     public enum CollectionFormat {
         CSV(","), TSV("\t"), SSV(" "), PIPES("|"), MULTI(null);

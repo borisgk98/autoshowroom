@@ -18,29 +18,20 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.mera.borisgk98.autoshowroom.client.models.Order;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Builder;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Contains information about
  */
-@Builder
 @ApiModel(description = "Contains information about")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-17T00:02:23.096+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T16:29:32.481+03:00[Europe/Moscow]")
 public class Seller {
   @JsonProperty("id")
   private Integer id;
 
   @JsonProperty("name")
   private String name;
-
-  @JsonProperty("orders")
-  private List<Order> orders = null;
 
   public Seller id(Integer id) {
     this.id = id;
@@ -78,32 +69,6 @@ public class Seller {
     this.name = name;
   }
 
-  public Seller orders(List<Order> orders) {
-    this.orders = orders;
-    return this;
-  }
-
-  public Seller addOrdersItem(Order ordersItem) {
-    if (this.orders == null) {
-      this.orders = new ArrayList<>();
-    }
-    this.orders.add(ordersItem);
-    return this;
-  }
-
-   /**
-   * Get orders
-   * @return orders
-  **/
-  @ApiModelProperty(value = "")
-  public List<Order> getOrders() {
-    return orders;
-  }
-
-  public void setOrders(List<Order> orders) {
-    this.orders = orders;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -115,13 +80,12 @@ public class Seller {
     }
     Seller seller = (Seller) o;
     return Objects.equals(this.id, seller.id) &&
-        Objects.equals(this.name, seller.name) &&
-        Objects.equals(this.orders, seller.orders);
+        Objects.equals(this.name, seller.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, orders);
+    return Objects.hash(id, name);
   }
 
 
@@ -132,7 +96,6 @@ public class Seller {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    orders: ").append(toIndentedString(orders)).append("\n");
     sb.append("}");
     return sb.toString();
   }

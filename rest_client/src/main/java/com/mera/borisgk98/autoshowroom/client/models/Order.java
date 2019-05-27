@@ -24,14 +24,12 @@ import com.mera.borisgk98.autoshowroom.client.models.OrderStatus;
 import com.mera.borisgk98.autoshowroom.client.models.Seller;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Builder;
 
 /**
  * Contains information about
  */
-@Builder
 @ApiModel(description = "Contains information about")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-17T00:02:23.096+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T16:29:32.481+03:00[Europe/Moscow]")
 public class Order {
   @JsonProperty("id")
   private Integer id;

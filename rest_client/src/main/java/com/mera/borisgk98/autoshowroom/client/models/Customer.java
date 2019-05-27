@@ -18,20 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.mera.borisgk98.autoshowroom.client.models.Order;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Builder;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Contains information about
  */
-@Builder
 @ApiModel(description = "Contains information about")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-17T00:02:23.096+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T16:29:32.481+03:00[Europe/Moscow]")
 public class Customer {
   @JsonProperty("id")
   private Integer id;
@@ -41,9 +35,6 @@ public class Customer {
 
   @JsonProperty("surname")
   private String surname;
-
-  @JsonProperty("orders")
-  private List<Order> orders = null;
 
   public Customer id(Integer id) {
     this.id = id;
@@ -99,32 +90,6 @@ public class Customer {
     this.surname = surname;
   }
 
-  public Customer orders(List<Order> orders) {
-    this.orders = orders;
-    return this;
-  }
-
-  public Customer addOrdersItem(Order ordersItem) {
-    if (this.orders == null) {
-      this.orders = new ArrayList<>();
-    }
-    this.orders.add(ordersItem);
-    return this;
-  }
-
-   /**
-   * Get orders
-   * @return orders
-  **/
-  @ApiModelProperty(value = "")
-  public List<Order> getOrders() {
-    return orders;
-  }
-
-  public void setOrders(List<Order> orders) {
-    this.orders = orders;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -137,13 +102,12 @@ public class Customer {
     Customer customer = (Customer) o;
     return Objects.equals(this.id, customer.id) &&
         Objects.equals(this.name, customer.name) &&
-        Objects.equals(this.surname, customer.surname) &&
-        Objects.equals(this.orders, customer.orders);
+        Objects.equals(this.surname, customer.surname);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, surname, orders);
+    return Objects.hash(id, name, surname);
   }
 
 
@@ -155,7 +119,6 @@ public class Customer {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    surname: ").append(toIndentedString(surname)).append("\n");
-    sb.append("    orders: ").append(toIndentedString(orders)).append("\n");
     sb.append("}");
     return sb.toString();
   }

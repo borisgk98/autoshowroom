@@ -23,7 +23,6 @@ configurations {
 //}
 
 repositories {
-    mavenCentral()
     jcenter()
     maven {
         url 'https://repo.spring.io/libs-snapshot'
@@ -33,10 +32,15 @@ repositories {
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            url 'https://raw.github.com/borisgk98/crudrepositorygenerator/mvn-repo'
+        }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
         classpath "org.openapitools:openapi-generator-gradle-plugin:3.3.4"
+        classpath 'space.borisgk:crudgeneration:0.2'
+        classpath 'org.antlr:stringtemplate:3.2'
     }
 }
 
@@ -59,16 +63,21 @@ dependencies {
 //    compile("org.apache.cxf:cxf-rt-rs-service-description-openapi-v3:3.3.1")
     compile("org.springframework.boot:spring-boot-starter-log4j2")
     compile("com.microsoft.sqlserver:mssql-jdbc:7.2.1.jre8")
+
+    implementation 'org.springframework.shell:spring-shell-starter:2.0.0.RELEASE'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 
 openApiGenerate {
     generatorName = "java"
     // TODO обращаться к спецификации по url
-    inputSpec = "$projectDir/../autoshowroom.yaml".toString()
+    inputSpec = "$projectDir/../server/src/main/resources/autoshowroom.yaml".toString()
     outputDir = "$projectDir".toString()
     apiPackage = ("com.mera.borisgk98.autoshowroom.client.rest.api").toString()
-    skipOverwrite = true
+//    skipOverwrite = true
     invokerPackage = ("com.mera.borisgk98.autoshowroom.client.rest.invoker").toString()
     modelPackage = ("com.mera.borisgk98.autoshowroom.client.models").toString()
 //    groupId = ("com.mera.borisgk98.autoshowroom.server").toString()

@@ -18,29 +18,20 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.mera.borisgk98.autoshowroom.client.models.Auto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Builder;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Contains information about automobiles&#39; options
  */
-@Builder
 @ApiModel(description = "Contains information about automobiles' options")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-17T00:02:23.096+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T16:29:32.481+03:00[Europe/Moscow]")
 public class AutoOption {
   @JsonProperty("id")
   private Integer id;
 
   @JsonProperty("name")
   private String name;
-
-  @JsonProperty("autos")
-  private List<Auto> autos = null;
 
   public AutoOption id(Integer id) {
     this.id = id;
@@ -78,32 +69,6 @@ public class AutoOption {
     this.name = name;
   }
 
-  public AutoOption autos(List<Auto> autos) {
-    this.autos = autos;
-    return this;
-  }
-
-  public AutoOption addAutosItem(Auto autosItem) {
-    if (this.autos == null) {
-      this.autos = new ArrayList<>();
-    }
-    this.autos.add(autosItem);
-    return this;
-  }
-
-   /**
-   * Get autos
-   * @return autos
-  **/
-  @ApiModelProperty(value = "")
-  public List<Auto> getAutos() {
-    return autos;
-  }
-
-  public void setAutos(List<Auto> autos) {
-    this.autos = autos;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -115,13 +80,12 @@ public class AutoOption {
     }
     AutoOption autoOption = (AutoOption) o;
     return Objects.equals(this.id, autoOption.id) &&
-        Objects.equals(this.name, autoOption.name) &&
-        Objects.equals(this.autos, autoOption.autos);
+        Objects.equals(this.name, autoOption.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, autos);
+    return Objects.hash(id, name);
   }
 
 
@@ -132,7 +96,6 @@ public class AutoOption {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    autos: ").append(toIndentedString(autos)).append("\n");
     sb.append("}");
     return sb.toString();
   }

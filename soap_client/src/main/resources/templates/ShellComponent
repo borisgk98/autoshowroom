@@ -1,0 +1,94 @@
+package com.mera.borisgk98.autoshowroom.soapclient.component;
+
+import com.mera.borisgk98.autoshowroom.soapclient.generated.ModelNotFound;
+import com.mera.borisgk98.autoshowroom.soapclient.model.*;
+import org.springframework.shell.standard.ShellComponent;
+import org.springframework.shell.standard.ShellMethod;
+import org.springframework.shell.standard.ShellOption;
+import org.springframework.shell.table.Table;
+import java.util.List;
+
+
+@ShellComponent
+public class $Model$ShellComponent extends AbstractShellComponent<$Model$> implements ReadDeleteShellComponent<$Model$> {
+
+    public $Model$ShellComponent() {
+        super($Model$.class);
+    }
+
+    @ShellMethod(
+            prefix = "--",
+            value = "Create new $model$",
+            key = "$model$ create"
+    )
+    public String create($paramsBlock$) {
+        $Model$ $model$ = new $Model$();
+        $settersBlock$
+        return crudService.create($model$).toString();
+    }
+
+    @ShellMethod(
+            prefix = "--",
+            value = "Update $model$",
+            key = "$model$ update"
+    )
+    public String update(
+            @ShellOption Integer id, $paramsBlock$) {
+        try {
+            $Model$ $model$ = new $Model$();
+            $model$.setId(id);
+            $settersBlock$
+            return crudService.update($model$).toString();
+        }
+        catch (ModelNotFound e) {
+            return "Not found";
+        }
+    }
+
+    @Override
+    @ShellMethod(
+            prefix = "--",
+            value = "Read all values of $model$",
+            key = "$model$ readall"
+    )
+    public Table readAll() {
+        return super.readAll();
+    }
+
+    @Override
+    @ShellMethod(
+            prefix = "--",
+            value = "Read some values of $model$ with pagination",
+            key = "$model$ readrange"
+    )
+    public Table readWithLimitAndOffset(
+            @ShellOption(
+                    help = "Limit for number of returning values"
+            ) Integer limit,
+            @ShellOption(
+                    help = "Offset for number of returning values"
+            ) Integer offset
+    ) {
+        return super.readWithLimitAndOffset(limit, offset);
+    }
+
+    @Override
+    @ShellMethod(
+            prefix = "--",
+            value = "Read information about $model$ by id",
+            key = "$model$ read"
+    )
+    public String read(@ShellOption Integer id) {
+        return super.read(id);
+    }
+
+    @Override
+    @ShellMethod(
+            prefix = "--",
+            value = "Delete $model$ by id",
+            key = "$model$ delete"
+    )
+    public String delete(@ShellOption Integer id) {
+        return super.delete(id);
+    }
+}

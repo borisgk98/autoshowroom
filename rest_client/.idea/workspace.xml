@@ -2,66 +2,134 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="504d8e6f-0fdd-4416-936b-dd90b47a5bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../abstract_client/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/exceptions/ModelNotFound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models/Auto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models/AutoMark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models/AutoModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models/AutoOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models/HasId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models/Seller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/objectfabric/Fabric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/objectfabric/FabricImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/services/AutoMarkService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/services/CrudService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/services/impldefault/AutoMarkDefaultImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/shell/components/AbstractCrudShellComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/shell/components/AutoMarkShellComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/shell/components/CrudShellComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/shell/components/TestComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abstract_client/src/main/resources/templates/Service" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/services/AutoMarkService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/services/AutoModelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/services/AutoOptionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/services/AutoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/services/CrudService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/services/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/services/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/services/SellerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../soap_client/src/main/resources/templates/Service" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_tmp___" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/Auto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoMark.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoMarkWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoMarkWebService_AutomarkServicePort_Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoModelWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoModelWebService_AutomodelServicePort_Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoOption.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoOptionWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoOptionWebService_AutooptionServicePort_Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoWebService_AutoServicePort_Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutomarkService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutomodelService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutooptionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/Customer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CustomerWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CustomerWebService_CustomerServicePort_Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ModelNotFound.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ModelNotFound_Exception.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ObjectFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/OrderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/OrderStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/OrderWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/OrderWebService_OrderServicePort_Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/Seller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/SellerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/SellerWebService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/SellerWebService_SellerServicePort_Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/Auto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/model/Auto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/model/AutoMark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoMarkWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutoMarkWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoMarkWebService_AutomarkServicePort_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutoMarkWebService_AutomarkServicePort_Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/model/AutoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoModelWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutoModelWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoModelWebService_AutomodelServicePort_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutoModelWebService_AutomodelServicePort_Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/model/AutoOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoOptionWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutoOptionWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoOptionWebService_AutooptionServicePort_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutoOptionWebService_AutooptionServicePort_Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutoWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutoWebService_AutoServicePort_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutoWebService_AutoServicePort_Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutomarkService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutomarkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutomodelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutomodelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/AutooptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/AutooptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateAuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateAutoMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateAutoMark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateAutoMarkResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateAutoMarkResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateAutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateAutoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateAutoModelResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateAutoModelResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateAutoOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateAutoOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateAutoOptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateAutoOptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateAutoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateAutoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateCustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateCustomerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateOrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateSeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CreateSellerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CreateSellerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CustomerWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CustomerWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/CustomerWebService_CustomerServicePort_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/CustomerWebService_CustomerServicePort_Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteAuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteAutoMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteAutoMark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteAutoMarkResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteAutoMarkResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteAutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteAutoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteAutoModelResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteAutoModelResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteAutoOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteAutoOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteAutoOptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteAutoOptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteAutoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteAutoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteCustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteCustomerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteOrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteSeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/DeleteSellerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/DeleteSellerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllAuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllAutoMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllAutoMark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllAutoMarkResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllAutoMarkResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllAutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllAutoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllAutoModelResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllAutoModelResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllAutoOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllAutoOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllAutoOptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllAutoOptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllAutoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllAutoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllCustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllCustomerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllOrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllSeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetAllSellerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetAllSellerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeAuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeAutoMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeAutoMark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeAutoMarkResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeAutoMarkResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeAutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeAutoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeAutoModelResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeAutoModelResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeAutoOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeAutoOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeAutoOptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeAutoOptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeAutoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeAutoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeCustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeCustomerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeOrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeSeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/GetRangeSellerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/GetRangeSellerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ModelNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ModelNotFound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ModelNotFound_Exception.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ModelNotFound_Exception.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ObjectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/OrderStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/model/OrderStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/OrderWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/OrderWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/OrderWebService_OrderServicePort_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/OrderWebService_OrderServicePort_Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadAuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadAutoMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadAutoMark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadAutoMarkResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadAutoMarkResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadAutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadAutoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadAutoModelResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadAutoModelResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadAutoOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadAutoOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadAutoOptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadAutoOptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadAutoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadAutoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadCustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadCustomerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadOrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadSeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/ReadSellerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/ReadSellerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/Seller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/model/Seller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/SellerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/SellerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/SellerWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/SellerWebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/SellerWebService_SellerServicePort_Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/SellerWebService_SellerServicePort_Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateAuto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateAutoMark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateAutoMark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateAutoMarkResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateAutoMarkResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateAutoModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateAutoModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateAutoModelResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateAutoModelResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateAutoOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateAutoOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateAutoOptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateAutoOptionResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateAutoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateAutoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateCustomerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateCustomerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateOrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateSeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateSeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/UpdateSellerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/UpdateSellerResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/server/soap/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../soap_client/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/generated/package-info.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -247,7 +315,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="960" />
     <option name="height" value="1172" />
   </component>
@@ -444,16 +512,18 @@
       <workItem from="1558181848588" duration="1973000" />
       <workItem from="1558184850105" duration="2588000" />
       <workItem from="1558657882819" duration="1527000" />
+      <workItem from="1558944499640" duration="111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15476000" />
+    <option name="totallyTimeSpent" value="15587000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1684" height="1024" extended-state="6" />
+    <frame x="-2" y="0" width="1684" height="1024" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21909425" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22215423" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -558,6 +628,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/git_push.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/models/AutoMark.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -609,16 +689,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/git_push.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="61" column="1" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
   </component>
   <component name="masterDetails">

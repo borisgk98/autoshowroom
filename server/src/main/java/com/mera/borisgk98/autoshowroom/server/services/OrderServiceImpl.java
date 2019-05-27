@@ -13,6 +13,8 @@ public class OrderServiceImpl
         extends AbstractCrudService<Order>
         implements OrderService {
 
+    private OrderRepository repository;
+
     @Autowired
     public OrderServiceImpl(OrderRepository repository) {
         this.repository = repository;
@@ -24,6 +26,6 @@ public class OrderServiceImpl
     }
 
     public List<Order> filterByOrderStatus(OrderStatus status) {
-        
+        return repository.findAllByOrderStatus(status);
     }
 }

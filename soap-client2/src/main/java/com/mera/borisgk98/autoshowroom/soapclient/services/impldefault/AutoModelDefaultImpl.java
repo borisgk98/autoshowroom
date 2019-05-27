@@ -1,7 +1,6 @@
 package com.mera.borisgk98.autoshowroom.soapclient.services.impldefault;
 
-import com.mera.borisgk98.autoshowroom.soapclient.generated.*;
-import com.mera.borisgk98.autoshowroom.soapclient.model.AutoModel;
+import com.mera.borisgk98.autoshowroom.server.soap.*;
 import com.mera.borisgk98.autoshowroom.soapclient.objectfabric.Fabric;
 import com.mera.borisgk98.autoshowroom.soapclient.services.AutoModelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,17 +20,17 @@ public class AutoModelDefaultImpl implements AutoModelService {
     }
 
     @Override
-    public AutoModel read(Integer id) throws ModelNotFound {
+    public AutoModel read(Integer id) throws ModelNotFound_Exception {
         return fabric.getObject(AutoModel.class);
     }
 
     @Override
-    public AutoModel update(AutoModel m) throws ModelNotFound {
+    public AutoModel update(AutoModel m) throws ModelNotFound_Exception {
         return fabric.getObject(AutoModel.class);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void delete(Integer id) throws ModelNotFound_Exception {
 
     }
 

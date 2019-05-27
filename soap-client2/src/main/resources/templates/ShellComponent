@@ -1,7 +1,6 @@
 package com.mera.borisgk98.autoshowroom.soapclient.component;
 
-import com.mera.borisgk98.autoshowroom.soapclient.generated.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.soapclient.model.*;
+import com.mera.borisgk98.autoshowroom.server.soap.*;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
@@ -40,7 +39,7 @@ public class $Model$ShellComponent extends AbstractShellComponent<$Model$> imple
             $settersBlock$
             return crudService.update($model$).toString();
         }
-        catch (ModelNotFound e) {
+        catch (ModelNotFound_Exception e) {
             return "Not found";
         }
     }

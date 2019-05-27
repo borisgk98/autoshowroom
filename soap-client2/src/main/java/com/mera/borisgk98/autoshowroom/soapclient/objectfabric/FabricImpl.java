@@ -1,6 +1,6 @@
 package com.mera.borisgk98.autoshowroom.soapclient.objectfabric;
 
-import com.mera.borisgk98.autoshowroom.soapclient.model.*;
+import com.mera.borisgk98.autoshowroom.server.soap.*;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Constructor;

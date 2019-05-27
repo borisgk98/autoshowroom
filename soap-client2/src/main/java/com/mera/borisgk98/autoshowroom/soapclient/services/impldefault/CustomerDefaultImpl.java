@@ -1,7 +1,6 @@
 package com.mera.borisgk98.autoshowroom.soapclient.services.impldefault;
 
-import com.mera.borisgk98.autoshowroom.soapclient.generated.*;
-import com.mera.borisgk98.autoshowroom.soapclient.model.Customer;
+import com.mera.borisgk98.autoshowroom.server.soap.*;
 import com.mera.borisgk98.autoshowroom.soapclient.objectfabric.Fabric;
 import com.mera.borisgk98.autoshowroom.soapclient.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,17 +20,17 @@ public class CustomerDefaultImpl implements CustomerService {
     }
 
     @Override
-    public Customer read(Integer id) throws ModelNotFound {
+    public Customer read(Integer id) throws ModelNotFound_Exception {
         return fabric.getObject(Customer.class);
     }
 
     @Override
-    public Customer update(Customer m) throws ModelNotFound {
+    public Customer update(Customer m) throws ModelNotFound_Exception {
         return fabric.getObject(Customer.class);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void delete(Integer id) throws ModelNotFound_Exception {
 
     }
 

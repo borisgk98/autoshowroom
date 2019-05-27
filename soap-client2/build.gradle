@@ -72,18 +72,15 @@ springBoot {
 
 crudGenerationSetting {
     srcRoot = "$projectDir/src/main/java"
-    modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/client/models"
+    modelPackage = "/home/boris/progs/autoshowroom/abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/models"
     generationRoot = "$projectDir/src/main/java"
     generationPackages = [
-            "com.mera.borisgk98.autoshowroom.client.services",
-            "com.mera.borisgk98.autoshowroom.client.shell.components",
-            "com.mera.borisgk98.autoshowroom.client.services.impldefault"
+            "com.mera.borisgk98.autoshowroom.soapclient.services",
+"com.mera.borisgk98.autoshowroom.soapclient.services.impldefault"
     ]
     generationTemplates = [
             "$projectDir/src/main/resources/templates/Service".toString(),
-            "$projectDir/src/main/resources/templates/ShellComponent".toString(),
-            "$projectDir/src/main/resources/templates/DefaultImpl".toString()
-
+"$projectDir/src/main/resources/templates/DefaultImpl".toString()
     ]
     generationConcatOuts = [
     ]
@@ -95,25 +92,29 @@ crudGenerationSetting {
     ]
 }
 
-crudGenerationSetting {
-    srcRoot = "$projectDir/src/main/java"
-    modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/soapclient/model"
-    generationRoot = "$projectDir/src/main/java"
-    generationPackages = [
-//            "com.mera.borisgk98.autoshowroom.soapclient.services"
-"com.mera.borisgk98.autoshowroom.soapclient.services.impldefault"
-    ]
-    generationTemplates = [
-//            "$projectDir/src/main/resources/templates/Service".toString()
-"$projectDir/src/main/resources/templates/DefaultImpl".toString()
-    ]
-    generationConcatOuts = [
-    ]
-    generationConcatTemplates = [
-    ]
-    excludeModels = [
-            "OrderStatus",
-            "HasId",
-            "AutoMark"
-    ]
+task wsdl2java(type: JavaExec) {
+    ext {
+        outputDir = file("$jaxbOutputDir")
+        wsdllist = "$projectDir/src/main/resources/services.txt"
+    }
+    systemProperties  = ['javax.xml.accessExternalSchema': 'file' , 'file.encoding':'UTF8']
+    outputs.upToDateWhen { false }
+    outputs.dir "$projectDir/src/main/java"
+    main = 'org.apache.cxf.tools.wsdlto.WSDLToJava'
+    classpath = project.configurations.cxf
+    args '-d', "$projectDir/src/main/java"
+    args '-fe', 'jaxws21'
+    args '-client'
+    args '-verbose'
+    args '-validate'
+    args '-mark-generated'
+//  args '-xjc-X'
+    args '-xjc-Xfluent-api'
+    args '-xjc-Xts'
+    args '-xjc-XhashCode'
+    args '-xjc-Xequals'
+    args '-wsdlList', wsdllist
+    doLast {
+        println "----- cxf jaxb2 files generated -----"
+    }
 }

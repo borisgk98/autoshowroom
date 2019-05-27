@@ -1,10 +1,9 @@
 package com.mera.borisgk98.autoshowroom.soapclient.component;
 
-import com.mera.borisgk98.autoshowroom.soapclient.generated.ModelNotFound;
+import com.mera.borisgk98.autoshowroom.server.soap.ModelNotFound_Exception;
 import com.mera.borisgk98.autoshowroom.soapclient.services.CrudService;
 import com.mera.borisgk98.autoshowroom.soapclient.tool.TableBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.shell.table.Table;
 
 public abstract class AbstractShellComponent<T> implements ReadDeleteShellComponent<T> {
@@ -31,7 +30,7 @@ public abstract class AbstractShellComponent<T> implements ReadDeleteShellCompon
         try {
             return crudService.read(id).toString();
         }
-        catch (ModelNotFound modelNotFound) {
+        catch (ModelNotFound_Exception modelNotFound) {
             return "Not found";
         }
     }
@@ -42,7 +41,7 @@ public abstract class AbstractShellComponent<T> implements ReadDeleteShellCompon
             crudService.delete(id);
             return "Successful deleting";
         }
-        catch (ModelNotFound e) {
+        catch (ModelNotFound_Exception e) {
             return "Not found";
         }
     }

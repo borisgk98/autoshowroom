@@ -1,5 +1,5 @@
 package com.mera.borisgk98.autoshowroom.soapclient.services;
-import com.mera.borisgk98.autoshowroom.soapclient.model.$Model$;
+import com.mera.borisgk98.autoshowroom.server.soap.$Model$;
 
 public interface $Model$Service extends CrudService<$Model$, Integer>{
 }

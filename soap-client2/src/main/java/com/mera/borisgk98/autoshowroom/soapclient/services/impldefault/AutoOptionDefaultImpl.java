@@ -1,7 +1,6 @@
 package com.mera.borisgk98.autoshowroom.soapclient.services.impldefault;
 
-import com.mera.borisgk98.autoshowroom.soapclient.generated.*;
-import com.mera.borisgk98.autoshowroom.soapclient.model.AutoOption;
+import com.mera.borisgk98.autoshowroom.server.soap.*;
 import com.mera.borisgk98.autoshowroom.soapclient.objectfabric.Fabric;
 import com.mera.borisgk98.autoshowroom.soapclient.services.AutoOptionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,17 +20,17 @@ public class AutoOptionDefaultImpl implements AutoOptionService {
     }
 
     @Override
-    public AutoOption read(Integer id) throws ModelNotFound {
+    public AutoOption read(Integer id) throws ModelNotFound_Exception {
         return fabric.getObject(AutoOption.class);
     }
 
     @Override
-    public AutoOption update(AutoOption m) throws ModelNotFound {
+    public AutoOption update(AutoOption m) throws ModelNotFound_Exception {
         return fabric.getObject(AutoOption.class);
     }
 
     @Override
-    public void delete(Integer id) throws ModelNotFound {
+    public void delete(Integer id) throws ModelNotFound_Exception {
 
     }
 

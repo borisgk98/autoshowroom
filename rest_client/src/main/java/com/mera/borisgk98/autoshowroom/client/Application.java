@@ -1,5 +1,6 @@
 package com.mera.borisgk98.autoshowroom.client;
 
+import com.mera.borisgk98.autoshowroom.client.rest.api.DefaultApi;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,5 +19,10 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+    }
+
+    @Bean
+    public DefaultApi api() {
+        return new DefaultApi();
     }
 }

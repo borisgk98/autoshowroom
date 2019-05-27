@@ -451,3 +451,31 @@ Caused by: org.springframework.context.ApplicationContextException: Unable to st
 2019-05-27 19:21:55.618  INFO 14281 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
 2019-05-27 19:21:57.120  WARN 14281 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
 2019-05-27 19:21:57.332  INFO 14281 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.405 seconds (JVM running for 3.411)
+2019-05-27 19:35:44.264  INFO 16066 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 16066 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 19:35:44.268  INFO 16066 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 19:35:45.043  WARN 16066 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'autoMarkShellComponent': Unsatisfied dependency expressed through field 'crudService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mera.borisgk98.autoshowroom.client.service.CrudService<com.mera.borisgk98.autoshowroom.client.models.AutoMark, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-05-27 19:35:45.056  INFO 16066 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 19:35:45.277 ERROR 16066 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field crudService in com.mera.borisgk98.autoshowroom.client.component.AbstractShellComponent required a bean of type 'com.mera.borisgk98.autoshowroom.client.service.CrudService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mera.borisgk98.autoshowroom.client.service.CrudService' in your configuration.
+
+2019-05-27 19:36:30.799  INFO 16275 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 16275 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 19:36:30.812  INFO 16275 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 19:36:31.979  WARN 16275 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-27 19:36:32.099  INFO 16275 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.003 seconds (JVM running for 2.828)

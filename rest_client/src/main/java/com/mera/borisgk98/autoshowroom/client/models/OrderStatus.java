@@ -16,13 +16,18 @@ package com.mera.borisgk98.autoshowroom.client.models;
 import java.util.Objects;
 import java.util.Arrays;
 import io.swagger.annotations.ApiModel;
+import com.google.gson.annotations.SerializedName;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
+import java.io.IOException;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 
 /**
  * Contains information about
  */
+@JsonAdapter(OrderStatus.Adapter.class)
 public enum OrderStatus {
   
   ACCEPTED("ACCEPTED"),
@@ -37,7 +42,6 @@ public enum OrderStatus {
     this.value = value;
   }
 
-  @JsonValue
   public String getValue() {
     return value;
   }
@@ -47,7 +51,6 @@ public enum OrderStatus {
     return String.valueOf(value);
   }
 
-  @JsonCreator
   public static OrderStatus fromValue(String text) {
     for (OrderStatus b : OrderStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
@@ -55,6 +58,19 @@ public enum OrderStatus {
       }
     }
     throw new IllegalArgumentException("Unexpected value '" + text + "'");
+  }
+
+  public static class Adapter extends TypeAdapter<OrderStatus> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final OrderStatus enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
+    }
+
+    @Override
+    public OrderStatus read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return OrderStatus.fromValue(String.valueOf(value));
+    }
   }
 }
 

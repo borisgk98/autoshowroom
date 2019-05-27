@@ -3,26 +3,20 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'org.openapi.generator'
+apply plugin: 'space.borisgk.crudgeneration'
 
 group = 'com.mera.borisgk98.autoshowroom'
-version = '0.0.1-SNAPSHOT'
+version = '0.1'
 sourceCompatibility = '1.8'
 
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
-    rest
-    all {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
-    }
 }
 
-//task wrapper (type: Wrapper) {
-//    gradleVersion = '5.2'
-//}
-
 repositories {
+    mavenCentral()
     jcenter()
     maven {
         url 'https://repo.spring.io/libs-snapshot'
@@ -45,29 +39,76 @@ buildscript {
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
-    compile("org.springframework.boot:spring-boot-starter-web-services")
-    compile("org.springframework.boot:spring-boot-starter-webflux")
-    compile("junit:junit")
-    // https://mvnrepository.com/artifact/io.projectreactor/reactor-core
-    compile group: 'io.projectreactor', name: 'reactor-core', version: '3.2.9.RELEASE'
-//    compile("org.apache.cxf:cxf-spring-boot-starter-jaxws:3.3.1")
-//    compile("wsdl4j:wsdl4j")
-    compile("org.projectlombok:lombok")
-//    compile("org.liquibase:liquibase-core")
-//    compile("com.h2database:h2")
-    compile("io.springfox:springfox-swagger-ui:2.9.2")
-    compile("io.springfox:springfox-swagger2:2.9.2")
-//    compile("org.apache.cxf:cxf-spring-boot-starter-jaxrs:3.3.1")
-//    compile("org.apache.cxf:cxf-rt-rs-service-description-openapi-v3:3.3.1")
-    compile("org.springframework.boot:spring-boot-starter-log4j2")
-    compile("com.microsoft.sqlserver:mssql-jdbc:7.2.1.jre8")
-
     implementation 'org.springframework.shell:spring-shell-starter:2.0.0.RELEASE'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compile("io.springfox:springfox-swagger-ui:2.9.2")
+    compile("io.springfox:springfox-swagger2:2.9.2")
+//
+//
+////    // https://mvnrepository.com/artifact/org.springframework/spring-web
+////    compile group: 'org.springframework', name: 'spring-web', version: '5.1.7.RELEASE'
+////    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+////    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
+//
+//
+//    compile "io.swagger:swagger-annotations:1.5.20"
+//    compile "io.projectreactor:reactor-core:3.1.8.RELEASE"
+//    compile "org.springframework:spring-webflux:5.0.7.RELEASE"
+//    compile "io.projectreactor.ipc:reactor-netty:5.0.7.RELEASE"
+//    compile "com.fasterxml.jackson.core:jackson-databind:2.8.11"
+//    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.11"
+//    testCompile "junit:junit:4.12"
+
+//    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux
+//    compile "org.springframework.boot:spring-boot-starter-webflux"
+//    compile("org.springframework.boot:spring-boot-starter-log4j2")
+//    compile 'org.springframework.shell:spring-shell-starter:2.0.1.BUILD-SNAPSHOT'
+//    compile "io.gsonfire:gson-fire:1.8.3"
+//    compile "com.google.code.gson:gson:2.8.1"
+//    // https://mvnrepository.com/artifact/io.swagger/swagger-annotations
+//    compile group: 'io.swagger', name: 'swagger-annotations', version: '1.5.22'
+//    compile 'commons-lang:commons-lang:2.6'
+//
+//    // https://mvnrepository.com/artifact/com.google.guava/guava
+//    compile group: 'com.google.guava', name: 'guava', version: '27.0.1-jre'
+//
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile "io.swagger:swagger-annotations:1.5.18"
+    compile "com.squareup.okhttp:okhttp:2.7.5"
+    compile "com.squareup.okhttp:logging-interceptor:2.7.5"
+    compile "com.google.code.gson:gson:2.8.1"
+    compile "io.gsonfire:gson-fire:1.8.0"
+    compile "org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.1"
+}
+
+springBoot {
+    mainClassName = 'com.mera.borisgk98.autoshowroom.client.Application'
+}
+
+crudGenerationSetting {
+    srcRoot = "$projectDir/src/main/java"
+    modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/client/models"
+    generationRoot = "$projectDir/src/main/java"
+    generationPackages = [
+            "com.mera.borisgk98.autoshowroom.client.services",
+            "com.mera.borisgk98.autoshowroom.client.services.impldefault"
+    ]
+    generationTemplates = [
+            "$projectDir/src/main/resources/templates/Service".toString(),
+            "$projectDir/src/main/resources/templates/DefaultImpl".toString()
+
+    ]
+    generationConcatOuts = [
+    ]
+    generationConcatTemplates = [
+    ]
+    excludeModels = [
+            "OrderStatus",
+            "HasId"
+    ]
 }
 
 
@@ -86,16 +127,14 @@ openApiGenerate {
             "Error"
     ]
     configOptions = [
-            dateLibrary: "java8",
-            library: "webclient"
+            dateLibrary: "java8"
+//            ,library: "google-api-client"
+//            ,library: "okhttp-gson"
+//            ,library: "webclient"
     ]
     systemProperties = [
             apis           : "",
             models         : "",
             supportingFiles: ""
     ]
-}
-
-openApiValidate {
-    inputSpec = "$projectDir/../autoshowroom.yaml".toString()
 }

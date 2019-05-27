@@ -1,12 +1,11 @@
 package com.mera.borisgk98.autoshowroom.client.component;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.client.models.*;
+import com.mera.borisgk98.autoshowroom.client.models.AutoOption;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import org.springframework.shell.table.Table;
-import java.util.List;
 
 
 @ShellComponent

@@ -1,17 +1,16 @@
-package com.mera.borisgk98.autoshowroom.soapclient.services.impldefault;
+package com.mera.borisgk98.autoshowroom.client.services.impldefault;
 
-import com.mera.borisgk98.autoshowroom.soapclient.generated.*;
-import com.mera.borisgk98.autoshowroom.soapclient.model.$Model$;
-import com.mera.borisgk98.autoshowroom.soapclient.objectfabric.Fabric;
-import com.mera.borisgk98.autoshowroom.soapclient.services.$Model$Service;
+
+import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
+import com.mera.borisgk98.autoshowroom.client.models.*;
+import com.mera.borisgk98.autoshowroom.client.objectfabric.Fabric;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 @Component
 @org.springframework.core.annotation.Order(org.springframework.core.Ordered.LOWEST_PRECEDENCE)
-public class $Model$DefaultImpl implements $Model$Service {
+public class $Model$DefaultImpl implements com.mera.borisgk98.autoshowroom.client.service.$Model$Service {
 
     @Autowired
     protected Fabric fabric;

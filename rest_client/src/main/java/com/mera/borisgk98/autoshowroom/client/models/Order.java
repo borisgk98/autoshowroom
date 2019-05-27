@@ -15,35 +15,43 @@ package com.mera.borisgk98.autoshowroom.client.models;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
 import com.mera.borisgk98.autoshowroom.client.models.Auto;
 import com.mera.borisgk98.autoshowroom.client.models.Customer;
 import com.mera.borisgk98.autoshowroom.client.models.OrderStatus;
 import com.mera.borisgk98.autoshowroom.client.models.Seller;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.io.IOException;
 
 /**
  * Contains information about
  */
 @ApiModel(description = "Contains information about")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T16:29:32.481+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T19:17:51.180+03:00[Europe/Moscow]")
 public class Order {
-  @JsonProperty("id")
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
   private Integer id;
 
-  @JsonProperty("seller")
+  public static final String SERIALIZED_NAME_SELLER = "seller";
+  @SerializedName(SERIALIZED_NAME_SELLER)
   private Seller seller = null;
 
-  @JsonProperty("customer")
+  public static final String SERIALIZED_NAME_CUSTOMER = "customer";
+  @SerializedName(SERIALIZED_NAME_CUSTOMER)
   private Customer customer = null;
 
-  @JsonProperty("auto")
+  public static final String SERIALIZED_NAME_AUTO = "auto";
+  @SerializedName(SERIALIZED_NAME_AUTO)
   private Auto auto = null;
 
-  @JsonProperty("status")
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
   private OrderStatus status = null;
 
   public Order id(Integer id) {

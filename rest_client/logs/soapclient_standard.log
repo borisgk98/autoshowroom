@@ -1,0 +1,453 @@
+2019-05-27 16:53:55.120  INFO 30032 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 30032 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 16:53:55.134  INFO 30032 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 16:53:56.097  WARN 30032 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-27 16:53:56.259  INFO 30032 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 1.755 seconds (JVM running for 3.239)
+2019-05-27 17:05:33.378  INFO 31590 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 31590 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 17:05:33.381  INFO 31590 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 17:05:34.243  INFO 31590 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-27 17:05:34.276  INFO 31590 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-05-27 17:05:34.714  INFO 31590 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$67d2179b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:05:34.755  INFO 31590 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-05-27 17:05:34.801  INFO 31590 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c33a529c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:05:35.217  INFO 31590 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-27 17:05:35.246  INFO 31590 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-27 17:05:35.246  INFO 31590 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-27 17:05:35.254  INFO 31590 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-05-27 17:05:35.348  INFO 31590 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-27 17:05:35.348  INFO 31590 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1922 ms
+2019-05-27 17:05:35.435  WARN 31590 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-05-27 17:05:35.439  INFO 31590 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-05-27 17:05:35.479  INFO 31590 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 17:05:35.482 ERROR 31590 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-05-27 17:07:38.335  INFO 31872 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 31872 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 17:07:38.338  INFO 31872 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 17:07:39.601  INFO 31872 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$f1927b79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:07:39.654  INFO 31872 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-05-27 17:07:40.070  INFO 31872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-27 17:07:40.100  INFO 31872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-27 17:07:40.100  INFO 31872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-27 17:07:40.108  INFO 31872 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-05-27 17:07:40.202  INFO 31872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-27 17:07:40.202  INFO 31872 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1813 ms
+2019-05-27 17:07:40.275  WARN 31872 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'autoMarkShellComponent': Unsatisfied dependency expressed through field 'crudService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mera.borisgk98.autoshowroom.client.service.CrudService<com.mera.borisgk98.autoshowroom.client.models.AutoMark, java.lang.Integer>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-05-27 17:07:40.278  INFO 31872 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-05-27 17:07:40.310  INFO 31872 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 17:07:40.423 ERROR 31872 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field crudService in com.mera.borisgk98.autoshowroom.client.component.AbstractShellComponent required a bean of type 'com.mera.borisgk98.autoshowroom.client.service.CrudService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.mera.borisgk98.autoshowroom.client.service.CrudService' in your configuration.
+
+2019-05-27 17:11:54.526  INFO 32515 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 32515 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 17:11:54.530  INFO 32515 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 17:11:55.678  INFO 32515 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ad56bc26] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:11:55.718  INFO 32515 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-05-27 17:11:56.069  INFO 32515 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-27 17:11:56.101  INFO 32515 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-27 17:11:56.102  INFO 32515 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-27 17:11:56.109  INFO 32515 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-05-27 17:11:56.202  INFO 32515 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-27 17:11:56.202  INFO 32515 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1620 ms
+2019-05-27 17:11:56.516  INFO 32515 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-27 17:11:57.154  WARN 32515 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-27 17:11:57.296 ERROR 32515 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.mera.borisgk98.autoshowroom.client.Application.main(Application.java:10) [classes/:na]
+Caused by: java.net.BindException: Адрес уже используется
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_212]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_212]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_212]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_212]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_212]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1085) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1171) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	... 14 common frames omitted
+
+2019-05-27 17:11:57.301  INFO 32515 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-05-27 17:11:57.327  INFO 32515 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 17:11:57.333 ERROR 32515 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-05-27 17:11:57.355  INFO 32515 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-27 17:15:56.897  INFO 302 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 302 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 17:15:56.906  INFO 302 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 17:15:58.040  INFO 302 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$33b2ec75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:15:58.080  INFO 302 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-05-27 17:15:58.423  INFO 302 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-27 17:15:58.451  INFO 302 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-27 17:15:58.451  INFO 302 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-27 17:15:58.459  INFO 302 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-05-27 17:15:58.557  INFO 302 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-27 17:15:58.558  INFO 302 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1563 ms
+2019-05-27 17:15:58.889  INFO 302 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-27 17:15:59.535  WARN 302 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-27 17:15:59.666 ERROR 302 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.mera.borisgk98.autoshowroom.client.Application.main(Application.java:10) [classes/:na]
+Caused by: java.net.BindException: Адрес уже используется
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_212]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_212]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_212]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_212]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_212]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1085) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1171) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	... 14 common frames omitted
+
+2019-05-27 17:15:59.685  INFO 302 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-05-27 17:15:59.708  INFO 302 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 17:15:59.714 ERROR 302 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-05-27 17:15:59.734  INFO 302 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-27 17:16:19.479  INFO 430 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 430 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 17:16:19.482  INFO 430 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 17:16:21.271  WARN 430 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-27 17:16:21.565  INFO 430 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 17:16:21.572 ERROR 430 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2019-05-27 17:22:49.583  INFO 2143 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 2143 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 17:22:49.589  INFO 2143 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 17:22:51.778  WARN 2143 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-27 17:22:52.048  INFO 2143 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 17:22:52.055 ERROR 2143 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2019-05-27 17:32:25.721  INFO 3824 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 3824 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 17:32:25.728  INFO 3824 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 17:32:26.764  INFO 3824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-27 17:32:26.800  INFO 3824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 0 repository interfaces.
+2019-05-27 17:32:27.235  INFO 3824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$dbf2206a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:32:27.290  INFO 3824 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-05-27 17:32:27.332  INFO 3824 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$375a5b6b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:32:27.703  INFO 3824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-27 17:32:27.733  INFO 3824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-27 17:32:27.733  INFO 3824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-27 17:32:27.741  INFO 3824 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-05-27 17:32:27.835  INFO 3824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-27 17:32:27.836  INFO 3824 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1992 ms
+2019-05-27 17:32:27.921  WARN 3824 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-05-27 17:32:27.925  INFO 3824 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-05-27 17:32:27.962  INFO 3824 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 17:32:27.965 ERROR 3824 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-05-27 17:32:59.584  INFO 3921 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 3921 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 17:32:59.589  INFO 3921 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 17:33:00.515  INFO 3921 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-27 17:33:00.550  INFO 3921 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 0 repository interfaces.
+2019-05-27 17:33:01.008  INFO 3921 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$58898c8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:33:01.047  INFO 3921 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-05-27 17:33:01.107  INFO 3921 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b3f1c790] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:33:01.517  INFO 3921 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-27 17:33:01.545  INFO 3921 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-27 17:33:01.548  INFO 3921 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-27 17:33:01.562  INFO 3921 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-05-27 17:33:01.667  INFO 3921 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-27 17:33:01.668  INFO 3921 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2000 ms
+2019-05-27 17:33:01.759  WARN 3921 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration': Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2019-05-27 17:33:01.762  INFO 3921 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-05-27 17:33:01.798  INFO 3921 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 17:33:01.800 ERROR 3921 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2019-05-27 17:33:15.791  INFO 4054 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 4054 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 17:33:15.803  INFO 4054 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 17:33:17.024  INFO 4054 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2d2b563a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-27 17:33:17.061  INFO 4054 --- [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2019-05-27 17:33:17.421  INFO 4054 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-05-27 17:33:17.450  INFO 4054 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-27 17:33:17.450  INFO 4054 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-27 17:33:17.458  INFO 4054 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2019-05-27 17:33:17.559  INFO 4054 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-27 17:33:17.559  INFO 4054 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1630 ms
+2019-05-27 17:33:17.870  INFO 4054 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-27 17:33:18.473  WARN 4054 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-27 17:33:18.607 ERROR 4054 --- [main] org.apache.catalina.util.LifecycleBase   : Failed to start component [Connector[HTTP/1.1-8080]]
+
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1008) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:226) [tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:311) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:164) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552) [spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.mera.borisgk98.autoshowroom.client.Application.main(Application.java:11) [classes/:na]
+Caused by: java.net.BindException: Адрес уже используется
+	at sun.nio.ch.Net.bind0(Native Method) ~[na:1.8.0_212]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[na:1.8.0_212]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[na:1.8.0_212]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[na:1.8.0_212]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[na:1.8.0_212]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1085) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1171) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:568) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1005) ~[tomcat-embed-core-9.0.16.jar:9.0.16]
+	... 14 common frames omitted
+
+2019-05-27 17:33:18.613  INFO 4054 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-05-27 17:33:18.640  INFO 4054 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 17:33:18.645 ERROR 4054 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-05-27 17:33:18.665  INFO 4054 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-27 18:08:04.196  INFO 8802 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 8802 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 18:08:04.200  INFO 8802 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 18:08:05.181  WARN 8802 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start reactive web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ReactiveWebApplicationContext due to missing ReactiveWebServerFactory bean.
+2019-05-27 18:08:05.194  INFO 8802 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 18:08:05.204 ERROR 8802 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start reactive web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ReactiveWebApplicationContext due to missing ReactiveWebServerFactory bean.
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.onRefresh(ReactiveWebServerApplicationContext.java:82) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:67) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.mera.borisgk98.autoshowroom.client.Application.main(Application.java:11) [classes/:na]
+Caused by: org.springframework.context.ApplicationContextException: Unable to start ReactiveWebApplicationContext due to missing ReactiveWebServerFactory bean.
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.getWebServerFactory(ReactiveWebServerApplicationContext.java:106) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.createWebServer(ReactiveWebServerApplicationContext.java:90) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.onRefresh(ReactiveWebServerApplicationContext.java:79) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	... 8 common frames omitted
+
+2019-05-27 18:11:06.635  INFO 9060 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 9060 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 18:11:06.638  INFO 9060 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 18:11:07.648  WARN 9060 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start reactive web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ReactiveWebApplicationContext due to missing ReactiveWebServerFactory bean.
+2019-05-27 18:11:07.662  INFO 9060 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 18:11:07.672 ERROR 9060 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start reactive web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ReactiveWebApplicationContext due to missing ReactiveWebServerFactory bean.
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.onRefresh(ReactiveWebServerApplicationContext.java:82) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:67) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.mera.borisgk98.autoshowroom.client.Application.main(Application.java:11) [classes/:na]
+Caused by: org.springframework.context.ApplicationContextException: Unable to start ReactiveWebApplicationContext due to missing ReactiveWebServerFactory bean.
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.getWebServerFactory(ReactiveWebServerApplicationContext.java:106) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.createWebServer(ReactiveWebServerApplicationContext.java:90) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.onRefresh(ReactiveWebServerApplicationContext.java:79) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	... 8 common frames omitted
+
+2019-05-27 18:55:02.480  INFO 11326 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 11326 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 18:55:02.486  INFO 11326 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 18:55:03.604  WARN 11326 --- [main] onfigReactiveWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start reactive web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ReactiveWebApplicationContext due to missing ReactiveWebServerFactory bean.
+2019-05-27 18:55:03.617  INFO 11326 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-05-27 18:55:03.628 ERROR 11326 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start reactive web server; nested exception is org.springframework.context.ApplicationContextException: Unable to start ReactiveWebApplicationContext due to missing ReactiveWebServerFactory bean.
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.onRefresh(ReactiveWebServerApplicationContext.java:82) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-5.1.5.RELEASE.jar:5.1.5.RELEASE]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:67) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at com.mera.borisgk98.autoshowroom.client.Application.main(Application.java:11) [classes/:na]
+Caused by: org.springframework.context.ApplicationContextException: Unable to start ReactiveWebApplicationContext due to missing ReactiveWebServerFactory bean.
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.getWebServerFactory(ReactiveWebServerApplicationContext.java:106) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.createWebServer(ReactiveWebServerApplicationContext.java:90) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.onRefresh(ReactiveWebServerApplicationContext.java:79) ~[spring-boot-2.1.3.RELEASE.jar:2.1.3.RELEASE]
+	... 8 common frames omitted
+
+2019-05-27 19:21:55.615  INFO 14281 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 14281 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-27 19:21:55.618  INFO 14281 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-27 19:21:57.120  WARN 14281 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-27 19:21:57.332  INFO 14281 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.405 seconds (JVM running for 3.411)

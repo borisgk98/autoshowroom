@@ -2,7 +2,7 @@
 
 Autoshowroom API
 - API version: 0.1
-  - Build date: 2019-05-16T21:49:27.277+03:00[Europe/Moscow]
+  - Build date: 2019-05-27T17:48:54.222+03:00[Europe/Moscow]
 
 An API that allows clients to obtain existing information of orders, create, edit and delete orders
 
@@ -87,10 +87,9 @@ public class DefaultApiExample {
         DefaultApi apiInstance = new DefaultApi();
         Integer autoId = 56; // Integer | 
         try {
-            Auto result = apiInstance.autoAutoIdGet(autoId);
-            System.out.println(result);
+            apiInstance.autoAutoIdDelete(autoId);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#autoAutoIdGet");
+            System.err.println("Exception when calling DefaultApi#autoAutoIdDelete");
             e.printStackTrace();
         }
     }
@@ -100,14 +99,45 @@ public class DefaultApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:9000*
+All URIs are relative to *http://localhost:8080*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**autoAutoIdDelete**](docs/DefaultApi.md#autoAutoIdDelete) | **DELETE** /auto/{auto_id} | 
 *DefaultApi* | [**autoAutoIdGet**](docs/DefaultApi.md#autoAutoIdGet) | **GET** /auto/{auto_id} | 
-*DefaultApi* | [**autoMarkAutoMarkIdGet**](docs/DefaultApi.md#autoMarkAutoMarkIdGet) | **GET** /auto_mark/{auto_mark_id} | 
-*DefaultApi* | [**autoMarkPost**](docs/DefaultApi.md#autoMarkPost) | **POST** /auto_mark | 
+*DefaultApi* | [**autoAutoIdPut**](docs/DefaultApi.md#autoAutoIdPut) | **PUT** /auto/{auto_id} | 
+*DefaultApi* | [**autoGet**](docs/DefaultApi.md#autoGet) | **GET** /auto | 
 *DefaultApi* | [**autoPost**](docs/DefaultApi.md#autoPost) | **POST** /auto | 
+*DefaultApi* | [**automarkAutomarkIdDelete**](docs/DefaultApi.md#automarkAutomarkIdDelete) | **DELETE** /automark/{automark_id} | 
+*DefaultApi* | [**automarkAutomarkIdGet**](docs/DefaultApi.md#automarkAutomarkIdGet) | **GET** /automark/{automark_id} | 
+*DefaultApi* | [**automarkAutomarkIdPut**](docs/DefaultApi.md#automarkAutomarkIdPut) | **PUT** /automark/{automark_id} | 
+*DefaultApi* | [**automarkGet**](docs/DefaultApi.md#automarkGet) | **GET** /automark | 
+*DefaultApi* | [**automarkPost**](docs/DefaultApi.md#automarkPost) | **POST** /automark | 
+*DefaultApi* | [**automodelAutomodelIdDelete**](docs/DefaultApi.md#automodelAutomodelIdDelete) | **DELETE** /automodel/{automodel_id} | 
+*DefaultApi* | [**automodelAutomodelIdGet**](docs/DefaultApi.md#automodelAutomodelIdGet) | **GET** /automodel/{automodel_id} | 
+*DefaultApi* | [**automodelAutomodelIdPut**](docs/DefaultApi.md#automodelAutomodelIdPut) | **PUT** /automodel/{automodel_id} | 
+*DefaultApi* | [**automodelGet**](docs/DefaultApi.md#automodelGet) | **GET** /automodel | 
+*DefaultApi* | [**automodelPost**](docs/DefaultApi.md#automodelPost) | **POST** /automodel | 
+*DefaultApi* | [**autooptionAutooptionIdDelete**](docs/DefaultApi.md#autooptionAutooptionIdDelete) | **DELETE** /autooption/{autooption_id} | 
+*DefaultApi* | [**autooptionAutooptionIdGet**](docs/DefaultApi.md#autooptionAutooptionIdGet) | **GET** /autooption/{autooption_id} | 
+*DefaultApi* | [**autooptionAutooptionIdPut**](docs/DefaultApi.md#autooptionAutooptionIdPut) | **PUT** /autooption/{autooption_id} | 
+*DefaultApi* | [**autooptionGet**](docs/DefaultApi.md#autooptionGet) | **GET** /autooption | 
+*DefaultApi* | [**autooptionPost**](docs/DefaultApi.md#autooptionPost) | **POST** /autooption | 
+*DefaultApi* | [**customerCustomerIdDelete**](docs/DefaultApi.md#customerCustomerIdDelete) | **DELETE** /customer/{customer_id} | 
+*DefaultApi* | [**customerCustomerIdGet**](docs/DefaultApi.md#customerCustomerIdGet) | **GET** /customer/{customer_id} | 
+*DefaultApi* | [**customerCustomerIdPut**](docs/DefaultApi.md#customerCustomerIdPut) | **PUT** /customer/{customer_id} | 
+*DefaultApi* | [**customerGet**](docs/DefaultApi.md#customerGet) | **GET** /customer | 
+*DefaultApi* | [**customerPost**](docs/DefaultApi.md#customerPost) | **POST** /customer | 
+*DefaultApi* | [**orderGet**](docs/DefaultApi.md#orderGet) | **GET** /order | 
+*DefaultApi* | [**orderOrderIdDelete**](docs/DefaultApi.md#orderOrderIdDelete) | **DELETE** /order/{order_id} | 
+*DefaultApi* | [**orderOrderIdGet**](docs/DefaultApi.md#orderOrderIdGet) | **GET** /order/{order_id} | 
+*DefaultApi* | [**orderOrderIdPut**](docs/DefaultApi.md#orderOrderIdPut) | **PUT** /order/{order_id} | 
+*DefaultApi* | [**orderPost**](docs/DefaultApi.md#orderPost) | **POST** /order | 
+*DefaultApi* | [**sellerGet**](docs/DefaultApi.md#sellerGet) | **GET** /seller | 
+*DefaultApi* | [**sellerPost**](docs/DefaultApi.md#sellerPost) | **POST** /seller | 
+*DefaultApi* | [**sellerSellerIdDelete**](docs/DefaultApi.md#sellerSellerIdDelete) | **DELETE** /seller/{seller_id} | 
+*DefaultApi* | [**sellerSellerIdGet**](docs/DefaultApi.md#sellerSellerIdGet) | **GET** /seller/{seller_id} | 
+*DefaultApi* | [**sellerSellerIdPut**](docs/DefaultApi.md#sellerSellerIdPut) | **PUT** /seller/{seller_id} | 
 
 
 ## Documentation for Models

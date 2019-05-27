@@ -1,7 +1,7 @@
 package com.mera.borisgk98.autoshowroom.client.service;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.client.model.$Model$;
+import com.mera.borisgk98.autoshowroom.client.model.AutoOption;
 import com.mera.borisgk98.autoshowroom.client.rest.api.DefaultApi;
 import com.mera.borisgk98.autoshowroom.client.rest.invoker.ApiException;
 import com.mera.borisgk98.autoshowroom.client.tool.Converter;
@@ -15,17 +15,17 @@ import java.util.stream.Collectors;
 
 @Component
 @Primary
-public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.client.service.$Model$Service {
+public class AutoOptionServiceImpl implements com.mera.borisgk98.autoshowroom.client.service.AutoOptionService {
 
     @Autowired
     private DefaultApi api;
 
     @Override
-    public $Model$ create($Model$ m) {
+    public AutoOption create(AutoOption m) {
         try {
-            com.mera.borisgk98.autoshowroom.client.rest.model.$Model$ dto =
-                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.$Model$.class);
-            return Converter.convert(api.$model$Post(dto), $Model$.class);
+            com.mera.borisgk98.autoshowroom.client.rest.model.AutoOption dto =
+                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.AutoOption.class);
+            return Converter.convert(api.autooptionPost(dto), AutoOption.class);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -34,9 +34,9 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public $Model$ read(Integer id) throws ModelNotFound {
+    public AutoOption read(Integer id) throws ModelNotFound {
         try {
-            return Converter.convert(api.$model$$Modelufl$IdGet(id), $Model$.class);
+            return Converter.convert(api.autooptionAutooptionIdGet(id), AutoOption.class);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -45,11 +45,11 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public $Model$ update($Model$ m) throws ModelNotFound {
+    public AutoOption update(AutoOption m) throws ModelNotFound {
         try {
-            com.mera.borisgk98.autoshowroom.client.rest.model.$Model$ dto =
-                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.$Model$.class);
-            return Converter.convert(api.$model$$Modelufl$IdPut(dto), $Model$.class);
+            com.mera.borisgk98.autoshowroom.client.rest.model.AutoOption dto =
+                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.AutoOption.class);
+            return Converter.convert(api.autooptionAutooptionIdPut(dto), AutoOption.class);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -60,7 +60,7 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     @Override
     public void delete(Integer id) throws ModelNotFound {
         try {
-            api.$model$$Modelufl$IdDelete(id);
+            api.autooptionAutooptionIdDelete(id);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -68,11 +68,11 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public List<$Model$> getAll() {
+    public List<AutoOption> getAll() {
         try {
-            return api.$model$Get(null, null)
+            return api.autooptionGet(null, null)
                     .stream()
-                    .map(x -> Converter.convert(x, $Model$.class))
+                    .map(x -> Converter.convert(x, AutoOption.class))
                     .collect(Collectors.toList());
         }
         catch (ApiException exc) {
@@ -82,11 +82,11 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public List<$Model$> getRange(Integer limit, Integer offset) {
+    public List<AutoOption> getRange(Integer limit, Integer offset) {
         try {
-            return api.$model$Get(limit, offset)
+            return api.autooptionGet(limit, offset)
                     .stream()
-                    .map(x -> Converter.convert(x, $Model$.class))
+                    .map(x -> Converter.convert(x, AutoOption.class))
                     .collect(Collectors.toList());
         }
         catch (ApiException exc) {

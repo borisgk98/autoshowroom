@@ -1,7 +1,7 @@
 package com.mera.borisgk98.autoshowroom.client.service;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.client.model.$Model$;
+import com.mera.borisgk98.autoshowroom.client.model.Order;
 import com.mera.borisgk98.autoshowroom.client.rest.api.DefaultApi;
 import com.mera.borisgk98.autoshowroom.client.rest.invoker.ApiException;
 import com.mera.borisgk98.autoshowroom.client.tool.Converter;
@@ -15,17 +15,17 @@ import java.util.stream.Collectors;
 
 @Component
 @Primary
-public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.client.service.$Model$Service {
+public class OrderServiceImpl implements com.mera.borisgk98.autoshowroom.client.service.OrderService {
 
     @Autowired
     private DefaultApi api;
 
     @Override
-    public $Model$ create($Model$ m) {
+    public Order create(Order m) {
         try {
-            com.mera.borisgk98.autoshowroom.client.rest.model.$Model$ dto =
-                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.$Model$.class);
-            return Converter.convert(api.$model$Post(dto), $Model$.class);
+            com.mera.borisgk98.autoshowroom.client.rest.model.Order dto =
+                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.Order.class);
+            return Converter.convert(api.orderPost(dto), Order.class);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -34,9 +34,9 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public $Model$ read(Integer id) throws ModelNotFound {
+    public Order read(Integer id) throws ModelNotFound {
         try {
-            return Converter.convert(api.$model$$Modelufl$IdGet(id), $Model$.class);
+            return Converter.convert(api.orderOrderIdGet(id), Order.class);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -45,11 +45,11 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public $Model$ update($Model$ m) throws ModelNotFound {
+    public Order update(Order m) throws ModelNotFound {
         try {
-            com.mera.borisgk98.autoshowroom.client.rest.model.$Model$ dto =
-                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.$Model$.class);
-            return Converter.convert(api.$model$$Modelufl$IdPut(dto), $Model$.class);
+            com.mera.borisgk98.autoshowroom.client.rest.model.Order dto =
+                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.Order.class);
+            return Converter.convert(api.orderOrderIdPut(dto), Order.class);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -60,7 +60,7 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     @Override
     public void delete(Integer id) throws ModelNotFound {
         try {
-            api.$model$$Modelufl$IdDelete(id);
+            api.orderOrderIdDelete(id);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -68,11 +68,11 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public List<$Model$> getAll() {
+    public List<Order> getAll() {
         try {
-            return api.$model$Get(null, null)
+            return api.orderGet(null, null)
                     .stream()
-                    .map(x -> Converter.convert(x, $Model$.class))
+                    .map(x -> Converter.convert(x, Order.class))
                     .collect(Collectors.toList());
         }
         catch (ApiException exc) {
@@ -82,11 +82,11 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public List<$Model$> getRange(Integer limit, Integer offset) {
+    public List<Order> getRange(Integer limit, Integer offset) {
         try {
-            return api.$model$Get(limit, offset)
+            return api.orderGet(limit, offset)
                     .stream()
-                    .map(x -> Converter.convert(x, $Model$.class))
+                    .map(x -> Converter.convert(x, Order.class))
                     .collect(Collectors.toList());
         }
         catch (ApiException exc) {

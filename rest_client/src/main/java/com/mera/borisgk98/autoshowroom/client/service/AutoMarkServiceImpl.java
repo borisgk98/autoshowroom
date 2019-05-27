@@ -1,7 +1,7 @@
 package com.mera.borisgk98.autoshowroom.client.service;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.client.model.$Model$;
+import com.mera.borisgk98.autoshowroom.client.model.AutoMark;
 import com.mera.borisgk98.autoshowroom.client.rest.api.DefaultApi;
 import com.mera.borisgk98.autoshowroom.client.rest.invoker.ApiException;
 import com.mera.borisgk98.autoshowroom.client.tool.Converter;
@@ -15,17 +15,17 @@ import java.util.stream.Collectors;
 
 @Component
 @Primary
-public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.client.service.$Model$Service {
+public class AutoMarkServiceImpl implements com.mera.borisgk98.autoshowroom.client.service.AutoMarkService {
 
     @Autowired
     private DefaultApi api;
 
     @Override
-    public $Model$ create($Model$ m) {
+    public AutoMark create(AutoMark m) {
         try {
-            com.mera.borisgk98.autoshowroom.client.rest.model.$Model$ dto =
-                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.$Model$.class);
-            return Converter.convert(api.$model$Post(dto), $Model$.class);
+            com.mera.borisgk98.autoshowroom.client.rest.model.AutoMark dto =
+                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.AutoMark.class);
+            return Converter.convert(api.automarkPost(dto), AutoMark.class);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -34,9 +34,9 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public $Model$ read(Integer id) throws ModelNotFound {
+    public AutoMark read(Integer id) throws ModelNotFound {
         try {
-            return Converter.convert(api.$model$$Modelufl$IdGet(id), $Model$.class);
+            return Converter.convert(api.automarkAutomarkIdGet(id), AutoMark.class);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -45,11 +45,11 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public $Model$ update($Model$ m) throws ModelNotFound {
+    public AutoMark update(AutoMark m) throws ModelNotFound {
         try {
-            com.mera.borisgk98.autoshowroom.client.rest.model.$Model$ dto =
-                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.$Model$.class);
-            return Converter.convert(api.$model$$Modelufl$IdPut(dto), $Model$.class);
+            com.mera.borisgk98.autoshowroom.client.rest.model.AutoMark dto =
+                    Converter.convert(m, com.mera.borisgk98.autoshowroom.client.rest.model.AutoMark.class);
+            return Converter.convert(api.automarkAutomarkIdPut(dto), AutoMark.class);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -60,7 +60,7 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     @Override
     public void delete(Integer id) throws ModelNotFound {
         try {
-            api.$model$$Modelufl$IdDelete(id);
+            api.automarkAutomarkIdDelete(id);
         }
         catch (ApiException exc) {
             System.err.println(exc);
@@ -68,11 +68,11 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public List<$Model$> getAll() {
+    public List<AutoMark> getAll() {
         try {
-            return api.$model$Get(null, null)
+            return api.automarkGet(null, null)
                     .stream()
-                    .map(x -> Converter.convert(x, $Model$.class))
+                    .map(x -> Converter.convert(x, AutoMark.class))
                     .collect(Collectors.toList());
         }
         catch (ApiException exc) {
@@ -82,11 +82,11 @@ public class $Model$ServiceImpl implements com.mera.borisgk98.autoshowroom.clien
     }
 
     @Override
-    public List<$Model$> getRange(Integer limit, Integer offset) {
+    public List<AutoMark> getRange(Integer limit, Integer offset) {
         try {
-            return api.$model$Get(limit, offset)
+            return api.automarkGet(limit, offset)
                     .stream()
-                    .map(x -> Converter.convert(x, $Model$.class))
+                    .map(x -> Converter.convert(x, AutoMark.class))
                     .collect(Collectors.toList());
         }
         catch (ApiException exc) {

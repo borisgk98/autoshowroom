@@ -1,7 +1,0 @@
-http://localhost:8080/services/auto?wsdl
-http://localhost:8080/services/autooption?wsdl
-http://localhost:8080/services/order?wsdl
-http://localhost:8080/services/customer?wsdl
-http://localhost:8080/services/automodel?wsdl
-http://localhost:8080/services/seller?wsdl
-http://localhost:8080/services/automark?wsdl

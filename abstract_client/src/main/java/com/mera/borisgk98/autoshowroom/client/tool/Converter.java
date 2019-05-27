@@ -1,6 +1,7 @@
 package com.mera.borisgk98.autoshowroom.client.tool;
 
 import com.mera.borisgk98.autoshowroom.client.exception.UnsupportedConvertation;
+import com.mera.borisgk98.autoshowroom.client.model.OrderStatus;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 

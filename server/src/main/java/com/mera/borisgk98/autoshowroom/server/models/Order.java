@@ -39,7 +39,7 @@ public class Order implements HasId<Integer> {
   private Auto auto = null;
 
   @JsonProperty("status")
-  private OrderStatus status = null;
+  private OrderStatus status = OrderStatus.ACCEPTED;
 
   public Order id(Integer id) {
     this.id = id;

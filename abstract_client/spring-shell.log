@@ -43,3 +43,14 @@
 1558990351447:auto create --markId 1 --modelId 1 --optionIds 1,2,3
 1558990376635:help "auto create"
 1558990929776:auto create --mark-id 1 --model-id 1 --option-ids 1,2,3
+1558996590259:order update --auto-id 1 --seller-id 1 --customer-id --id 1 --order-status r
+1558996633651:order update --id 1 --auto-id 1 --seller-id 1 --customer-id --order-status r
+1558996641955:order update --auto-id 1 --seller-id 1 --customer-id --id 1 --order-status r
+1558996656252:order update
+1558996666222:order update --id 1
+1558996693662:order update --id 1 --auto-id 1 --seller-id 1 --customer-id 1
+1558996706705:order update --id 1 --auto-id 1 --seller-id 1 --customer-id 1 --order-status 1
+1558996732909:v
+1558996736640:order update --id 1 --auto-id 1 --seller-id 1 --customer-id 1
+1558996747178:order update --id 1 --auto-id 1 --seller-id 1 --customer-id 1 --order-status 1
+1558996904843:order update --id 1 --auto-id 1 --seller-id 1 --customer-id 1 --order-status ACCEPTED

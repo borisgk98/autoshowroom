@@ -48,9 +48,19 @@ public class OrderShellComponent extends AbstractShellComponent<Order> implement
             @ShellOption Integer id, 
 			@ShellOption Integer autoId,
 			@ShellOption Integer customerId,
-			@ShellOption Integer sellerId) {
+			@ShellOption Integer sellerId,
+            @ShellOption String orderStatus) {
         try {
+            OrderStatus status;
+            try {
+                status  = OrderStatus.valueOf(orderStatus);
+            }
+            catch (IllegalArgumentException e) {
+                throw new IllegalArgumentException("Incorrect --order-status");
+            }
+
             Order order = new Order();
+            order.setStatus(status);
             order.setId(id);
             Auto auto = new Auto();
             		auto.setId(autoId);

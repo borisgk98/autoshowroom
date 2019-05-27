@@ -76,11 +76,11 @@ crudGenerationSetting {
     generationRoot = "$projectDir/src/main/java"
     generationPackages = [
             "com.mera.borisgk98.autoshowroom.soapclient.services",
-"com.mera.borisgk98.autoshowroom.soapclient.services.impldefault"
+            "com.mera.borisgk98.autoshowroom.soapclient.services.impl"
     ]
     generationTemplates = [
             "$projectDir/src/main/resources/templates/Service".toString(),
-"$projectDir/src/main/resources/templates/DefaultImpl".toString()
+            "$projectDir/src/main/resources/templates/ServiceImpl".toString()
     ]
     generationConcatOuts = [
     ]

@@ -1,14 +1,13 @@
 package com.mera.borisgk98.autoshowroom.soapclient.services.impl;
 
 import com.mera.borisgk98.autoshowroom.server.soap.*;
-import com.mera.borisgk98.autoshowroom.soapclient.services.AutoMarkService;
 import org.springframework.stereotype.Component;
 
 import javax.xml.namespace.QName;
 import java.util.List;
 
 @Component
-public class AutoMarkServiceImpl implements AutoMarkService {
+public class AutoMarkServiceImpl implements com.mera.borisgk98.autoshowroom.soapclient.services.AutoMarkService {
 
     AutoMarkWebService port;
 

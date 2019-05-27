@@ -49,3 +49,14 @@
 1558958749949:automark create --name BMW
 1558958756776:automark read 1
 1558958761104:automark readall
+1558959157742:automodel readall
+1558959170827:automodeal create --name name
+1558959191807:automodel create --name X5
+1558959205135:help auto create
+1558959215129:help "auto create"
+1558959264791:auto create --mark-id 1 --model-id 1
+1558959270035:auto readall
+1558959284632:auto read 1
+1558959331293:order read 1
+1558959350002:order readall
+1558959411887:exit

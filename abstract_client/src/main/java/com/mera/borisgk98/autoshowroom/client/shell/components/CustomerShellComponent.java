@@ -1,16 +1,61 @@
 package com.mera.borisgk98.autoshowroom.client.shell.components;
 
-import com.mera.borisgk98.autoshowroom.client.models.Customer;
+
+import com.mera.borisgk98.autoshowroom.client.exceptions.ModelNotFound;
+import com.mera.borisgk98.autoshowroom.client.models.*;
+import com.mera.borisgk98.autoshowroom.client.shell.components.AbstractShellComponent;
+import com.mera.borisgk98.autoshowroom.client.shell.components.ReadDeleteShellComponent;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import org.springframework.shell.table.Table;
+import java.util.List;
+
 
 @ShellComponent
 public class CustomerShellComponent extends AbstractShellComponent<Customer> implements ReadDeleteShellComponent<Customer> {
 
     public CustomerShellComponent() {
         super(Customer.class);
+    }
+
+    @ShellMethod(
+            prefix = "--",
+            value = "Create new customer",
+            key = "customer create"
+    )
+    public String create(
+			@ShellOption String name,
+			@ShellOption String surname
+) {
+        return crudService.create(new Customer(){{
+               setName(name);
+               setSurname(surname);
+
+        }}).toString();
+    }
+
+    @ShellMethod(
+            prefix = "--",
+            value = "Update customer",
+            key = "customer update"
+    )
+    public String update(
+            @ShellOption Integer id, 
+			@ShellOption String name,
+			@ShellOption String surname
+) {
+        try {
+            return crudService.update(new Customer(){{
+                setId(id);
+                setName(name);
+                setSurname(surname);
+
+            }}).toString();
+        }
+        catch (ModelNotFound e) {
+            return "Not found";
+        }
     }
 
     @Override

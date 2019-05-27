@@ -1,16 +1,59 @@
 package com.mera.borisgk98.autoshowroom.client.shell.components;
 
-import com.mera.borisgk98.autoshowroom.client.models.Auto;
+
+import com.mera.borisgk98.autoshowroom.client.exceptions.ModelNotFound;
+import com.mera.borisgk98.autoshowroom.client.models.*;
+import com.mera.borisgk98.autoshowroom.client.shell.components.AbstractShellComponent;
+import com.mera.borisgk98.autoshowroom.client.shell.components.ReadDeleteShellComponent;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
 import org.springframework.shell.table.Table;
+import java.util.List;
+
 
 @ShellComponent
 public class AutoShellComponent extends AbstractShellComponent<Auto> implements ReadDeleteShellComponent<Auto> {
 
     public AutoShellComponent() {
         super(Auto.class);
+    }
+
+    @ShellMethod(
+            prefix = "--",
+            value = "Create new auto",
+            key = "auto create"
+    )
+    public String create(
+			@ShellOption Integer mark,
+			@ShellOption Integer model) {
+        return crudService.create(new Auto(){{
+               setMark(new AutoMark(){{ setId(mark); }});
+               setModel(new AutoModel(){{ setId(model); }});
+
+        }}).toString();
+    }
+
+    @ShellMethod(
+            prefix = "--",
+            value = "Update auto",
+            key = "auto update"
+    )
+    public String update(
+            @ShellOption Integer id, 
+			@ShellOption Integer mark,
+			@ShellOption Integer model) {
+        try {
+            return crudService.update(new Auto(){{
+                setId(id);
+                setMark(new AutoMark(){{ setId(mark); }});
+                setModel(new AutoModel(){{ setId(model); }});
+
+            }}).toString();
+        }
+        catch (ModelNotFound e) {
+            return "Not found";
+        }
     }
 
     @Override

@@ -36,3 +36,7 @@
 1558908069396:auto readrange --limit 2 --offset 1
 1558914869627:automark update
 1558914884410:automark update --id 1
+1558924437221:auto read 1
+1558924448004:auto readall
+1558924459448:auto create
+1558924476756:automodel create --name sdgsl

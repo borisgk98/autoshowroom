@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163423e2-ce16-4eca-9a24-3d5e90c483d0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../abstract_client/spring-shell.log" beforeDir="false" afterPath="$PROJECT_DIR$/../abstract_client/spring-shell.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/component/OrderShellComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/component/OrderShellComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/tool/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/tool/Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/soapclient_standard.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/soapclient_standard.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/services/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../server/src/main/java/com/mera/borisgk98/autoshowroom/server/services/OrderServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -79,7 +75,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1200">
@@ -88,11 +84,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/service/OrderServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-64">
+              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/api/DefaultApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="621" column="41" selection-start-line="621" selection-start-column="41" selection-end-line="621" selection-end-column="41" />
+            <state relative-caret-position="178">
+              <caret line="3672" selection-start-line="3672" selection-end-line="3672" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -245,6 +250,15 @@
               <item name="rest_client" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="restclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rest_client" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -288,7 +302,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.rest_client [bootJar]">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="rest_client [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -411,16 +425,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1558988382422</updated>
-      <workItem from="1558988384027" duration="6913000" />
+      <workItem from="1558988384027" duration="7224000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6913000" />
+    <option name="totallyTimeSpent" value="7224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1684" height="1024" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -439,8 +452,8 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32962137" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997773" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997773" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -550,20 +563,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1200">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/rest/api/DefaultApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="621" column="41" selection-start-line="621" selection-start-column="41" selection-end-line="621" selection-end-column="41" />
+        <state relative-caret-position="178">
+          <caret line="3672" selection-start-line="3672" selection-end-line="3672" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mera/borisgk98/autoshowroom/client/service/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1200">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        <state relative-caret-position="-64">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
         </state>
       </provider>
     </entry>

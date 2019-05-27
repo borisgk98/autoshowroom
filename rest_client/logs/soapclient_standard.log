@@ -100,3 +100,7 @@ Caused by: java.io.IOException: Неправильный дескриптор ф
 2019-05-28 01:07:14.888  INFO 21791 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
 2019-05-28 01:07:16.102  WARN 21791 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
 2019-05-28 01:07:16.221  INFO 21791 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.03 seconds (JVM running for 2.917)
+2019-05-28 01:52:50.600  INFO 26566 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 26566 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
+2019-05-28 01:52:50.605  INFO 26566 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
+2019-05-28 01:52:51.864  WARN 26566 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+2019-05-28 01:52:51.996  INFO 26566 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 2.06 seconds (JVM running for 3.022)

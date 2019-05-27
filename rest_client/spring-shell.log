@@ -70,3 +70,7 @@
 1558994845609:auto read 1
 1558994855541:auto read 3
 1558994923367:auto read 9
+1558997600850:order create --auto-id 1 --customer-id 1 --seller-id 1
+1558997801864:order readall
+1558997840899:automark create --name mark
+1558997854408:order create --auto-id 1 --customer-id 1 --seller-id 1

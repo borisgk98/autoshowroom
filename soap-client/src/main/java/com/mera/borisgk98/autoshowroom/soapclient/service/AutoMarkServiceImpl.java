@@ -6,7 +6,6 @@ import com.mera.borisgk98.autoshowroom.server.soap.AutoMarkWebService;
 import com.mera.borisgk98.autoshowroom.server.soap.AutomarkService;
 import com.mera.borisgk98.autoshowroom.server.soap.ModelNotFound_Exception;
 import org.springframework.stereotype.Component;
-import com.mera.borisgk98.autoshowroom.client.service.*;
 import org.springframework.context.annotation.Primary;
 import javax.xml.namespace.QName;
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Primary
-public class AutoMarkServiceImpl implements AutoMarkService {
+public class AutoMarkServiceImpl implements com.mera.borisgk98.autoshowroom.client.service.AutoMarkService {
 
     AutoMarkWebService port;
 

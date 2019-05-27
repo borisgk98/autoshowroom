@@ -6,7 +6,6 @@ import com.mera.borisgk98.autoshowroom.server.soap.CustomerWebService;
 import com.mera.borisgk98.autoshowroom.server.soap.CustomerService;
 import com.mera.borisgk98.autoshowroom.server.soap.ModelNotFound_Exception;
 import org.springframework.stereotype.Component;
-import com.mera.borisgk98.autoshowroom.client.service.*;
 import org.springframework.context.annotation.Primary;
 import javax.xml.namespace.QName;
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Primary
-public class CustomerServiceImpl implements CustomerService {
+public class CustomerServiceImpl implements com.mera.borisgk98.autoshowroom.client.service.CustomerService {
 
     CustomerWebService port;
 

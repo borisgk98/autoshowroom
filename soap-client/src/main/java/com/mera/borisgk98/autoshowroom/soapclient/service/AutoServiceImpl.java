@@ -6,7 +6,6 @@ import com.mera.borisgk98.autoshowroom.server.soap.AutoWebService;
 import com.mera.borisgk98.autoshowroom.server.soap.AutoService;
 import com.mera.borisgk98.autoshowroom.server.soap.ModelNotFound_Exception;
 import org.springframework.stereotype.Component;
-import com.mera.borisgk98.autoshowroom.client.service.*;
 import org.springframework.context.annotation.Primary;
 import javax.xml.namespace.QName;
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Primary
-public class AutoServiceImpl implements AutoService {
+public class AutoServiceImpl implements com.mera.borisgk98.autoshowroom.client.service.AutoService {
 
     AutoWebService port;
 

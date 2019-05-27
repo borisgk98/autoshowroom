@@ -137,7 +137,8 @@ crudGenerationSetting {
     ]
     excludeModels = [
             "OrderStatus",
-            "HasId"
+            "HasId",
+            "Order"
     ]
 }
 

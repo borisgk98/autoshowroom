@@ -1,8 +1,7 @@
-package com.mera.borisgk98.autoshowroom.client.services.impl;
+package com.mera.borisgk98.autoshowroom.client.service;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
-import com.mera.borisgk98.autoshowroom.client.models.Auto;
-import com.mera.borisgk98.autoshowroom.client.models.$Model$;
+import com.mera.borisgk98.autoshowroom.client.model.$Model$;
 import com.mera.borisgk98.autoshowroom.client.rest.api.DefaultApi;
 import com.mera.borisgk98.autoshowroom.client.rest.invoker.ApiException;
 import org.springframework.beans.factory.annotation.Autowired;

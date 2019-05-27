@@ -24,7 +24,7 @@ import com.google.gson.JsonElement;
 import io.gsonfire.GsonFireBuilder;
 import io.gsonfire.TypeSelector;
 
-import com.mera.borisgk98.autoshowroom.client.models.*;
+import com.mera.borisgk98.autoshowroom.client.rest.model.*;
 import okio.ByteString;
 
 import java.io.IOException;

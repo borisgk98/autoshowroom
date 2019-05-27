@@ -27,13 +27,13 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
-import com.mera.borisgk98.autoshowroom.client.models.Auto;
-import com.mera.borisgk98.autoshowroom.client.models.AutoMark;
-import com.mera.borisgk98.autoshowroom.client.models.AutoModel;
-import com.mera.borisgk98.autoshowroom.client.models.AutoOption;
-import com.mera.borisgk98.autoshowroom.client.models.Customer;
-import com.mera.borisgk98.autoshowroom.client.models.Order;
-import com.mera.borisgk98.autoshowroom.client.models.Seller;
+import com.mera.borisgk98.autoshowroom.client.rest.model.Auto;
+import com.mera.borisgk98.autoshowroom.client.rest.model.AutoMark;
+import com.mera.borisgk98.autoshowroom.client.rest.model.AutoModel;
+import com.mera.borisgk98.autoshowroom.client.rest.model.AutoOption;
+import com.mera.borisgk98.autoshowroom.client.rest.model.Customer;
+import com.mera.borisgk98.autoshowroom.client.rest.model.Order;
+import com.mera.borisgk98.autoshowroom.client.rest.model.Seller;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

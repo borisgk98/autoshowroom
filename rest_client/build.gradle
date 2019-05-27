@@ -21,6 +21,7 @@ repositories {
     maven {
         url 'https://repo.spring.io/libs-snapshot'
     }
+    mavenLocal()
 }
 
 buildscript {
@@ -39,6 +40,8 @@ buildscript {
 }
 
 dependencies {
+    compile("com.mera.borisgk98.autoshowroom:abstractclient:0.1")
+
     implementation 'org.springframework.shell:spring-shell-starter:2.0.0.RELEASE'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
@@ -90,15 +93,15 @@ springBoot {
 
 crudGenerationSetting {
     srcRoot = "$projectDir/src/main/java"
-    modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/client/models"
+    modelPackage = "/home/boris/progs/autoshowroom/abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/model"
     generationRoot = "$projectDir/src/main/java"
     generationPackages = [
-            "com.mera.borisgk98.autoshowroom.client.services",
+//            "com.mera.borisgk98.autoshowroom.client.services",
 //            "com.mera.borisgk98.autoshowroom.client.services.impldefault",
-            "com.mera.borisgk98.autoshowroom.client.services.impl"
+            "com.mera.borisgk98.autoshowroom.client.service"
     ]
     generationTemplates = [
-            "$projectDir/src/main/resources/templates/Service".toString(),
+//            "$projectDir/src/main/resources/templates/Service".toString(),
 //            "$projectDir/src/main/resources/templates/DefaultImpl".toString(),
             "$projectDir/src/main/resources/templates/ServiceImpl".toString()
 
@@ -122,7 +125,7 @@ openApiGenerate {
     apiPackage = ("com.mera.borisgk98.autoshowroom.client.rest.api").toString()
 //    skipOverwrite = true
     invokerPackage = ("com.mera.borisgk98.autoshowroom.client.rest.invoker").toString()
-    modelPackage = ("com.mera.borisgk98.autoshowroom.client.models").toString()
+    modelPackage = ("com.mera.borisgk98.autoshowroom.client.rest.model").toString()
 //    groupId = ("com.mera.borisgk98.autoshowroom.server").toString()
 //    configPackage = ("com.mera.borisgk98.autoshowroom.server.config.openapi").toString()
     modelFilesConstrainedTo = [

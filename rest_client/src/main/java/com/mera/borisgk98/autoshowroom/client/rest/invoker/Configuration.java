@@ -13,7 +13,7 @@
 
 package com.mera.borisgk98.autoshowroom.client.rest.invoker;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T19:17:51.180+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-27T23:31:58.178+03:00[Europe/Moscow]")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 

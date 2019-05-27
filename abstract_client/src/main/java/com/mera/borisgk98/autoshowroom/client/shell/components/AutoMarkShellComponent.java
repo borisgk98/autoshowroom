@@ -1,5 +1,6 @@
 package com.mera.borisgk98.autoshowroom.client.shell.components;
 
+import com.mera.borisgk98.autoshowroom.client.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.client.models.AutoMark;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
@@ -15,13 +16,30 @@ public class AutoMarkShellComponent extends AbstractShellComponent<AutoMark> imp
 
     @ShellMethod(
             prefix = "--",
-            value = "automark",
+            value = "Create new automark",
             key = "automark create"
     )
     public String create(@ShellOption String name) {
         return crudService.create(new AutoMark(){{
             setName(name);
         }}).toString();
+    }
+
+    @ShellMethod(
+            prefix = "--",
+            value = "Update automark",
+            key = "automark update"
+    )
+    public String update(@ShellOption Integer id, String name) {
+        try {
+            return crudService.update(new AutoMark(){{
+                setName(name);
+                setId(id);
+            }}).toString();
+        }
+        catch (ModelNotFound e) {
+            return "Not found";
+        }
     }
 
     @Override

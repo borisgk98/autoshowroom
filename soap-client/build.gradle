@@ -67,7 +67,7 @@ dependencies {
 }
 
 springBoot {
-    mainClassName = 'com.mera.borisgk98.autoshowroom.client.Application'
+    mainClassName = 'com.mera.borisgk98.autoshowroom.soapclient.Application'
 }
 
 crudGenerationSetting {

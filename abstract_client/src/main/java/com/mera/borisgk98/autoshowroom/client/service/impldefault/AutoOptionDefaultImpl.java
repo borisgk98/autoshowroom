@@ -37,16 +37,6 @@ public class AutoOptionDefaultImpl implements AutoOptionService {
     }
 
     @Override
-    public boolean existById(Integer id) {
-        return false;
-    }
-
-    @Override
-    public boolean exist(AutoOption m) {
-        return false;
-    }
-
-    @Override
     public List<AutoOption> getAll() {
         return fabric.getList(AutoOption.class);
     }

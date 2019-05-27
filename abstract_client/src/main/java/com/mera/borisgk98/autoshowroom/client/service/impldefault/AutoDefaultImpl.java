@@ -37,16 +37,6 @@ public class AutoDefaultImpl implements AutoService {
     }
 
     @Override
-    public boolean existById(Integer id) {
-        return false;
-    }
-
-    @Override
-    public boolean exist(Auto m) {
-        return false;
-    }
-
-    @Override
     public List<Auto> getAll() {
         return fabric.getList(Auto.class);
     }

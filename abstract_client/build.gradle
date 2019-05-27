@@ -60,12 +60,10 @@ crudGenerationSetting {
     generationRoot = "$projectDir/src/main/java"
     generationPackages = [
             "com.mera.borisgk98.autoshowroom.client.service",
-            "com.mera.borisgk98.autoshowroom.client.shell.components",
             "com.mera.borisgk98.autoshowroom.client.service.impldefault"
     ]
     generationTemplates = [
             "$projectDir/src/main/resources/templates/Service".toString(),
-            "$projectDir/src/main/resources/templates/ShellComponent".toString(),
             "$projectDir/src/main/resources/templates/DefaultImpl".toString()
 
     ]

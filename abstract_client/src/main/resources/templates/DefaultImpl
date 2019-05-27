@@ -37,16 +37,6 @@ public class $Model$DefaultImpl implements $Model$Service {
     }
 
     @Override
-    public boolean existById(Integer id) {
-        return false;
-    }
-
-    @Override
-    public boolean exist($Model$ m) {
-        return false;
-    }
-
-    @Override
     public List<$Model$> getAll() {
         return fabric.getList($Model$.class);
     }

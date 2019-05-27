@@ -37,16 +37,6 @@ public class OrderDefaultImpl implements OrderService {
     }
 
     @Override
-    public boolean existById(Integer id) {
-        return false;
-    }
-
-    @Override
-    public boolean exist(Order m) {
-        return false;
-    }
-
-    @Override
     public List<Order> getAll() {
         return fabric.getList(Order.class);
     }

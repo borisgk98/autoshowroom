@@ -1,15 +1,19 @@
 package com.mera.borisgk98.autoshowroom.soapclient.service;
 
 import com.mera.borisgk98.autoshowroom.client.model.Customer;
+import com.mera.borisgk98.autoshowroom.client.tool.Converter;
 import com.mera.borisgk98.autoshowroom.server.soap.CustomerWebService;
 import com.mera.borisgk98.autoshowroom.server.soap.CustomerService;
 import com.mera.borisgk98.autoshowroom.server.soap.ModelNotFound_Exception;
 import org.springframework.stereotype.Component;
 import com.mera.borisgk98.autoshowroom.client.service.*;
+import org.springframework.context.annotation.Primary;
 import javax.xml.namespace.QName;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
+@Primary
 public class CustomerServiceImpl implements CustomerService {
 
     CustomerWebService port;
@@ -23,13 +27,15 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer create(Customer m) {
-        return port.createCustomer(m);
+        com.mera.borisgk98.autoshowroom.server.soap.Customer dto
+                = Converter.convert(m, com.mera.borisgk98.autoshowroom.server.soap.Customer.class);
+        return Converter.convert(port.createCustomer(dto), Customer.class);
     }
 
     @Override
     public Customer read(Integer id) throws com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound {
         try {
-            return port.readCustomer(id);
+            return Converter.convert(port.readCustomer(id), Customer.class);
         }
         catch(ModelNotFound_Exception exc) {
             throw new com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound();
@@ -39,7 +45,9 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public Customer update(Customer m) throws com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound {
         try {
-            return port.updateCustomer(m);
+            com.mera.borisgk98.autoshowroom.server.soap.Customer dto
+                    = Converter.convert(m, com.mera.borisgk98.autoshowroom.server.soap.Customer.class);
+            return Converter.convert(port.updateCustomer(dto), Customer.class);
         }
         catch(ModelNotFound_Exception exc) {
             throw new com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound();
@@ -58,11 +66,18 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public List<Customer> getAll() {
-        return port.getAllCustomer();
+        return port.getAllCustomer()
+                .stream()
+                .map(x -> Converter.convert(x, Customer.class))
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<Customer> getRange(Integer offset, Integer limit) {
-        return port.getRangeCustomer(offset, limit);
+
+        return port.getRangeCustomer(offset, limit)
+                .stream()
+                .map(x -> Converter.convert(x, Customer.class))
+                .collect(Collectors.toList());
     }
 }

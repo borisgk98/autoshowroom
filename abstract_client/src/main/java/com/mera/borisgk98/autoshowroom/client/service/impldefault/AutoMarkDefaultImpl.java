@@ -37,16 +37,6 @@ public class AutoMarkDefaultImpl implements AutoMarkService {
     }
 
     @Override
-    public boolean existById(Integer id) {
-        return false;
-    }
-
-    @Override
-    public boolean exist(AutoMark m) {
-        return false;
-    }
-
-    @Override
     public List<AutoMark> getAll() {
         return fabric.getList(AutoMark.class);
     }

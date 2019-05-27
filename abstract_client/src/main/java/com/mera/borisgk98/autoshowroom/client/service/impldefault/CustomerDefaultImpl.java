@@ -37,16 +37,6 @@ public class CustomerDefaultImpl implements CustomerService {
     }
 
     @Override
-    public boolean existById(Integer id) {
-        return false;
-    }
-
-    @Override
-    public boolean exist(Customer m) {
-        return false;
-    }
-
-    @Override
     public List<Customer> getAll() {
         return fabric.getList(Customer.class);
     }

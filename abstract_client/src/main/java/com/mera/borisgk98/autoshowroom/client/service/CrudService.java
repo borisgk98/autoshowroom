@@ -10,8 +10,6 @@ public interface CrudService<T extends HasId<Integer>, F> {
     T read(F id) throws ModelNotFound;
     T update(T m) throws ModelNotFound;
     void delete(F id) throws ModelNotFound;
-    boolean existById(F id);
-    boolean exist(T m);
     List<T> getAll();
     List<T> getRange(F offset, F limit);
 }

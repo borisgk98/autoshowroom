@@ -1,15 +1,19 @@
 package com.mera.borisgk98.autoshowroom.soapclient.service;
 
 import com.mera.borisgk98.autoshowroom.client.model.AutoModel;
+import com.mera.borisgk98.autoshowroom.client.tool.Converter;
 import com.mera.borisgk98.autoshowroom.server.soap.AutoModelWebService;
 import com.mera.borisgk98.autoshowroom.server.soap.AutomodelService;
 import com.mera.borisgk98.autoshowroom.server.soap.ModelNotFound_Exception;
 import org.springframework.stereotype.Component;
 import com.mera.borisgk98.autoshowroom.client.service.*;
+import org.springframework.context.annotation.Primary;
 import javax.xml.namespace.QName;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
+@Primary
 public class AutoModelServiceImpl implements AutoModelService {
 
     AutoModelWebService port;
@@ -23,13 +27,15 @@ public class AutoModelServiceImpl implements AutoModelService {
 
     @Override
     public AutoModel create(AutoModel m) {
-        return port.createAutoModel(m);
+        com.mera.borisgk98.autoshowroom.server.soap.AutoModel dto
+                = Converter.convert(m, com.mera.borisgk98.autoshowroom.server.soap.AutoModel.class);
+        return Converter.convert(port.createAutoModel(dto), AutoModel.class);
     }
 
     @Override
     public AutoModel read(Integer id) throws com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound {
         try {
-            return port.readAutoModel(id);
+            return Converter.convert(port.readAutoModel(id), AutoModel.class);
         }
         catch(ModelNotFound_Exception exc) {
             throw new com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound();
@@ -39,7 +45,9 @@ public class AutoModelServiceImpl implements AutoModelService {
     @Override
     public AutoModel update(AutoModel m) throws com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound {
         try {
-            return port.updateAutoModel(m);
+            com.mera.borisgk98.autoshowroom.server.soap.AutoModel dto
+                    = Converter.convert(m, com.mera.borisgk98.autoshowroom.server.soap.AutoModel.class);
+            return Converter.convert(port.updateAutoModel(dto), AutoModel.class);
         }
         catch(ModelNotFound_Exception exc) {
             throw new com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound();
@@ -58,11 +66,18 @@ public class AutoModelServiceImpl implements AutoModelService {
 
     @Override
     public List<AutoModel> getAll() {
-        return port.getAllAutoModel();
+        return port.getAllAutoModel()
+                .stream()
+                .map(x -> Converter.convert(x, AutoModel.class))
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<AutoModel> getRange(Integer offset, Integer limit) {
-        return port.getRangeAutoModel(offset, limit);
+
+        return port.getRangeAutoModel(offset, limit)
+                .stream()
+                .map(x -> Converter.convert(x, AutoModel.class))
+                .collect(Collectors.toList());
     }
 }

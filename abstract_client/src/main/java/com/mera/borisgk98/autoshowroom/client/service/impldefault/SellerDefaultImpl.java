@@ -37,16 +37,6 @@ public class SellerDefaultImpl implements SellerService {
     }
 
     @Override
-    public boolean existById(Integer id) {
-        return false;
-    }
-
-    @Override
-    public boolean exist(Seller m) {
-        return false;
-    }
-
-    @Override
     public List<Seller> getAll() {
         return fabric.getList(Seller.class);
     }

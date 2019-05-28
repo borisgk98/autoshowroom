@@ -243,6 +243,12 @@ paths:
           schema:
             type: integer
           description: Offset for number of returnig values
+        - name: status
+          in: query
+          required: false
+          schema:
+            type: string
+          description: OrderStatus
       responses:
         200:
           description: List of orders

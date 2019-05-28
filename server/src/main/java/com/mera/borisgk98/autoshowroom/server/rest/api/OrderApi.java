@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-21T18:27:24.365+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-28T02:53:14.531+03:00[Europe/Moscow]")
 
 @Validated
 @Api(value = "order", description = "the order API")
@@ -42,11 +42,11 @@ public interface OrderApi {
     @RequestMapping(value = "/order",
         produces = { "application/json" }, 
         method = RequestMethod.GET)
-    default ResponseEntity<List<Order>> orderGet(@ApiParam(value = "Limit for number of returnig values") @Valid @RequestParam(value = "limit", required = false) Integer limit,@ApiParam(value = "Offset for number of returnig values") @Valid @RequestParam(value = "offset", required = false) Integer offset) {
+    default ResponseEntity<List<Order>> orderGet(@ApiParam(value = "Limit for number of returnig values") @Valid @RequestParam(value = "limit", required = false) Integer limit,@ApiParam(value = "Offset for number of returnig values") @Valid @RequestParam(value = "offset", required = false) Integer offset,@ApiParam(value = "OrderStatus") @Valid @RequestParam(value = "status", required = false) String status) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"seller\" : {    \"name\" : \"SallerName\",    \"orders\" : [ null, null ],    \"id\" : 6  },  \"auto\" : {    \"options\" : [ {      \"name\" : \"4x4\",      \"autos\" : [ null, null ],      \"id\" : 5    }, {      \"name\" : \"4x4\",      \"autos\" : [ null, null ],      \"id\" : 5    } ],    \"model\" : {      \"name\" : \"q5\",      \"autos\" : [ null, null ],      \"id\" : 1    },    \"id\" : 0,    \"mark\" : {      \"name\" : \"audi\",      \"autos\" : [ null, null ],      \"id\" : 6    }  },  \"id\" : 0,  \"customer\" : {    \"surname\" : \"Kozhuhovskij\",    \"name\" : \"Boris\",    \"orders\" : [ null, null ],    \"id\" : 1  },  \"status\" : \"DONE\"}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"seller\" : {    \"name\" : \"SallerName\",    \"id\" : 6  },  \"auto\" : {    \"options\" : [ {      \"name\" : \"4x4\",      \"id\" : 5    }, {      \"name\" : \"4x4\",      \"id\" : 5    } ],    \"model\" : {      \"name\" : \"q5\",      \"id\" : 1    },    \"id\" : 0,    \"mark\" : {      \"name\" : \"audi\",      \"id\" : 6    }  },  \"id\" : 0,  \"customer\" : {    \"surname\" : \"Kozhuhovskij\",    \"name\" : \"Boris\",    \"id\" : 1  },  \"status\" : \"DONE\"}");
                     break;
                 }
             }
@@ -79,7 +79,7 @@ public interface OrderApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"seller\" : {    \"name\" : \"SallerName\",    \"orders\" : [ null, null ],    \"id\" : 6  },  \"auto\" : {    \"options\" : [ {      \"name\" : \"4x4\",      \"autos\" : [ null, null ],      \"id\" : 5    }, {      \"name\" : \"4x4\",      \"autos\" : [ null, null ],      \"id\" : 5    } ],    \"model\" : {      \"name\" : \"q5\",      \"autos\" : [ null, null ],      \"id\" : 1    },    \"id\" : 0,    \"mark\" : {      \"name\" : \"audi\",      \"autos\" : [ null, null ],      \"id\" : 6    }  },  \"id\" : 0,  \"customer\" : {    \"surname\" : \"Kozhuhovskij\",    \"name\" : \"Boris\",    \"orders\" : [ null, null ],    \"id\" : 1  },  \"status\" : \"DONE\"}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"seller\" : {    \"name\" : \"SallerName\",    \"id\" : 6  },  \"auto\" : {    \"options\" : [ {      \"name\" : \"4x4\",      \"id\" : 5    }, {      \"name\" : \"4x4\",      \"id\" : 5    } ],    \"model\" : {      \"name\" : \"q5\",      \"id\" : 1    },    \"id\" : 0,    \"mark\" : {      \"name\" : \"audi\",      \"id\" : 6    }  },  \"id\" : 0,  \"customer\" : {    \"surname\" : \"Kozhuhovskij\",    \"name\" : \"Boris\",    \"id\" : 1  },  \"status\" : \"DONE\"}");
                     break;
                 }
             }
@@ -100,7 +100,7 @@ public interface OrderApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"seller\" : {    \"name\" : \"SallerName\",    \"orders\" : [ null, null ],    \"id\" : 6  },  \"auto\" : {    \"options\" : [ {      \"name\" : \"4x4\",      \"autos\" : [ null, null ],      \"id\" : 5    }, {      \"name\" : \"4x4\",      \"autos\" : [ null, null ],      \"id\" : 5    } ],    \"model\" : {      \"name\" : \"q5\",      \"autos\" : [ null, null ],      \"id\" : 1    },    \"id\" : 0,    \"mark\" : {      \"name\" : \"audi\",      \"autos\" : [ null, null ],      \"id\" : 6    }  },  \"id\" : 0,  \"customer\" : {    \"surname\" : \"Kozhuhovskij\",    \"name\" : \"Boris\",    \"orders\" : [ null, null ],    \"id\" : 1  },  \"status\" : \"DONE\"}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"seller\" : {    \"name\" : \"SallerName\",    \"id\" : 6  },  \"auto\" : {    \"options\" : [ {      \"name\" : \"4x4\",      \"id\" : 5    }, {      \"name\" : \"4x4\",      \"id\" : 5    } ],    \"model\" : {      \"name\" : \"q5\",      \"id\" : 1    },    \"id\" : 0,    \"mark\" : {      \"name\" : \"audi\",      \"id\" : 6    }  },  \"id\" : 0,  \"customer\" : {    \"surname\" : \"Kozhuhovskij\",    \"name\" : \"Boris\",    \"id\" : 1  },  \"status\" : \"DONE\"}");
                     break;
                 }
             }
@@ -121,7 +121,7 @@ public interface OrderApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    ApiUtil.setExampleResponse(request, "application/json", "{  \"seller\" : {    \"name\" : \"SallerName\",    \"orders\" : [ null, null ],    \"id\" : 6  },  \"auto\" : {    \"options\" : [ {      \"name\" : \"4x4\",      \"autos\" : [ null, null ],      \"id\" : 5    }, {      \"name\" : \"4x4\",      \"autos\" : [ null, null ],      \"id\" : 5    } ],    \"model\" : {      \"name\" : \"q5\",      \"autos\" : [ null, null ],      \"id\" : 1    },    \"id\" : 0,    \"mark\" : {      \"name\" : \"audi\",      \"autos\" : [ null, null ],      \"id\" : 6    }  },  \"id\" : 0,  \"customer\" : {    \"surname\" : \"Kozhuhovskij\",    \"name\" : \"Boris\",    \"orders\" : [ null, null ],    \"id\" : 1  },  \"status\" : \"DONE\"}");
+                    ApiUtil.setExampleResponse(request, "application/json", "{  \"seller\" : {    \"name\" : \"SallerName\",    \"id\" : 6  },  \"auto\" : {    \"options\" : [ {      \"name\" : \"4x4\",      \"id\" : 5    }, {      \"name\" : \"4x4\",      \"id\" : 5    } ],    \"model\" : {      \"name\" : \"q5\",      \"id\" : 1    },    \"id\" : 0,    \"mark\" : {      \"name\" : \"audi\",      \"id\" : 6    }  },  \"id\" : 0,  \"customer\" : {    \"surname\" : \"Kozhuhovskij\",    \"name\" : \"Boris\",    \"id\" : 1  },  \"status\" : \"DONE\"}");
                     break;
                 }
             }

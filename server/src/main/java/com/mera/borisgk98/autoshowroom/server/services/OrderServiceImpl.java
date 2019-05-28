@@ -4,6 +4,7 @@ import com.mera.borisgk98.autoshowroom.server.models.Order;
 import com.mera.borisgk98.autoshowroom.server.models.OrderStatus;
 import com.mera.borisgk98.autoshowroom.server.repositories.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,7 +26,10 @@ public class OrderServiceImpl
         return super.create(m);
     }
 
+    @Override
     public List<Order> filterByOrderStatus(OrderStatus status) {
-        return repository.findAllByOrderStatus(status);
+        Order example = new Order();
+        example.setStatus(status);
+        return repository.findAll(Example.of(example));
     }
 }

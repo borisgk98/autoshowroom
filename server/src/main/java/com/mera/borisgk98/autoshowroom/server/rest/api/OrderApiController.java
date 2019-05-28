@@ -2,7 +2,7 @@ package com.mera.borisgk98.autoshowroom.server.rest.api;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Order;
-import com.mera.borisgk98.autoshowroom.server.rest.api.OrderApi;
+import com.mera.borisgk98.autoshowroom.server.models.OrderStatus;
 import com.mera.borisgk98.autoshowroom.server.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -76,13 +76,18 @@ public class OrderApiController implements OrderApi {
     }
 
     @Override
-    public ResponseEntity<List<Order>> orderGet(Integer limit, Integer offset) {
-        if (limit == null) {
-            return ResponseEntity.ok(orderService.getAll());
+    public ResponseEntity<List<Order>> orderGet(Integer limit, Integer offset, String status) {
+        if (status == null) {
+            if (limit == null) {
+                return ResponseEntity.ok(orderService.getAll());
+            }
+            if (offset == null) {
+                offset = defaultOffset;
+            }
+            return ResponseEntity.ok(orderService.getRange(offset, limit));
         }
-        if (offset == null) {
-            offset = defaultOffset;
+        else {
+            return ResponseEntity.ok(orderService.filterByOrderStatus(OrderStatus.valueOf(status)));
         }
-        return ResponseEntity.ok(orderService.getRange(offset, limit));
     }
 }

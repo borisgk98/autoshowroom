@@ -2,6 +2,7 @@ package com.mera.borisgk98.autoshowroom.client.service;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.client.model.Order;
+import com.mera.borisgk98.autoshowroom.client.model.OrderStatus;
 import com.mera.borisgk98.autoshowroom.client.rest.api.DefaultApi;
 import com.mera.borisgk98.autoshowroom.client.rest.invoker.ApiException;
 import com.mera.borisgk98.autoshowroom.client.tool.Converter;
@@ -70,7 +71,7 @@ public class OrderServiceImpl implements com.mera.borisgk98.autoshowroom.client.
     @Override
     public List<Order> getAll() {
         try {
-            return api.orderGet(null, null)
+            return api.orderGet(null, null, null)
                     .stream()
                     .map(x -> Converter.convert(x, Order.class))
                     .collect(Collectors.toList());
@@ -84,7 +85,21 @@ public class OrderServiceImpl implements com.mera.borisgk98.autoshowroom.client.
     @Override
     public List<Order> getRange(Integer limit, Integer offset) {
         try {
-            return api.orderGet(limit, offset)
+            return api.orderGet(limit, offset, null)
+                    .stream()
+                    .map(x -> Converter.convert(x, Order.class))
+                    .collect(Collectors.toList());
+        }
+        catch (ApiException exc) {
+            System.err.println(exc);
+            return null;
+        }
+    }
+
+    @Override
+    public List<Order> filter(OrderStatus status) {
+        try {
+            return api.orderGet(null, null, status.toString())
                     .stream()
                     .map(x -> Converter.convert(x, Order.class))
                     .collect(Collectors.toList());

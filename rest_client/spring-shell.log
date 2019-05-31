@@ -75,3 +75,7 @@
 1558997840899:automark create --name mark
 1558997854408:order create --auto-id 1 --customer-id 1 --seller-id 1
 1558998459714:order read 1
+1559294443532:order filter ACCEPTED
+1559294455222:order filter lgfs
+1559294460707:order filter DONE
+1559294465321:exit

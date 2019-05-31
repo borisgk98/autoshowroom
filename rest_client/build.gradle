@@ -123,7 +123,7 @@ openApiGenerate {
     inputSpec = "$projectDir/../server/src/main/resources/autoshowroom.yaml".toString()
     outputDir = "$projectDir".toString()
     apiPackage = ("com.mera.borisgk98.autoshowroom.client.rest.api").toString()
-//    skipOverwrite = true
+    skipOverwrite = true
     invokerPackage = ("com.mera.borisgk98.autoshowroom.client.rest.invoker").toString()
     modelPackage = ("com.mera.borisgk98.autoshowroom.client.rest.model").toString()
 //    groupId = ("com.mera.borisgk98.autoshowroom.server").toString()

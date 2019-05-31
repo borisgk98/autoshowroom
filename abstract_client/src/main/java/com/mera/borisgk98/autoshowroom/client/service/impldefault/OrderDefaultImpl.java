@@ -2,6 +2,7 @@ package com.mera.borisgk98.autoshowroom.client.service.impldefault;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.client.model.Order;
+import com.mera.borisgk98.autoshowroom.client.model.OrderStatus;
 import com.mera.borisgk98.autoshowroom.client.objectfabric.Fabric;
 import com.mera.borisgk98.autoshowroom.client.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +44,11 @@ public class OrderDefaultImpl implements OrderService {
 
     @Override
     public List<Order> getRange(Integer offset, Integer limit) {
+        return fabric.getList(Order.class);
+    }
+
+    @Override
+    public List<Order> filter(OrderStatus status) {
         return fabric.getList(Order.class);
     }
 }

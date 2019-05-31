@@ -2,6 +2,8 @@ package com.mera.borisgk98.autoshowroom.client.component;
 
 import com.mera.borisgk98.autoshowroom.client.exception.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.client.model.*;
+import com.mera.borisgk98.autoshowroom.client.service.OrderService;
+import com.mera.borisgk98.autoshowroom.client.tool.TableBuilder;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
@@ -87,6 +89,22 @@ public class OrderShellComponent extends AbstractShellComponent<Order> implement
     )
     public Table readAll() {
         return super.readAll();
+    }
+
+    @ShellMethod(
+            prefix = "--",
+            value = "Read all values of order by order status",
+            key = "order filter"
+    )
+    public Table filter(@ShellOption String orderStatus) {
+        OrderStatus status = null;
+        try {
+            status  = OrderStatus.valueOf(orderStatus);
+        }
+        catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Incorrect --order-status");
+        }
+        return TableBuilder.build(((OrderService) crudService).filter(status), Order.class);
     }
 
     @Override

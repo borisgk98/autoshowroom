@@ -54,3 +54,6 @@
 1558996736640:order update --id 1 --auto-id 1 --seller-id 1 --customer-id 1
 1558996747178:order update --id 1 --auto-id 1 --seller-id 1 --customer-id 1 --order-status 1
 1558996904843:order update --id 1 --auto-id 1 --seller-id 1 --customer-id 1 --order-status ACCEPTED
+1559294034844:order filter ACCEPTED
+1559294042022:order filter lgjd
+1559294054561:exit

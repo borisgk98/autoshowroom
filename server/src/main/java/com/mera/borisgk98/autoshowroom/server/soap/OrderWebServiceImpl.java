@@ -2,6 +2,7 @@ package com.mera.borisgk98.autoshowroom.server.soap;
 
 import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Order;
+import com.mera.borisgk98.autoshowroom.server.models.OrderStatus;
 import com.mera.borisgk98.autoshowroom.server.services.OrderService;
 import com.mera.borisgk98.autoshowroom.server.services.CrudService;
 import lombok.SneakyThrows;
@@ -46,5 +47,10 @@ public class OrderWebServiceImpl implements OrderWebService {
     @Override
     public List<Order> getRangeOrder(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
+    }
+
+    @Override
+    public List<Order> filterByOrderStatus(OrderStatus status) {
+        return service.filterByOrderStatus(status);
     }
 }

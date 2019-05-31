@@ -258,6 +258,8 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Order'
+        400:
+          description: Bad request
     post:
       requestBody:
         required: true

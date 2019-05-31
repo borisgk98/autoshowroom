@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-18T17:15:41.019+03:00[Europe/Moscow]")
@@ -87,7 +88,14 @@ public class OrderApiController implements OrderApi {
             return ResponseEntity.ok(orderService.getRange(offset, limit));
         }
         else {
-            return ResponseEntity.ok(orderService.filterByOrderStatus(OrderStatus.valueOf(status)));
+            OrderStatus orderStatus = null;
+            try {
+                orderStatus = OrderStatus.fromValue(status);
+            }
+            catch (IllegalArgumentException e) {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+            return ResponseEntity.ok(orderService.filterByOrderStatus(orderStatus));
         }
     }
 }

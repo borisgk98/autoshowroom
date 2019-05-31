@@ -26,7 +26,7 @@ import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-28T02:53:14.531+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2019-05-31T11:27:02.643+03:00[Europe/Moscow]")
 
 @Validated
 @Api(value = "order", description = "the order API")
@@ -38,7 +38,8 @@ public interface OrderApi {
 
     @ApiOperation(value = "", nickname = "orderGet", notes = "", response = Order.class, responseContainer = "List", tags={  })
     @ApiResponses(value = { 
-        @ApiResponse(code = 200, message = "List of orders", response = Order.class, responseContainer = "List") })
+        @ApiResponse(code = 200, message = "List of orders", response = Order.class, responseContainer = "List"),
+        @ApiResponse(code = 400, message = "Bad request") })
     @RequestMapping(value = "/order",
         produces = { "application/json" }, 
         method = RequestMethod.GET)

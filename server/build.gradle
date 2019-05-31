@@ -115,22 +115,25 @@ springBoot {
 crudGenerationSetting {
     srcRoot = "$projectDir/src/main/java"
     modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/server/models"
-    generationRoot = "$projectDir/src/main/java"
+//    generationRoot = "$projectDir/src/main/java"
+    generationRoot = "$projectDir/src/test/groovy"
     generationPackages = [
-            "com.mera.borisgk98.autoshowroom.server.rest.api",
-            "com.mera.borisgk98.autoshowroom.server.repositories",
-            "com.mera.borisgk98.autoshowroom.server.services",
-            "com.mera.borisgk98.autoshowroom.server.services",
-            "com.mera.borisgk98.autoshowroom.server.soap",
-            "com.mera.borisgk98.autoshowroom.server.soap"
+//            "com.mera.borisgk98.autoshowroom.server.rest.api",
+//            "com.mera.borisgk98.autoshowroom.server.repositories",
+//            "com.mera.borisgk98.autoshowroom.server.services",
+//            "com.mera.borisgk98.autoshowroom.server.services",
+//            "com.mera.borisgk98.autoshowroom.server.soap",
+//            "com.mera.borisgk98.autoshowroom.server.soap"
+            "com.mera.borisgk98.autoshowroom.server.services"
     ]
     generationTemplates = [
-            "$projectDir/src/main/resources/templates/rest/ApiController".toString(),
-            "$projectDir/src/main/resources/templates/Repository".toString(),
-            "$projectDir/src/main/resources/templates/Service".toString(),
-            "$projectDir/src/main/resources/templates/ServiceImpl".toString(),
-            "$projectDir/src/main/resources/templates/soap/WebService".toString(),
-            "$projectDir/src/main/resources/templates/soap/WebServiceImpl".toString()
+//            "$projectDir/src/main/resources/templates/rest/ApiController".toString(),
+//            "$projectDir/src/main/resources/templates/Repository".toString(),
+//            "$projectDir/src/main/resources/templates/Service".toString(),
+//            "$projectDir/src/main/resources/templates/ServiceImpl".toString(),
+//            "$projectDir/src/main/resources/templates/soap/WebService".toString(),
+//            "$projectDir/src/main/resources/templates/soap/WebServiceImpl".toString()
+            "$projectDir/src/main/resources/templates/ServiceTest".toString()
     ]
     generationConcatOuts = [
             "$projectDir/src/main/resources/generated/paths.yaml".toString(),
@@ -144,8 +147,9 @@ crudGenerationSetting {
     ]
     excludeModels = [
             "OrderStatus",
-            "HasId",
-            "Order"
+            "HasId"
+//            ,
+//            "Order"
     ]
 }
 

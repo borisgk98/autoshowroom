@@ -1,4 +1,0 @@
-2019-05-31 12:20:29.225  INFO 9537 --- [main] c.m.b.autoshowroom.client.Application    : Starting Application on boris-pc with PID 9537 (/home/boris/progs/autoshowroom/rest_client/out/production/classes started by boris in /home/boris/progs/autoshowroom/rest_client)
-2019-05-31 12:20:29.253  INFO 9537 --- [main] c.m.b.autoshowroom.client.Application    : No active profile set, falling back to default profiles: default
-2019-05-31 12:20:31.437  WARN 9537 --- [main] org.jline                                : Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
-2019-05-31 12:20:31.691  INFO 9537 --- [main] c.m.b.autoshowroom.client.Application    : Started Application in 3.658 seconds (JVM running for 5.658)

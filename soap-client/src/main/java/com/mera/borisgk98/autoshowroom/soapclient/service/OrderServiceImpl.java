@@ -1,6 +1,7 @@
 package com.mera.borisgk98.autoshowroom.soapclient.service;
 
 import com.mera.borisgk98.autoshowroom.client.model.Order;
+import com.mera.borisgk98.autoshowroom.client.model.OrderStatus;
 import com.mera.borisgk98.autoshowroom.client.tool.Converter;
 import com.mera.borisgk98.autoshowroom.server.soap.OrderWebService;
 import com.mera.borisgk98.autoshowroom.server.soap.OrderService;
@@ -74,7 +75,19 @@ public class OrderServiceImpl implements com.mera.borisgk98.autoshowroom.client.
     @Override
     public List<Order> getRange(Integer offset, Integer limit) {
 
-        return port.getRangeOrder(offset, limit)
+        return port
+                .getRangeOrder(offset, limit)
+                .stream()
+                .map(x -> Converter.convert(x, Order.class))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Order> filter(OrderStatus status) {
+        return port
+                .filterByOrderStatus(
+                    Converter.convert(status, com.mera.borisgk98.autoshowroom.server.soap.OrderStatus.class)
+                )
                 .stream()
                 .map(x -> Converter.convert(x, Order.class))
                 .collect(Collectors.toList());

@@ -44,12 +44,12 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 @XmlType(name = "getAllAutoOptionResponse", propOrder = {
     "_return"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
 public class GetAllAutoOptionResponse implements Equals2, HashCode2
 {
 
     @XmlElement(name = "return")
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
     protected List<AutoOption> _return;
 
     /**
@@ -74,7 +74,7 @@ public class GetAllAutoOptionResponse implements Equals2, HashCode2
      * 
      * 
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
     public List<AutoOption> getReturn() {
         if (_return == null) {
             _return = new ArrayList<AutoOption>();
@@ -82,7 +82,7 @@ public class GetAllAutoOptionResponse implements Equals2, HashCode2
         return this._return;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
     public GetAllAutoOptionResponse withReturn(AutoOption... values) {
         if (values!= null) {
             for (AutoOption value: values) {
@@ -92,7 +92,7 @@ public class GetAllAutoOptionResponse implements Equals2, HashCode2
         return this;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
     public GetAllAutoOptionResponse withReturn(Collection<AutoOption> values) {
         if (values!= null) {
             getReturn().addAll(values);
@@ -106,12 +106,12 @@ public class GetAllAutoOptionResponse implements Equals2, HashCode2
      * 
      */
     @Override
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
     public String toString() {
         return ToStringBuilder.reflectionToString(this, JAXBToStringStyle.DEFAULT_STYLE);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
@@ -122,13 +122,13 @@ public class GetAllAutoOptionResponse implements Equals2, HashCode2
         return currentHashCode;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode() {
         final HashCodeStrategy2 strategy = JAXBHashCodeStrategy.INSTANCE;
         return this.hashCode(null, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
@@ -149,7 +149,7 @@ public class GetAllAutoOptionResponse implements Equals2, HashCode2
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:34+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:37+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(Object object) {
         final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE;
         return equals(null, null, object, strategy);

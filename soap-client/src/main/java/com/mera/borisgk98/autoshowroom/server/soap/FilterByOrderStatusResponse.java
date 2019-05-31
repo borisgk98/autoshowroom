@@ -1,9 +1,13 @@
 
 package com.mera.borisgk98.autoshowroom.server.soap;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import javax.annotation.Generated;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.cxf.xjc.runtime.JAXBToStringStyle;
@@ -18,17 +22,16 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for autoOption complex type.
+ * <p>Java class for filterByOrderStatusResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="autoOption"&gt;
+ * &lt;complexType name="filterByOrderStatusResponse"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="return" type="{http://soap.server.autoshowroom.borisgk98.mera.com/}order" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,80 +41,62 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "autoOption", propOrder = {
-    "id",
-    "name"
+@XmlType(name = "filterByOrderStatusResponse", propOrder = {
+    "_return"
 })
 @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-public class AutoOption implements Equals2, HashCode2
+public class FilterByOrderStatusResponse implements Equals2, HashCode2
 {
 
+    @XmlElement(name = "return")
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    protected Integer id;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    protected String name;
+    protected List<Order> _return;
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the return property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the return property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getReturn().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Order }
+     * 
+     * 
      */
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public void setId(Integer value) {
-        this.id = value;
-    }
-
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public void setName(String value) {
-        this.name = value;
+    public List<Order> getReturn() {
+        if (_return == null) {
+            _return = new ArrayList<Order>();
+        }
+        return this._return;
     }
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public AutoOption withId(Integer value) {
-        setId(value);
+    public FilterByOrderStatusResponse withReturn(Order... values) {
+        if (values!= null) {
+            for (Order value: values) {
+                getReturn().add(value);
+            }
+        }
         return this;
     }
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public AutoOption withName(String value) {
-        setName(value);
+    public FilterByOrderStatusResponse withReturn(Collection<Order> values) {
+        if (values!= null) {
+            getReturn().addAll(values);
+        }
         return this;
     }
 
@@ -130,14 +115,9 @@ public class AutoOption implements Equals2, HashCode2
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
-            Integer theId;
-            theId = this.getId();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "id", theId), currentHashCode, theId, (this.id!= null));
-        }
-        {
-            String theName;
-            theName = this.getName();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "name", theName), currentHashCode, theName, (this.name!= null));
+            List<Order> theReturn;
+            theReturn = (((this._return!= null)&&(!this._return.isEmpty()))?this.getReturn():null);
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "_return", theReturn), currentHashCode, theReturn, ((this._return!= null)&&(!this._return.isEmpty())));
         }
         return currentHashCode;
     }
@@ -156,22 +136,13 @@ public class AutoOption implements Equals2, HashCode2
         if (this == object) {
             return true;
         }
-        final AutoOption that = ((AutoOption) object);
+        final FilterByOrderStatusResponse that = ((FilterByOrderStatusResponse) object);
         {
-            Integer lhsId;
-            lhsId = this.getId();
-            Integer rhsId;
-            rhsId = that.getId();
-            if (!strategy.equals(LocatorUtils.property(thisLocator, "id", lhsId), LocatorUtils.property(thatLocator, "id", rhsId), lhsId, rhsId, (this.id!= null), (that.id!= null))) {
-                return false;
-            }
-        }
-        {
-            String lhsName;
-            lhsName = this.getName();
-            String rhsName;
-            rhsName = that.getName();
-            if (!strategy.equals(LocatorUtils.property(thisLocator, "name", lhsName), LocatorUtils.property(thatLocator, "name", rhsName), lhsName, rhsName, (this.name!= null), (that.name!= null))) {
+            List<Order> lhsReturn;
+            lhsReturn = (((this._return!= null)&&(!this._return.isEmpty()))?this.getReturn():null);
+            List<Order> rhsReturn;
+            rhsReturn = (((that._return!= null)&&(!that._return.isEmpty()))?that.getReturn():null);
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "_return", lhsReturn), LocatorUtils.property(thatLocator, "_return", rhsReturn), lhsReturn, rhsReturn, ((this._return!= null)&&(!this._return.isEmpty())), ((that._return!= null)&&(!that._return.isEmpty())))) {
                 return false;
             }
         }

@@ -4,6 +4,7 @@ package com.mera.borisgk98.autoshowroom.server.soap;
 import javax.annotation.Generated;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.cxf.xjc.runtime.JAXBToStringStyle;
@@ -18,17 +19,16 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
 
 
 /**
- * <p>Java class for autoOption complex type.
+ * <p>Java class for filterByOrderStatus complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="autoOption"&gt;
+ * &lt;complexType name="filterByOrderStatus"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="arg0" type="{http://soap.server.autoshowroom.borisgk98.mera.com/}orderStatus" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,80 +38,46 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "autoOption", propOrder = {
-    "id",
-    "name"
+@XmlType(name = "filterByOrderStatus", propOrder = {
+    "arg0"
 })
 @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-public class AutoOption implements Equals2, HashCode2
+public class FilterByOrderStatus implements Equals2, HashCode2
 {
 
+    @XmlSchemaType(name = "string")
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    protected Integer id;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    protected String name;
+    protected OrderStatus arg0;
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the arg0 property.
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link OrderStatus }
      *     
      */
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public Integer getId() {
-        return id;
+    public OrderStatus getArg0() {
+        return arg0;
     }
 
     /**
-     * Sets the value of the id property.
+     * Sets the value of the arg0 property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link OrderStatus }
      *     
      */
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public void setId(Integer value) {
-        this.id = value;
-    }
-
-    /**
-     * Gets the value of the name property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Sets the value of the name property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public void setName(String value) {
-        this.name = value;
+    public void setArg0(OrderStatus value) {
+        this.arg0 = value;
     }
 
     @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public AutoOption withId(Integer value) {
-        setId(value);
-        return this;
-    }
-
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
-    public AutoOption withName(String value) {
-        setName(value);
+    public FilterByOrderStatus withArg0(OrderStatus value) {
+        setArg0(value);
         return this;
     }
 
@@ -130,14 +96,9 @@ public class AutoOption implements Equals2, HashCode2
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
-            Integer theId;
-            theId = this.getId();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "id", theId), currentHashCode, theId, (this.id!= null));
-        }
-        {
-            String theName;
-            theName = this.getName();
-            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "name", theName), currentHashCode, theName, (this.name!= null));
+            OrderStatus theArg0;
+            theArg0 = this.getArg0();
+            currentHashCode = strategy.hashCode(LocatorUtils.property(locator, "arg0", theArg0), currentHashCode, theArg0, (this.arg0 != null));
         }
         return currentHashCode;
     }
@@ -156,22 +117,13 @@ public class AutoOption implements Equals2, HashCode2
         if (this == object) {
             return true;
         }
-        final AutoOption that = ((AutoOption) object);
+        final FilterByOrderStatus that = ((FilterByOrderStatus) object);
         {
-            Integer lhsId;
-            lhsId = this.getId();
-            Integer rhsId;
-            rhsId = that.getId();
-            if (!strategy.equals(LocatorUtils.property(thisLocator, "id", lhsId), LocatorUtils.property(thatLocator, "id", rhsId), lhsId, rhsId, (this.id!= null), (that.id!= null))) {
-                return false;
-            }
-        }
-        {
-            String lhsName;
-            lhsName = this.getName();
-            String rhsName;
-            rhsName = that.getName();
-            if (!strategy.equals(LocatorUtils.property(thisLocator, "name", lhsName), LocatorUtils.property(thatLocator, "name", rhsName), lhsName, rhsName, (this.name!= null), (that.name!= null))) {
+            OrderStatus lhsArg0;
+            lhsArg0 = this.getArg0();
+            OrderStatus rhsArg0;
+            rhsArg0 = that.getArg0();
+            if (!strategy.equals(LocatorUtils.property(thisLocator, "arg0", lhsArg0), LocatorUtils.property(thatLocator, "arg0", rhsArg0), lhsArg0, rhsArg0, (this.arg0 != null), (that.arg0 != null))) {
                 return false;
             }
         }

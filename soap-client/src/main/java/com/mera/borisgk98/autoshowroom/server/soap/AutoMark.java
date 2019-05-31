@@ -42,13 +42,13 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
     "id",
     "name"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
 public class AutoMark implements Equals2, HashCode2
 {
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     protected Integer id;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     protected String name;
 
     /**
@@ -59,7 +59,7 @@ public class AutoMark implements Equals2, HashCode2
      *     {@link Integer }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public Integer getId() {
         return id;
     }
@@ -72,7 +72,7 @@ public class AutoMark implements Equals2, HashCode2
      *     {@link Integer }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public void setId(Integer value) {
         this.id = value;
     }
@@ -85,7 +85,7 @@ public class AutoMark implements Equals2, HashCode2
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public String getName() {
         return name;
     }
@@ -98,18 +98,18 @@ public class AutoMark implements Equals2, HashCode2
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public void setName(String value) {
         this.name = value;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public AutoMark withId(Integer value) {
         setId(value);
         return this;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public AutoMark withName(String value) {
         setName(value);
         return this;
@@ -121,12 +121,12 @@ public class AutoMark implements Equals2, HashCode2
      * 
      */
     @Override
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public String toString() {
         return ToStringBuilder.reflectionToString(this, JAXBToStringStyle.DEFAULT_STYLE);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
@@ -142,13 +142,13 @@ public class AutoMark implements Equals2, HashCode2
         return currentHashCode;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode() {
         final HashCodeStrategy2 strategy = JAXBHashCodeStrategy.INSTANCE;
         return this.hashCode(null, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
@@ -178,7 +178,7 @@ public class AutoMark implements Equals2, HashCode2
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-27T02:33:35+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(Object object) {
         final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE;
         return equals(null, null, object, strategy);

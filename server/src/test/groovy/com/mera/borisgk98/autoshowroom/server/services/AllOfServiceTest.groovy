@@ -9,7 +9,7 @@ import org.junit.runners.Suite
     AutoServiceTest.class,
     AutoOptionServiceTest.class,
     SellerServiceTest.class,
-    OrderServiceTest.class,
+//    OrderServiceTest.class,
     CustomerServiceTest.class
 ])
 @RunWith(Suite.class)

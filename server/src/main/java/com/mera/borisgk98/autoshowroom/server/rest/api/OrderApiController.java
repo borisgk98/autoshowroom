@@ -95,6 +95,9 @@ public class OrderApiController implements OrderApi {
             catch (IllegalArgumentException e) {
                 return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
             }
+            if (limit != null || offset != null) {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
             return ResponseEntity.ok(orderService.filterByOrderStatus(orderStatus));
         }
     }

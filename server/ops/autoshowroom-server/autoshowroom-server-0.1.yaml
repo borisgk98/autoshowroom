@@ -1,0 +1,53 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: autoshowroom-d
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: autoshowroom
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: autoshowroom
+        image: gcr.io/rich-sprite-242414/autoshowroom-server:0.1
+        ports:
+        - containerPort: 8080
+        env:
+        - name: spring.datasource.url
+          value: jdbc:sqlserver://mssql-clusterip
+        - name: spring.datasource.username
+          value: sa
+        - name: spring.datasource.password        
+          valueFrom:
+            secretKeyRef:
+              name: mssql
+              key: password
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: autoshowroom-lb
+spec:
+  selector:
+    app: autoshowroom
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: autoshowroom-cip
+spec:
+  selector:
+    app: autoshowroom
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP

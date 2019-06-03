@@ -50,18 +50,18 @@ import org.jvnet.jaxb2_commons.locator.util.LocatorUtils;
     "model",
     "options"
 })
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
 public class Auto implements Equals2, HashCode2
 {
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     protected Integer id;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     protected AutoMark mark;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     protected AutoModel model;
     @XmlElement(nillable = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     protected List<AutoOption> options;
 
     /**
@@ -72,7 +72,7 @@ public class Auto implements Equals2, HashCode2
      *     {@link Integer }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public Integer getId() {
         return id;
     }
@@ -85,7 +85,7 @@ public class Auto implements Equals2, HashCode2
      *     {@link Integer }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public void setId(Integer value) {
         this.id = value;
     }
@@ -98,7 +98,7 @@ public class Auto implements Equals2, HashCode2
      *     {@link AutoMark }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public AutoMark getMark() {
         return mark;
     }
@@ -111,7 +111,7 @@ public class Auto implements Equals2, HashCode2
      *     {@link AutoMark }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public void setMark(AutoMark value) {
         this.mark = value;
     }
@@ -124,7 +124,7 @@ public class Auto implements Equals2, HashCode2
      *     {@link AutoModel }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public AutoModel getModel() {
         return model;
     }
@@ -137,7 +137,7 @@ public class Auto implements Equals2, HashCode2
      *     {@link AutoModel }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public void setModel(AutoModel value) {
         this.model = value;
     }
@@ -164,7 +164,7 @@ public class Auto implements Equals2, HashCode2
      * 
      * 
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public List<AutoOption> getOptions() {
         if (options == null) {
             options = new ArrayList<AutoOption>();
@@ -172,25 +172,25 @@ public class Auto implements Equals2, HashCode2
         return this.options;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public Auto withId(Integer value) {
         setId(value);
         return this;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public Auto withMark(AutoMark value) {
         setMark(value);
         return this;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public Auto withModel(AutoModel value) {
         setModel(value);
         return this;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public Auto withOptions(AutoOption... values) {
         if (values!= null) {
             for (AutoOption value: values) {
@@ -200,7 +200,7 @@ public class Auto implements Equals2, HashCode2
         return this;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public Auto withOptions(Collection<AutoOption> values) {
         if (values!= null) {
             getOptions().addAll(values);
@@ -214,12 +214,12 @@ public class Auto implements Equals2, HashCode2
      * 
      */
     @Override
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public String toString() {
         return ToStringBuilder.reflectionToString(this, JAXBToStringStyle.DEFAULT_STYLE);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode(ObjectLocator locator, HashCodeStrategy2 strategy) {
         int currentHashCode = 1;
         {
@@ -245,13 +245,13 @@ public class Auto implements Equals2, HashCode2
         return currentHashCode;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public int hashCode() {
         final HashCodeStrategy2 strategy = JAXBHashCodeStrategy.INSTANCE;
         return this.hashCode(null, strategy);
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(ObjectLocator thisLocator, ObjectLocator thatLocator, Object object, EqualsStrategy2 strategy) {
         if ((object == null)||(this.getClass()!= object.getClass())) {
             return false;
@@ -299,7 +299,7 @@ public class Auto implements Equals2, HashCode2
         return true;
     }
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
     public boolean equals(Object object) {
         final EqualsStrategy2 strategy = JAXBEqualsStrategy.INSTANCE;
         return equals(null, null, object, strategy);

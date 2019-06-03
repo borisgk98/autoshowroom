@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlType(name = "orderStatus")
 @XmlEnum
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-05-31T12:27:38+03:00", comments = "JAXB RI v2.3.2")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2019-06-03T11:44:06+03:00", comments = "JAXB RI v2.3.2")
 public enum OrderStatus {
 
     ACCEPTED,

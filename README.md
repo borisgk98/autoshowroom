@@ -31,6 +31,7 @@ java -jar restclient-0.1.jar
 * <entity_name> create \<param-1\>...\<param-n\>
 * <entity_name> update --id \<id\> \<param-1\>...\<param-n\>
 * <entity_name> delete --id \<id\>
+* order filter --order-status <status>
 
 ## Get entity
 ### One entity

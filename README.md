@@ -25,13 +25,13 @@ java -jar restclient-0.1.jar
 * order
 
 ## Available commands
-* <entity_name> read --id \<id\>
-* <entity_name> readll
-* <entity_name> readrange --limit \<l\> --offset \<o\>
-* <entity_name> create \<param-1\>...\<param-n\>
-* <entity_name> update --id \<id\> \<param-1\>...\<param-n\>
-* <entity_name> delete --id \<id\>
-* order filter --order-status <status>
+* \<entity_name\> read --id \<id\>
+* \<entity_name\> readll
+* \<entity_name\> readrange --limit \<l\> --offset \<o\>
+* \<entity_name\> create \<param-1\>...\<param-n\>
+* \<entity_name\> update --id \<id\> \<param-1\>...\<param-n\>
+* \<entity_name\> delete --id \<id\>
+* order filter --order-status \<status\>
 
 ## Get entity
 ### One entity

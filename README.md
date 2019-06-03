@@ -24,13 +24,13 @@ java -jar restclient-0.1.jar
 * customer
 * order
 
-## Available operations
-* read --id \<id\>
-* readll
-* readrange --limit \<l\> --offset \<o\>
-* create \<param-1\>...\<param-n\>
-* update --id \<id\> \<param-1\>...\<param-n\>
-* delete --id \<id\>
+## Available commands
+* <entity_name> read --id \<id\>
+* <entity_name> readll
+* <entity_name> readrange --limit \<l\> --offset \<o\>
+* <entity_name> create \<param-1\>...\<param-n\>
+* <entity_name> update --id \<id\> \<param-1\>...\<param-n\>
+* <entity_name> delete --id \<id\>
 
 ## Get entity
 ### One entity

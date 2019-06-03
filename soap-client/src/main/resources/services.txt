@@ -1,7 +1,0 @@
-http://35.228.60.112/services/auto?wsdl
-http://35.228.60.112/services/autooption?wsdl
-http://35.228.60.112/services/order?wsdl
-http://35.228.60.112/services/customer?wsdl
-http://35.228.60.112/services/automodel?wsdl
-http://35.228.60.112/services/seller?wsdl
-http://35.228.60.112/services/automark?wsdl

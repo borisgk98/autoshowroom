@@ -28,7 +28,7 @@ import java.io.IOException;
  * Contains information about automobiles&#39; models1
  */
 @ApiModel(description = "Contains information about automobiles' models1")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-05-31T12:18:59.787+03:00[Europe/Moscow]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2019-06-03T11:37:35.434+03:00[Europe/Moscow]")
 public class AutoModel {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)

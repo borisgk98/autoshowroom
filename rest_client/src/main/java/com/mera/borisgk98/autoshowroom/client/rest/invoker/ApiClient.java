@@ -57,7 +57,7 @@ import com.mera.borisgk98.autoshowroom.client.rest.invoker.auth.OAuthFlow;
 
 public class ApiClient {
 
-    private String basePath = "http://localhost:8080";
+    private String basePath = "http://35.228.60.112";
     private boolean debugging = false;
     private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
     private String tempFolderPath = null;
@@ -115,7 +115,7 @@ public class ApiClient {
     /**
      * Set base path
      *
-     * @param basePath Base path of the URL (e.g http://localhost:8080
+     * @param basePath Base path of the URL (e.g http://35.228.60.112
      * @return An instance of OkHttpClient
      */
     public ApiClient setBasePath(String basePath) {

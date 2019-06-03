@@ -8,8 +8,8 @@ info:
     email: borisgk98@ya.ru
 
 servers:
-  - url: http://localhost:8080/
-    description: local server
+  - url: http://35.228.60.112
+    description: remote server
 
 paths:
 

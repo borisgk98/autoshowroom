@@ -1,4 +1,4 @@
-FROM gradle:jdk8 as builder
+FROM gradle:5.2.1-jdk8-slim as builder
 
 COPY --chown=gradle:gradle . /home/gradle/builddir
 WORKDIR /home/gradle/builddir

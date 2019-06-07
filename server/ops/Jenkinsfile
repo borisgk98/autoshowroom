@@ -1,0 +1,95 @@
+def label = "worker-${UUID.randomUUID().toString()}"
+
+podTemplate(label: label, containers: [
+  containerTemplate(name: 'gradle', image: 'borisgk98/autoshowroom:gradle-builder-0.1', command: 'cat', ttyEnabled: true),
+  containerTemplate(name: 'docker', image: 'docker:18.06.3-ce', command: 'cat', ttyEnabled: true),
+  containerTemplate(name: 'kubectl', image: 'borisgk98/autoshowroom:kubectl-0.1.1', command: 'cat', ttyEnabled: true),
+  containerTemplate(name: 'helm', image: 'lachlanevenson/k8s-helm:latest', command: 'cat', ttyEnabled: true)
+],
+volumes: [
+//  hostPathVolume(mountPath: '/home/gradle/.gradle', hostPath: '/tmp/jenkins/.gradle'),
+  hostPathVolume(mountPath: '/var/run/docker.sock', hostPath: '/var/run/docker.sock')
+]) {
+  node(label) {
+    def myRepo = checkout scm
+    def gitCommit = myRepo.GIT_COMMIT
+    def gitBranch = myRepo.GIT_BRANCH
+    def shortGitCommit = "${gitCommit[0..10]}"
+    def previousGitCommit = sh(script: "git rev-parse ${gitCommit}~", returnStdout: true)
+    def projectId = "rich-sprite-242414"
+    def artifactName = "autoshowroom-server"
+    def imageId
+    def registryHost = "gcr.io"
+    def gcloudAccessToken
+ 
+
+    stage('Build image') {
+        container('docker') {    
+            sh """
+                cd server
+                docker build . -t merann/autoshowroom:latest
+                """
+      }
+    }
+    
+    stage('Test') {
+      try {
+        container('gradle') {
+          sh """
+            pwd
+            echo "GIT_BRANCH=${gitBranch}"
+            echo "GIT_COMMIT=${gitCommit}"
+            cd server
+            gradle test
+            """
+        }
+      }
+      catch (exc) {
+        println "Failed to test - ${currentBuild.fullDisplayName}"
+        throw(exc)
+      }
+    }    
+
+    stage ('Get access token') {
+        container('kubectl') {
+            gcloudAccessToken = sh (
+                script: "kubectl --namespace=default get secrets gc -o jsonpath=\"{.data.access-token}\"",
+                returnStdout: true
+            ).trim()
+        }
+    }
+
+    stage ('Publish docker image') {
+        container('docker') {
+            imageId = "${registryHost}/${projectId}/${artifactName}:0.0.${env.BUILD_NUMBER}"
+            sh """
+                echo ${imageId}
+                docker tag merann/autoshowroom:latest ${imageId}
+                echo \$(echo ${gcloudAccessToken} | base64 -d) > login.json
+                """
+            sh("docker login -u _json_key --password-stdin https://${registryHost} < login.json")
+            sh("docker push ${imageId}")
+            echo "Successfull push ${imageId} to registry"
+        }
+    }
+
+    
+    stage('Deploy to k8s cluster') {
+      container('kubectl') {
+          sh """
+            cd server/ops
+            export BUILD_ID=${env.BUILD_NUMBER}
+            sh deploy.sh
+            """
+      }
+    }
+
+    /*
+    stage('Run helm') {
+      container('helm') {
+        sh "helm list"
+      }
+    }
+    */
+  }
+}

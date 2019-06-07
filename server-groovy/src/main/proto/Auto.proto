@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package mera.com.borisgk98.autoshowroom.grpc;
+
+import "AutoMark.proto";
+import "AutoModel.proto";
+import "AutoOption.proto";
+
+message Auto {
+    int32 id = 1;
+
+    Auto auto_mark = 3;
+    Auto auto_model = 4;
+    repeated Auto auto_options = 5;
+}

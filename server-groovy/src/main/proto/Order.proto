@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package mera.com.borisgk98.autoshowroom.grpc;
+
+import "Auto.proto";
+import "Seller.proto";
+import "Customer.proto";
+import "OrderStatus.proto";
+
+message Order {
+    int32 id = 1;
+
+    OrderStatus status = 2;
+    Seller seller = 3;
+    Auto auto = 4;
+    Customer customer = 5;
+}
+
+service HelloWorldService {
+    rpc get (Order) returns (Order);
+}

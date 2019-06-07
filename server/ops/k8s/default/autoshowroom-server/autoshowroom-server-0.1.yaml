@@ -12,7 +12,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: autoshowroom
-        image: gcr.io/rich-sprite-242414/autoshowroom-server:0.1
+        image: gcr.io/rich-sprite-242414/autoshowroom-server:0.0.${BUILD_ID}
         ports:
         - containerPort: 8080
         env:

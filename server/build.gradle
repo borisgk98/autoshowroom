@@ -77,6 +77,7 @@ dependencies {
     // https://mvnrepository.com/artifact/junit/junit
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
+    compile 'org.codehaus.groovy:groovy-all:2.5.7'
 }
 
 

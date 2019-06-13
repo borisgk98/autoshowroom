@@ -9,9 +9,10 @@ import mera.com.borisgk98.autoshowroom.servergroovy.repo.OrderRepo
 import mera.com.borisgk98.autoshowroom.servergroovy.tool.Converter
 import org.lognet.springboot.grpc.GRpcService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.stereotype.Component
 
-@GRpcService
-class OrderGRpcService extends OrderServiceGrpc.OrderServiceImplBase {
+@Component
+class OrderGRpcClient extends OrderServiceGrpc.OrderServiceImplBase {
 
     @Autowired
     OrderRepo orderRepo

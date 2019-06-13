@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-package mera.com.borisgk98.autoshowroom.grpc;
+package com.mera.borisgk98.autoshowroom.grpc;
 
 import "Auto.proto";
 import "Seller.proto";
@@ -17,6 +17,11 @@ message Order {
     Customer customer = 5;
 }
 
-service HelloWorldService {
-    rpc get (Order) returns (Order);
+message OrderGetRequest {
+    int32 orderId = 1;
+}
+
+service OrderService {
+    rpc get (OrderGetRequest) returns (Order);
+    rpc save (Order) returns (Order);
 }

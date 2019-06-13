@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-package mera.com.borisgk98.autoshowroom.grpc;
+package com.mera.borisgk98.autoshowroom.grpc;
 
 message Customer {
     int32 id = 1;

@@ -1,4 +1,4 @@
-package mera.com.borisgk98.autoshowroom.servergroovy.service
+package mera.com.borisgk98.autoshowroom.servergroovy.grpc
 
 import com.mera.borisgk98.autoshowroom.grpc.Order
 import com.mera.borisgk98.autoshowroom.grpc.OrderServiceGrpc
@@ -11,7 +11,7 @@ import org.lognet.springboot.grpc.GRpcService
 import org.springframework.beans.factory.annotation.Autowired
 
 @GRpcService
-class OrderService extends OrderServiceGrpc.OrderServiceImplBase {
+class OrderGRpcService extends OrderServiceGrpc.OrderServiceImplBase {
 
     @Autowired
     OrderRepo orderRepo
@@ -27,9 +27,5 @@ class OrderService extends OrderServiceGrpc.OrderServiceImplBase {
         orderCM.initStringData()
         orderCM.uuid = UUID.randomUUID()
         orderCM = orderRepo.save(orderCM)
-        Order result = Converter.convert(orderCM.getModel(), Order.class)
-        result.id = orderCM.getId()
-        responseObserver.onNext(result)
-        responseObserver.onCompleted()
     }
 }

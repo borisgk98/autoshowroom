@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.annotation.Transient
 import org.springframework.data.cassandra.core.mapping.PrimaryKey
 
-class CassandraModel<T> {
+class CassandraModel<T> implements HasUuid{
     @Transient
     T model
     @Transient
@@ -21,7 +21,7 @@ class CassandraModel<T> {
     String jsonData
 
     T getModel() {
-      om.readValue(jsonData, modelClass)
+      return om.readValue(jsonData, modelClass)
     }
 
     void initStringData() {

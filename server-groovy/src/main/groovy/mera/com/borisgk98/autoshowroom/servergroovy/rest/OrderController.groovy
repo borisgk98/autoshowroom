@@ -6,7 +6,7 @@ import mera.com.borisgk98.autoshowroom.servergroovy.model.Order
 import mera.com.borisgk98.autoshowroom.servergroovy.model.cassandra.CassandraModelFactory
 import mera.com.borisgk98.autoshowroom.servergroovy.model.cassandra.OrderCM
 import mera.com.borisgk98.autoshowroom.servergroovy.repo.OrderRepo
-import mera.com.borisgk98.autoshowroom.servergroovy.tool.Converter
+import mera.com.borisgk98.autoshowroom.servergroovy.tool.*
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.repository.CrudRepository
 import org.springframework.http.HttpStatus
@@ -44,7 +44,8 @@ class OrderController {
         orderCM = repo.save(orderCM)
 
         // TODO communication with java server
-        OrderSaveStatus saveStatus = client.save(Converter.convert(order, com.mera.borisgk98.autoshowroom.grpc.Order))
+        def res = BuilderConverter.convert(order, com.mera.borisgk98.autoshowroom.grpc.Order.class)
+        OrderSaveStatus saveStatus = client.save(res)
         if (saveStatus.getStatus().equals(com.mera.borisgk98.autoshowroom.grpc.OrderSaveStatus.Status.FAIL)) {
             throw new Exception("Some error on java client")
         }

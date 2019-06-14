@@ -10,7 +10,7 @@ import "AutoOption.proto";
 message Auto {
     int32 id = 1;
 
-    AutoMark auto_mark = 3;
-    AutoModel auto_model = 4;
-    repeated AutoOption auto_options = 5;
+    AutoMark mark = 3;
+    AutoModel model = 4;
+    repeated AutoOption options = 5;
 }

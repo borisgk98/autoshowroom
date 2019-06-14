@@ -28,15 +28,15 @@ public class Order implements HasId<Integer> {
   private Integer id;
 
   @JsonProperty("seller")
-  @OneToOne
+  @OneToOne(cascade=CascadeType.ALL)
   private Seller seller = null;
 
   @JsonProperty("customer")
-  @OneToOne
+  @OneToOne(cascade=CascadeType.ALL)
   private Customer customer = null;
 
   @JsonProperty("auto")
-  @OneToOne
+  @OneToOne(cascade=CascadeType.ALL)
   private Auto auto = null;
 
   @JsonProperty("status")

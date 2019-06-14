@@ -25,16 +25,16 @@ public class Auto implements HasId<Integer> {
   private Integer id;
 
   @JsonProperty("mark")
-  @OneToOne
+  @OneToOne(cascade=CascadeType.ALL)
   private AutoMark mark = null;
 
   @JsonProperty("model")
-  @OneToOne
+  @OneToOne(cascade=CascadeType.ALL)
   private AutoModel model = null;
 
   @JsonProperty("options")
   @Valid
-  @OneToMany(fetch = FetchType.EAGER)
+  @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   private List<AutoOption> options = null;
 
   public Auto id(Integer id) {

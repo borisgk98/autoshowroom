@@ -1,0 +1,59 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: autoshowroom-server-groovy-d
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: autoshowroom
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: autoshowroom-server-groovy
+        image: gcr.io/rich-sprite-242414/autoshowroom-server-groovy:0.0.${BUILD_ID}
+        ports:
+        - containerPort: 8081
+        env:
+        - name: spring.data.cassandra.contact-points
+          value: jdbc:sqlserver://silly-penguin-cassandra
+        - name: spring.data.cassandra.keyspace-name
+          value: cassandra
+        - name: java-server.host
+          value: http://autoshowroom-cip
+        - name: java-server.port
+          value: 6565
+        - name: server.port
+          value: 8081
+        - name: spring.data.cassandra.password        
+          valueFrom:
+            secretKeyRef:
+              name: silly-penguin-cassandra
+              key: cassandra-password
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: autoshowroom-server-groovy-lb
+spec:
+  selector:
+    app: autoshowroom-server-groovy
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8081
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: autoshowroom-server-groovy-cip
+spec:
+  selector:
+    app: autoshowroom-server-groovy
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8081
+  type: ClusterIP

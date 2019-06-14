@@ -17,17 +17,18 @@ public class OrderGrpcService extends OrderServiceGrpc.OrderServiceImplBase {
 
     @Override
     public void save(Order request, StreamObserver<OrderSaveStatus> responseObserver) {
-//        try {
-                                                service.create(Converter.convert(request, com.mera.borisgk98.autoshowroom.server.models.Order.class));
+        try {
+            service.create(Converter.convert(request, com.mera.borisgk98.autoshowroom.server.models.Order.class));
             responseObserver.onNext(OrderSaveStatus.newBuilder()
                     .setOrder(request)
                     .setStatus(OrderSaveStatus.Status.SUCCESS).build());
-//        }
-//        catch (Exception e) {
-//            responseObserver.onNext(OrderSaveStatus.newBuilder()
-//                    .setOrder(request)
-//                    .setStatus(OrderSaveStatus.Status.FAIL).build());
-//        }
+        }
+        catch (Exception e) {
+            System.err.println(e);
+            responseObserver.onNext(OrderSaveStatus.newBuilder()
+                    .setOrder(request)
+                    .setStatus(OrderSaveStatus.Status.FAIL).build());
+        }
         responseObserver.onCompleted();
     }
 }

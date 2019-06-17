@@ -17,19 +17,19 @@ spec:
         - containerPort: 8081
         env:
         - name: spring.data.cassandra.contact-points
-          value: jdbc:sqlserver://silly-penguin-cassandra
+          value: cassandra
         - name: spring.data.cassandra.keyspace-name
           value: cassandra
         - name: java-server.host
-          value: http://autoshowroom-cip
+          value: autoshowroom-cip
         - name: java-server.port
-          value: 6565
+          value: '6565'
         - name: server.port
-          value: 8081
+          value: '8081'
         - name: spring.data.cassandra.password        
           valueFrom:
             secretKeyRef:
-              name: silly-penguin-cassandra
+              name: cassandra
               key: cassandra-password
 ---
 apiVersion: v1

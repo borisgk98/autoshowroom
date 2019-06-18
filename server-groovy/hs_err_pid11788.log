@@ -254,9 +254,9 @@ Deoptimization events (0 events):
 No events
 
 Classes redefined (3 events):
-Event: 88,674 Thread 0x00007f8a2014a000 redefined class name=mera.com.borisgk98.autoshowroom.servergroovy.rest.OrderController, count=1
-Event: 1334,471 Thread 0x00007f8a2014a000 redefined class name=mera.com.borisgk98.autoshowroom.servergroovy.rest.OrderController, count=2
-Event: 1515,906 Thread 0x00007f8a2014a000 redefined class name=mera.com.borisgk98.autoshowroom.servergroovy.rest.OrderController, count=3
+Event: 88,674 Thread 0x00007f8a2014a000 redefined class name=mera.com.borisgk98.autoshowroom.servergroovy.rest.grpc.OrderController, count=1
+Event: 1334,471 Thread 0x00007f8a2014a000 redefined class name=mera.com.borisgk98.autoshowroom.servergroovy.rest.grpc.OrderController, count=2
+Event: 1515,906 Thread 0x00007f8a2014a000 redefined class name=mera.com.borisgk98.autoshowroom.servergroovy.rest.grpc.OrderController, count=3
 
 Internal exceptions (10 events):
 Event: 1530,076 Thread 0x00007f8a215fd800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000007972c2810) thrown at [/build/src/jdk8u-jdk8u212-b03/hotspot/src/share/vm/runtime/sharedRuntime.cpp, line 605]

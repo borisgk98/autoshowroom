@@ -1,4 +1,4 @@
-package mera.com.borisgk98.autoshowroom.servergroovy.rest
+package mera.com.borisgk98.autoshowroom.servergroovy.rest.grpc
 
 import com.mera.borisgk98.autoshowroom.grpc.OrderSaveStatus
 import com.mera.borisgk98.autoshowroom.grpc.OrderServiceGrpc.OrderServiceBlockingStub
@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.client.HttpServerErrorException
 
 @RestController
-@RequestMapping("/order")
-class OrderController {
+@RequestMapping("/grpc/order")
+class GrpcOrderController {
 
     @Autowired
     OrderRepo repo

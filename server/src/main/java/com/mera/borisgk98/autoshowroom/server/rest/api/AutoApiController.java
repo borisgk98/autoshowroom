@@ -4,6 +4,7 @@ import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Auto;
 import com.mera.borisgk98.autoshowroom.server.rest.api.AutoApi;
 import com.mera.borisgk98.autoshowroom.server.services.AutoService;
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -38,6 +39,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
+    @Timed(percentiles = {0.5, 0.95, 0.999}, histogram = true)
     public ResponseEntity<Auto> autoAutoIdGet(Integer autoId) {
         try {
             Auto auto = autoService.read(autoId);

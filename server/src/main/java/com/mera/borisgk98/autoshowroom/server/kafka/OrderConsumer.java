@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mera.borisgk98.autoshowroom.server.models.Order;
 import com.mera.borisgk98.autoshowroom.server.services.OrderService;
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
@@ -25,6 +26,7 @@ public class OrderConsumer {
     private OrderService orderService;
 
     @KafkaListener(topics = "order", groupId = "server-java")
+    @Timed(value = "kafka_requests")
     public void receive(String payload) {
         System.out.println("Receive payload:");
         System.out.println(payload);

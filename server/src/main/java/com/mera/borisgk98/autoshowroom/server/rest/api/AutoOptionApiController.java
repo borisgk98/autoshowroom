@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
+import io.micrometer.core.annotation.Timed;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -38,6 +39,7 @@ public class AutoOptionApiController implements AutooptionApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<AutoOption> autooptionAutooptionIdGet(Integer autooptionId) {
         try {
             AutoOption autooption = autooptionService.read(autooptionId);
@@ -49,11 +51,13 @@ public class AutoOptionApiController implements AutooptionApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<AutoOption> autooptionPost(@Valid AutoOption autooption) {
         return ResponseEntity.ok(autooptionService.create(autooption));
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<Void> autooptionAutooptionIdDelete(Integer autooptionId) {
         try {
             autooptionService.delete(autooptionId);
@@ -65,6 +69,7 @@ public class AutoOptionApiController implements AutooptionApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<AutoOption> autooptionAutooptionIdPut(@Valid AutoOption autooption) {
         try {
             AutoOption newAutoOption = autooptionService.update(autooption);
@@ -76,6 +81,7 @@ public class AutoOptionApiController implements AutooptionApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<List<AutoOption>> autooptionGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(autooptionService.getAll());

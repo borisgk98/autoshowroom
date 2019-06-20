@@ -4,7 +4,6 @@ import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Auto;
 import com.mera.borisgk98.autoshowroom.server.rest.api.AutoApi;
 import com.mera.borisgk98.autoshowroom.server.services.AutoService;
-import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -12,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
+import io.micrometer.core.annotation.Timed;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -39,7 +39,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    @Timed(percentiles = {0.5, 0.95, 0.999}, histogram = true)
+    @Timed(value = "rest")
     public ResponseEntity<Auto> autoAutoIdGet(Integer autoId) {
         try {
             Auto auto = autoService.read(autoId);
@@ -51,11 +51,13 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<Auto> autoPost(@Valid Auto auto) {
         return ResponseEntity.ok(autoService.create(auto));
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<Void> autoAutoIdDelete(Integer autoId) {
         try {
             autoService.delete(autoId);
@@ -67,6 +69,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<Auto> autoAutoIdPut(@Valid Auto auto) {
         try {
             Auto newAuto = autoService.update(auto);
@@ -78,6 +81,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<List<Auto>> autoGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(autoService.getAll());

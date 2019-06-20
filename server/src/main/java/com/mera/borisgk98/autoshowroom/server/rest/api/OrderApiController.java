@@ -4,6 +4,7 @@ import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
 import com.mera.borisgk98.autoshowroom.server.models.Order;
 import com.mera.borisgk98.autoshowroom.server.models.OrderStatus;
 import com.mera.borisgk98.autoshowroom.server.services.OrderService;
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -39,6 +40,7 @@ public class OrderApiController implements OrderApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<Order> orderOrderIdGet(Integer orderId) {
         try {
             Order order = orderService.read(orderId);
@@ -50,11 +52,13 @@ public class OrderApiController implements OrderApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<Order> orderPost(@Valid Order order) {
         return ResponseEntity.ok(orderService.create(order));
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<Void> orderOrderIdDelete(Integer orderId) {
         try {
             orderService.delete(orderId);
@@ -66,6 +70,7 @@ public class OrderApiController implements OrderApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<Order> orderOrderIdPut(@Valid Order order) {
         try {
             Order newOrder = orderService.update(order);
@@ -77,6 +82,7 @@ public class OrderApiController implements OrderApi {
     }
 
     @Override
+    @Timed(value = "rest")
     public ResponseEntity<List<Order>> orderGet(Integer limit, Integer offset, String status) {
         if (status == null) {
             if (limit == null) {

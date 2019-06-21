@@ -26,8 +26,8 @@ public class OrderConsumer {
     private OrderService orderService;
 
     @KafkaListener(topics = "order", groupId = "server-java")
-    @Timed(value = "kafka_requests")
     public void receive(String payload) {
+        test();
         System.out.println("Receive payload:");
         System.out.println(payload);
         Order order = null;
@@ -42,5 +42,11 @@ public class OrderConsumer {
         System.out.println("Successfully save order: ");
         System.out.println(order);
 //        latch.countDown();
+    }
+
+
+    @Timed(value = "kafka_requests")
+    public void test() {
+        System.out.println(1);
     }
 }

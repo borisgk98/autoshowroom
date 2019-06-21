@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+spec:
+  jobLabel: autoshowroom-java-server
+  selector:
+    matchLabels:
+      app: autoshowroom
+  namespaceSelector:
+    matchNames:
+    - default
+  endpoints:
+  - path: /actuator/prometheus
+    interval: 5s

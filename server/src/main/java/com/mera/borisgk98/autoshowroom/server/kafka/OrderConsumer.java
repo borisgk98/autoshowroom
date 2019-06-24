@@ -7,6 +7,8 @@ import com.mera.borisgk98.autoshowroom.server.models.Order;
 import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 import com.mera.borisgk98.autoshowroom.server.services.OrderService;
 import io.micrometer.core.annotation.Timed;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
@@ -21,6 +23,8 @@ public class OrderConsumer {
 //        return latch;
 //    }
 
+    private Logger logger = LoggerFactory.getLogger(OrderConsumer.class);
+
     @Autowired
     private ObjectMapper om;
     @Autowired
@@ -29,19 +33,19 @@ public class OrderConsumer {
     @KafkaListener(topics = "order", groupId = "server-java")
     @Counter(metric = "kafka_requests")
     public void receive(String payload) {
-        System.out.println("Receive payload:");
-        System.out.println(payload);
+        logger.info("Receive payload:");
+        logger.info(payload);
         Order order = null;
         try {
             order = om.readValue(payload, Order.class);
         }
         catch (Exception e) {
-            System.err.println("Error while deserialize order object from payload");
+            logger.error("Error while deserialize order object from payload");
             return;
         }
         orderService.create(order);
-        System.out.println("Successfully save order: ");
-        System.out.println(order);
+        logger.info("Successfully save order: ");
+        logger.info(order.toString());
 //        latch.countDown();
     }
 }

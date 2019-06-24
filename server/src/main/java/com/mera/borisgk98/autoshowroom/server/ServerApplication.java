@@ -24,36 +24,7 @@ import java.util.Random;
 @EnableScheduling
 public class ServerApplication {
 
-	@Autowired
-	@Qualifier("mt")
-	private Thread mt;
-
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(ServerApplication.class).profiles("prometheus").run(args);
-	}
-
-	@Bean(name = "mt")
-	public Thread metricThread() {
-		Thread thread = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				while (true) {
-					Metrics.counter("x").increment();
-					System.out.println("Increment x");
-					Random random = new Random();
-					Integer r = random.nextInt() % 5;
-					if (r == 0) {
-						Metrics.counter("y").increment();
-						System.out.println("Increment y");
-					}
-					try {
-						Thread.sleep(30_000);
-					}
-					catch (Exception e){}
-				}
-			}
-		});
-		thread.start();
-		return thread;
 	}
 }

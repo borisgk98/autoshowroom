@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
 @Component
 public class CounterAspect {
 
-    Logger logger = LoggerFactory.getLogger(CounterAspect.class);
+    private Logger logger = LoggerFactory.getLogger(CounterAspect.class);
 
     @Pointcut("@annotation(com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter)")
     public void pointcut() {}

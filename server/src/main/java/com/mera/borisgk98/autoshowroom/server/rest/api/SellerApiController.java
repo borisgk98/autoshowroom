@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
-import io.micrometer.core.annotation.Timed;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -39,7 +39,7 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Seller> sellerSellerIdGet(Integer sellerId) {
         try {
             Seller seller = sellerService.read(sellerId);
@@ -51,13 +51,13 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Seller> sellerPost(@Valid Seller seller) {
         return ResponseEntity.ok(sellerService.create(seller));
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Void> sellerSellerIdDelete(Integer sellerId) {
         try {
             sellerService.delete(sellerId);
@@ -69,7 +69,7 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Seller> sellerSellerIdPut(@Valid Seller seller) {
         try {
             Seller newSeller = sellerService.update(seller);
@@ -81,7 +81,7 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<List<Seller>> sellerGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(sellerService.getAll());

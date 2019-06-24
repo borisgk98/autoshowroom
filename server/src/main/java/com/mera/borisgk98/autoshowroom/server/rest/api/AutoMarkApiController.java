@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
-import io.micrometer.core.annotation.Timed;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -39,7 +39,7 @@ public class AutoMarkApiController implements AutomarkApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<AutoMark> automarkAutomarkIdGet(Integer automarkId) {
         try {
             AutoMark automark = automarkService.read(automarkId);
@@ -51,13 +51,13 @@ public class AutoMarkApiController implements AutomarkApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<AutoMark> automarkPost(@Valid AutoMark automark) {
         return ResponseEntity.ok(automarkService.create(automark));
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Void> automarkAutomarkIdDelete(Integer automarkId) {
         try {
             automarkService.delete(automarkId);
@@ -69,7 +69,7 @@ public class AutoMarkApiController implements AutomarkApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<AutoMark> automarkAutomarkIdPut(@Valid AutoMark automark) {
         try {
             AutoMark newAutoMark = automarkService.update(automark);
@@ -81,7 +81,7 @@ public class AutoMarkApiController implements AutomarkApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<List<AutoMark>> automarkGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(automarkService.getAll());

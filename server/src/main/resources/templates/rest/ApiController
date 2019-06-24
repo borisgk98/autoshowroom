@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
-import io.micrometer.core.annotation.Timed;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -39,7 +39,7 @@ public class $Model$ApiController implements $Modelufl$Api {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<$Model$> $model$$Modelufl$IdGet(Integer $model$Id) {
         try {
             $Model$ $model$ = $model$Service.read($model$Id);
@@ -51,13 +51,13 @@ public class $Model$ApiController implements $Modelufl$Api {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<$Model$> $model$Post(@Valid $Model$ $model$) {
         return ResponseEntity.ok($model$Service.create($model$));
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Void> $model$$Modelufl$IdDelete(Integer $model$Id) {
         try {
             $model$Service.delete($model$Id);
@@ -69,7 +69,7 @@ public class $Model$ApiController implements $Modelufl$Api {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<$Model$> $model$$Modelufl$IdPut(@Valid $Model$ $model$) {
         try {
             $Model$ new$Model$ = $model$Service.update($model$);
@@ -81,7 +81,7 @@ public class $Model$ApiController implements $Modelufl$Api {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<List<$Model$>> $model$Get(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok($model$Service.getAll());

@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
-import io.micrometer.core.annotation.Timed;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -39,7 +39,7 @@ public class AutoModelApiController implements AutomodelApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<AutoModel> automodelAutomodelIdGet(Integer automodelId) {
         try {
             AutoModel automodel = automodelService.read(automodelId);
@@ -51,13 +51,13 @@ public class AutoModelApiController implements AutomodelApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<AutoModel> automodelPost(@Valid AutoModel automodel) {
         return ResponseEntity.ok(automodelService.create(automodel));
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Void> automodelAutomodelIdDelete(Integer automodelId) {
         try {
             automodelService.delete(automodelId);
@@ -69,7 +69,7 @@ public class AutoModelApiController implements AutomodelApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<AutoModel> automodelAutomodelIdPut(@Valid AutoModel automodel) {
         try {
             AutoModel newAutoModel = automodelService.update(automodel);
@@ -81,7 +81,7 @@ public class AutoModelApiController implements AutomodelApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<List<AutoModel>> automodelGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(automodelService.getAll());

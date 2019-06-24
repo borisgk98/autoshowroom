@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
-import io.micrometer.core.annotation.Timed;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -39,7 +39,7 @@ public class CustomerApiController implements CustomerApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Customer> customerCustomerIdGet(Integer customerId) {
         try {
             Customer customer = customerService.read(customerId);
@@ -51,13 +51,13 @@ public class CustomerApiController implements CustomerApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Customer> customerPost(@Valid Customer customer) {
         return ResponseEntity.ok(customerService.create(customer));
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Void> customerCustomerIdDelete(Integer customerId) {
         try {
             customerService.delete(customerId);
@@ -69,7 +69,7 @@ public class CustomerApiController implements CustomerApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Customer> customerCustomerIdPut(@Valid Customer customer) {
         try {
             Customer newCustomer = customerService.update(customer);
@@ -81,7 +81,7 @@ public class CustomerApiController implements CustomerApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<List<Customer>> customerGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(customerService.getAll());

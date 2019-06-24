@@ -3,6 +3,7 @@ package com.mera.borisgk98.autoshowroom.server.grpc;
 import com.mera.borisgk98.autoshowroom.grpc.Order;
 import com.mera.borisgk98.autoshowroom.grpc.OrderSaveStatus;
 import com.mera.borisgk98.autoshowroom.grpc.OrderServiceGrpc;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 import com.mera.borisgk98.autoshowroom.server.services.OrderService;
 import com.mera.borisgk98.autoshowroom.server.tool.Converter;
 import io.grpc.stub.StreamObserver;
@@ -17,7 +18,7 @@ public class OrderGrpcService extends OrderServiceGrpc.OrderServiceImplBase {
     protected OrderService service;
 
     @Override
-    @Timed(value = "grpc_requests")
+    @Counter(metric = "grpc_requests")
     public void save(Order request, StreamObserver<OrderSaveStatus> responseObserver) {
         try {
             service.create(Converter.convert(request, com.mera.borisgk98.autoshowroom.server.models.Order.class));

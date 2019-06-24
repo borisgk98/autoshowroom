@@ -90,8 +90,8 @@ dependencies {
     testImplementation 'org.springframework.kafka:spring-kafka-test'
 
 
-    compile "org.springframework.boot:spring-boot-starter-actuator:*"
-    compile "io.micrometer:micrometer-registry-prometheus:*"
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "io.micrometer:micrometer-registry-prometheus"
 
 }
 

@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
-import io.micrometer.core.annotation.Timed;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -39,7 +39,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Auto> autoAutoIdGet(Integer autoId) {
         try {
             Auto auto = autoService.read(autoId);
@@ -51,13 +51,13 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Auto> autoPost(@Valid Auto auto) {
         return ResponseEntity.ok(autoService.create(auto));
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Void> autoAutoIdDelete(Integer autoId) {
         try {
             autoService.delete(autoId);
@@ -69,7 +69,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<Auto> autoAutoIdPut(@Valid Auto auto) {
         try {
             Auto newAuto = autoService.update(auto);
@@ -81,7 +81,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    @Timed(value = "rest")
+    @Counter(metric = "rest_requests")
     public ResponseEntity<List<Auto>> autoGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(autoService.getAll());

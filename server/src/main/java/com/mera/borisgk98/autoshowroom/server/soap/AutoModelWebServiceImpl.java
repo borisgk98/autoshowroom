@@ -7,7 +7,7 @@ import com.mera.borisgk98.autoshowroom.server.services.CrudService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import io.micrometer.core.annotation.Timed;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 
 import javax.jws.WebService;
 import java.util.List;
@@ -20,37 +20,37 @@ public class AutoModelWebServiceImpl implements AutoModelWebService {
     protected AutoModelService service;
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public AutoModel createAutoModel(AutoModel m) {
         return service.create(m);
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public AutoModel readAutoModel(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public AutoModel updateAutoModel(AutoModel m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public void deleteAutoModel(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public List<AutoModel> getAllAutoModel() {
         return service.getAll();
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public List<AutoModel> getRangeAutoModel(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }

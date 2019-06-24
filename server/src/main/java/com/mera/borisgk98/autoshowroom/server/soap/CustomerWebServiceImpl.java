@@ -7,7 +7,7 @@ import com.mera.borisgk98.autoshowroom.server.services.CrudService;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import io.micrometer.core.annotation.Timed;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 
 import javax.jws.WebService;
 import java.util.List;
@@ -20,37 +20,37 @@ public class CustomerWebServiceImpl implements CustomerWebService {
     protected CustomerService service;
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public Customer createCustomer(Customer m) {
         return service.create(m);
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public Customer readCustomer(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public Customer updateCustomer(Customer m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public void deleteCustomer(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public List<Customer> getAllCustomer() {
         return service.getAll();
     }
 
     @Override
-    @Timed(value = "soap")
+    @Counter(metric = "soap_requests")
     public List<Customer> getRangeCustomer(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }

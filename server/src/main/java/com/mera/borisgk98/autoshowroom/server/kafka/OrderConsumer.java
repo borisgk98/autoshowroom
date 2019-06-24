@@ -4,6 +4,7 @@ package com.mera.borisgk98.autoshowroom.server.kafka;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mera.borisgk98.autoshowroom.server.models.Order;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
 import com.mera.borisgk98.autoshowroom.server.services.OrderService;
 import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,8 @@ public class OrderConsumer {
     private OrderService orderService;
 
     @KafkaListener(topics = "order", groupId = "server-java")
+    @Counter(metric = "kafka_requests")
     public void receive(String payload) {
-        test();
         System.out.println("Receive payload:");
         System.out.println(payload);
         Order order = null;
@@ -42,11 +43,5 @@ public class OrderConsumer {
         System.out.println("Successfully save order: ");
         System.out.println(order);
 //        latch.countDown();
-    }
-
-
-    @Timed(value = "kafka_requests")
-    public void test() {
-        System.out.println(1);
     }
 }

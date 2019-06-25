@@ -1,0 +1,205 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'groovy'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.openapi.generator'
+apply plugin: 'space.borisgk.crudgeneration'
+apply plugin: 'org.liquibase.gradle'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'com.google.protobuf'
+
+
+group = 'com.mera.borisgk98.autoshowroom'
+version = '0.1'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    rest
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url 'https://repo.spring.io/libs-snapshot'
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://raw.github.com/borisgk98/crudrepositorygenerator/mvn-repo'
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
+        classpath "org.openapitools:openapi-generator-gradle-plugin:3.3.4"
+        classpath 'space.borisgk:crudgeneration:0.2'
+        classpath "org.liquibase:liquibase-gradle-plugin:2.0.1"
+        classpath 'org.antlr:stringtemplate:3.2'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
+    }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    compile("org.springframework.boot:spring-boot-starter-web-services")
+    compile("org.apache.cxf:cxf-spring-boot-starter-jaxws:3.3.1")
+    compile("wsdl4j:wsdl4j")
+    compile("org.projectlombok:lombok")
+//    compile("com.h2database:h2")
+    compile("io.springfox:springfox-swagger-ui:2.9.2")
+    compile("io.springfox:springfox-swagger2:2.9.2")
+    compile("org.apache.cxf:cxf-spring-boot-starter-jaxrs:3.3.1")
+    compile("org.apache.cxf:cxf-rt-rs-service-description-openapi-v3:3.3.1")
+    compile("org.springframework.boot:spring-boot-starter-log4j2")
+    compile("com.microsoft.sqlserver:mssql-jdbc:7.2.1.jre8")
+
+//    liquibase "org.liquibase:liquibase-core"
+//    liquibase "com.microsoft.sqlserver:mssql-jdbc:7.2.1.jre8"
+//    sqlDriver "com.microsoft.sqlserver:mssql-jdbc:7.2.1.jre8"
+
+    liquibaseRuntime 'org.liquibase:liquibase-core:3.6.3'
+//    liquibaseRuntime 'org.liquibase:liquibase-groovy-dsl:2.0.1'
+    liquibaseRuntime 'com.microsoft.sqlserver:mssql-jdbc:7.2.1.jre8'
+    liquibaseRuntime 'ch.qos.logback:logback-core:1.2.3'
+    liquibaseRuntime 'ch.qos.logback:logback-classic:1.2.3'
+    liquibaseRuntime 'org.slf4j:slf4j-api:1.7.26'
+
+    // https://mvnrepository.com/artifact/org.mockito/mockito-all
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
+    // https://mvnrepository.com/artifact/junit/junit
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile 'org.codehaus.groovy:groovy-all:2.5.7'
+
+
+    compile 'io.github.lognet:grpc-spring-boot-starter:3.3.0'
+
+
+    implementation 'org.springframework.kafka:spring-kafka'
+    testImplementation 'org.springframework.kafka:spring-kafka-test'
+
+
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "io.micrometer:micrometer-registry-prometheus"
+
+}
+
+
+openApiGenerate {
+    generatorName = "spring"
+    inputSpec = "$projectDir/src/main/resources/autoshowroom.yaml".toString()
+    outputDir = "$projectDir".toString()
+    apiPackage = ("com.mera.borisgk98.autoshowroom.server.rest.api").toString()
+    skipOverwrite = true
+    invokerPackage = ("com.mera.borisgk98.autoshowroom.server.rest.invoker").toString()
+    modelPackage = ("com.mera.borisgk98.autoshowroom.server.models").toString()
+    groupId = ("com.mera.borisgk98.autoshowroom.server").toString()
+    modelFilesConstrainedTo = [
+            "Error"
+    ]
+    configOptions = [
+            dateLibrary: "java8",
+            configPackage: "com.mera.borisgk98.autoshowroom.server.config.openapi",
+            interfaceOnly: true
+    ]
+    systemProperties = [
+            apis           : "",
+            models         : "",
+            supportingFiles: ""
+    ]
+}
+
+openApiValidate {
+    inputSpec = "$projectDir/src/main/resources/autoshowroom.yaml".toString()
+}
+
+springBoot {
+    mainClassName = 'com.mera.borisgk98.autoshowroom.server.ServerApplication'
+}
+
+crudGenerationSetting {
+    srcRoot = "$projectDir/src/main/java"
+    modelPackage = "$projectDir/src/main/java/com/mera/borisgk98/autoshowroom/server/models"
+    generationRoot = "$projectDir/src/main/java"
+//    generationRoot = "$projectDir/src/test/groovy"
+    generationPackages = [
+            "com.mera.borisgk98.autoshowroom.server.rest.api",
+            "com.mera.borisgk98.autoshowroom.server.repositories",
+            "com.mera.borisgk98.autoshowroom.server.services",
+            "com.mera.borisgk98.autoshowroom.server.services",
+            "com.mera.borisgk98.autoshowroom.server.soap",
+            "com.mera.borisgk98.autoshowroom.server.soap"
+//            "com.mera.borisgk98.autoshowroom.server.services"
+    ]
+    generationTemplates = [
+            "$projectDir/src/main/resources/templates/rest/ApiController".toString(),
+            "$projectDir/src/main/resources/templates/Repository".toString(),
+            "$projectDir/src/main/resources/templates/Service".toString(),
+            "$projectDir/src/main/resources/templates/ServiceImpl".toString(),
+            "$projectDir/src/main/resources/templates/soap/WebService".toString(),
+            "$projectDir/src/main/resources/templates/soap/WebServiceImpl".toString()
+//            "$projectDir/src/main/resources/templates/ServiceTest".toString()
+    ]
+    generationConcatOuts = [
+            "$projectDir/src/main/resources/generated/paths.yaml".toString(),
+            "$projectDir/src/main/resources/generated/soapbeans.java".toString(),
+            "$projectDir/src/main/resources/generated/urls.txt".toString()
+    ]
+    generationConcatTemplates = [
+            "$projectDir/src/main/resources/templates/Path".toString(),
+            "$projectDir/src/main/resources/templates/soap/Bean".toString(),
+            "$projectDir/src/main/resources/templates/soap/ServicesUrls".toString()
+    ]
+    excludeModels = [
+            "OrderStatus",
+            "HasId"
+            ,
+            "Order"
+    ]
+}
+
+liquibase {
+    activities {
+        main {
+            changeLogFile "$projectDir/src/main/resources/db/changelog.xml".toString()
+            url "jdbc:sqlserver://localhost"
+            username "sa"
+            password "SA_PASS12"
+        }
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs += "build/generated/source/proto"
+        }
+    }
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.7.1"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.21.0'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}

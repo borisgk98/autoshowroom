@@ -1,0 +1,57 @@
+package com.mera.borisgk98.autoshowroom.server.soap;
+
+import com.mera.borisgk98.autoshowroom.server.exceptions.ModelNotFound;
+import com.mera.borisgk98.autoshowroom.server.models.$Model$;
+import com.mera.borisgk98.autoshowroom.server.services.$Model$Service;
+import com.mera.borisgk98.autoshowroom.server.services.CrudService;
+import lombok.SneakyThrows;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import com.mera.borisgk98.autoshowroom.server.prometheus.annotations.Counter;
+
+import javax.jws.WebService;
+import java.util.List;
+
+@Component
+@WebService(serviceName = "$model$Service", portName = "$model$ServicePort")
+public class $Model$WebServiceImpl implements $Model$WebService {
+
+    @Autowired
+    protected $Model$Service service;
+
+    @Override
+    @Counter(metrics = { "soap_requests", "requests" } )
+    public $Model$ create$Model$($Model$ m) {
+        return service.create(m);
+    }
+
+    @Override
+    @Counter(metrics = { "soap_requests", "requests" } )
+    public $Model$ read$Model$(Integer id) throws ModelNotFound {
+        return service.read(id);
+    }
+
+    @Override
+    @Counter(metrics = { "soap_requests", "requests" } )
+    public $Model$ update$Model$($Model$ m) throws ModelNotFound {
+        return service.update(m);
+    }
+
+    @Override
+    @Counter(metrics = { "soap_requests", "requests" } )
+    public void delete$Model$(Integer id) throws ModelNotFound {
+        service.delete(id);
+    }
+
+    @Override
+    @Counter(metrics = { "soap_requests", "requests" } )
+    public List<$Model$> getAll$Model$() {
+        return service.getAll();
+    }
+
+    @Override
+    @Counter(metrics = { "soap_requests", "requests" } )
+    public List<$Model$> getRange$Model$(Integer offset, Integer limit) {
+        return service.getRange(offset, limit);
+    }
+}

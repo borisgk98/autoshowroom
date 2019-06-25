@@ -1,0 +1,407 @@
+Name:         autoshowroom-d2-monitor
+Namespace:    default
+Labels:       <none>
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"annotations":{},"name":"autoshowroom-d2-monitor","namespace"...
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-24T11:51:02Z
+  Generation:          1
+  Resource Version:    2012593
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/autoshowroom-d2-monitor
+  UID:                 5751c10d-9676-11e9-a3a2-42010a80014e
+Spec:
+  Endpoints:
+    Interval:  5s
+    Path:      /actuator/prometheus
+  Selector:
+    Match Labels:
+      App:  autoshowroom
+Events:     <none>
+Name:         example-app
+Namespace:    default
+Labels:       team=frontend
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"annotations":{},"labels":{"team":"frontend"},"name":"example...
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-24T15:06:09Z
+  Generation:          1
+  Resource Version:    2070445
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/example-app
+  UID:                 98ef5e81-9691-11e9-a3a2-42010a80014e
+Spec:
+  Endpoints:
+    Interval:  5s
+    Path:      /metrics
+    Port:      web
+  Selector:
+    Match Labels:
+      App:  example-app
+Events:     <none>
+Name:         prometheus-operator-alertmanager
+Namespace:    default
+Labels:       app=prometheus-operator-alertmanager
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974033
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-alertmanager
+  UID:                 f14b9765-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Path:  /metrics
+    Port:  web
+  Namespace Selector:
+    Match Names:
+      default
+  Selector:
+    Match Labels:
+      App:      prometheus-operator-alertmanager
+      Release:  prometheus-operator
+Events:         <none>
+Name:         prometheus-operator-apiserver
+Namespace:    default
+Labels:       app=prometheus-operator-apiserver
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974035
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-apiserver
+  UID:                 f14d5049-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Bearer Token File:  /var/run/secrets/kubernetes.io/serviceaccount/token
+    Port:               https
+    Scheme:             https
+    Tls Config:
+      Ca File:               /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+      Insecure Skip Verify:  false
+      Server Name:           kubernetes
+  Job Label:                 component
+  Namespace Selector:
+    Match Names:
+      default
+  Selector:
+    Match Labels:
+      Component:  apiserver
+      Provider:   kubernetes
+Events:           <none>
+Name:         prometheus-operator-coredns
+Namespace:    default
+Labels:       app=prometheus-operator-coredns
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974034
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-coredns
+  UID:                 f14c9430-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Bearer Token File:  /var/run/secrets/kubernetes.io/serviceaccount/token
+    Port:               http-metrics
+  Job Label:            jobLabel
+  Namespace Selector:
+    Match Names:
+      kube-system
+  Selector:
+    Match Labels:
+      App:      prometheus-operator-coredns
+      Release:  prometheus-operator
+Events:         <none>
+Name:         prometheus-operator-grafana
+Namespace:    default
+Labels:       app=prometheus-operator-grafana
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974042
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-grafana
+  UID:                 f15313f0-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Path:  /metrics
+    Port:  service
+  Namespace Selector:
+    Match Names:
+      default
+  Selector:
+    Match Labels:
+      App:      grafana
+      Release:  prometheus-operator
+Events:         <none>
+Name:         prometheus-operator-kube-controller-manager
+Namespace:    default
+Labels:       app=prometheus-operator-kube-controller-manager
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974036
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-kube-controller-manager
+  UID:                 f14ea033-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Bearer Token File:  /var/run/secrets/kubernetes.io/serviceaccount/token
+    Port:               http-metrics
+  Job Label:            jobLabel
+  Namespace Selector:
+    Match Names:
+      kube-system
+  Selector:
+    Match Labels:
+      App:      prometheus-operator-kube-controller-manager
+      Release:  prometheus-operator
+Events:         <none>
+Name:         prometheus-operator-kube-etcd
+Namespace:    default
+Labels:       app=prometheus-operator-kube-etcd
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974037
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-kube-etcd
+  UID:                 f14fba27-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Bearer Token File:  /var/run/secrets/kubernetes.io/serviceaccount/token
+    Port:               http-metrics
+  Job Label:            jobLabel
+  Namespace Selector:
+    Match Names:
+      kube-system
+  Selector:
+    Match Labels:
+      App:      prometheus-operator-kube-etcd
+      Release:  prometheus-operator
+Events:         <none>
+Name:         prometheus-operator-kube-scheduler
+Namespace:    default
+Labels:       app=prometheus-operator-kube-scheduler
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974038
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-kube-scheduler
+  UID:                 f1508705-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Bearer Token File:  /var/run/secrets/kubernetes.io/serviceaccount/token
+    Port:               http-metrics
+  Job Label:            jobLabel
+  Namespace Selector:
+    Match Names:
+      kube-system
+  Selector:
+    Match Labels:
+      App:      prometheus-operator-kube-scheduler
+      Release:  prometheus-operator
+Events:         <none>
+Name:         prometheus-operator-kube-state-metrics
+Namespace:    default
+Labels:       app=prometheus-operator-kube-state-metrics
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974039
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-kube-state-metrics
+  UID:                 f1511e3e-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Honor Labels:  true
+    Port:          http
+  Job Label:       app
+  Selector:
+    Match Labels:
+      App:      kube-state-metrics
+      Release:  prometheus-operator
+Events:         <none>
+Name:         prometheus-operator-kubelet
+Namespace:    default
+Labels:       app=prometheus-operator-kubelet
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974040
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-kubelet
+  UID:                 f151c486-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Bearer Token File:  /var/run/secrets/kubernetes.io/serviceaccount/token
+    Honor Labels:       true
+    Port:               https-metrics
+    Scheme:             https
+    Tls Config:
+      Ca File:               /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+      Insecure Skip Verify:  true
+    Bearer Token File:       /var/run/secrets/kubernetes.io/serviceaccount/token
+    Honor Labels:            true
+    Path:                    /metrics/cadvisor
+    Port:                    https-metrics
+    Scheme:                  https
+    Tls Config:
+      Ca File:               /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+      Insecure Skip Verify:  true
+  Job Label:                 k8s-app
+  Namespace Selector:
+    Match Names:
+      kube-system
+  Selector:
+    Match Labels:
+      K 8 S - App:  kubelet
+Events:             <none>
+Name:         prometheus-operator-node-exporter
+Namespace:    default
+Labels:       app=prometheus-operator-node-exporter
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974041
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-node-exporter
+  UID:                 f1527306-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Port:     metrics
+  Job Label:  jobLabel
+  Selector:
+    Match Labels:
+      App:      prometheus-node-exporter
+      Release:  prometheus-operator
+Events:         <none>
+Name:         prometheus-operator-operator
+Namespace:    default
+Labels:       app=prometheus-operator-operator
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974043
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-operator
+  UID:                 f157024d-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Honor Labels:  true
+    Port:          http
+  Namespace Selector:
+    Match Names:
+      default
+  Selector:
+    Match Labels:
+      App:      prometheus-operator-operator
+      Release:  prometheus-operator
+Events:         <none>
+Name:         prometheus-operator-prometheus
+Namespace:    default
+Labels:       app=prometheus-operator-prometheus
+              chart=prometheus-operator-5.12.3
+              heritage=Tiller
+              release=prometheus-operator
+Annotations:  <none>
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-20T14:59:03Z
+  Generation:          1
+  Resource Version:    974044
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/prometheus-operator-prometheus
+  UID:                 f1586f60-936b-11e9-b845-42010a800128
+Spec:
+  Endpoints:
+    Path:  /metrics
+    Port:  web
+  Namespace Selector:
+    Match Names:
+      default
+  Selector:
+    Match Labels:
+      App:      prometheus-operator-prometheus
+      Release:  prometheus-operator
+Events:         <none>
+Name:         sm-example
+Namespace:    default
+Labels:       team=frontend
+Annotations:  kubectl.kubernetes.io/last-applied-configuration:
+                {"apiVersion":"monitoring.coreos.com/v1","kind":"ServiceMonitor","metadata":{"annotations":{},"labels":{"team":"frontend"},"name":"sm-exam...
+API Version:  monitoring.coreos.com/v1
+Kind:         ServiceMonitor
+Metadata:
+  Creation Timestamp:  2019-06-24T18:02:27Z
+  Generation:          1
+  Resource Version:    2077082
+  Self Link:           /apis/monitoring.coreos.com/v1/namespaces/default/servicemonitors/sm-example
+  UID:                 3a15c6a7-96aa-11e9-a3a2-42010a80014e
+Spec:
+  Endpoints:
+    Interval:  5s
+    Path:      /metrics
+    Port:      web
+  Selector:
+    Match Labels:
+      App:  example-app
+Events:     <none>

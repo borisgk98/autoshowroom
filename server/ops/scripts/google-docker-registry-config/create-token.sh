@@ -1,0 +1,1 @@
+kubectl create secret generic gcloud-access-token --from-literal=gtoken=$(gcloud auth print-access-token)

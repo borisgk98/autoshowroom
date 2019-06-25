@@ -1,0 +1,145 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.openapi.generator'
+apply plugin: 'space.borisgk.crudgeneration'
+
+group = 'com.mera.borisgk98.autoshowroom'
+version = '0.1'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url 'https://repo.spring.io/libs-snapshot'
+    }
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://raw.github.com/borisgk98/crudrepositorygenerator/mvn-repo'
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
+        classpath "org.openapitools:openapi-generator-gradle-plugin:3.3.4"
+        classpath 'space.borisgk:crudgeneration:0.2'
+        classpath 'org.antlr:stringtemplate:3.2'
+    }
+}
+
+dependencies {
+    compile("com.mera.borisgk98.autoshowroom:abstractclient:0.1")
+
+    implementation 'org.springframework.shell:spring-shell-starter:2.0.0.RELEASE'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    compile("io.springfox:springfox-swagger-ui:2.9.2")
+    compile("io.springfox:springfox-swagger2:2.9.2")
+//
+//
+////    // https://mvnrepository.com/artifact/org.springframework/spring-web
+////    compile group: 'org.springframework', name: 'spring-web', version: '5.1.7.RELEASE'
+////    // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+////    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
+//
+//
+//    compile "io.swagger:swagger-annotations:1.5.20"
+//    compile "io.projectreactor:reactor-core:3.1.8.RELEASE"
+//    compile "org.springframework:spring-webflux:5.0.7.RELEASE"
+//    compile "io.projectreactor.ipc:reactor-netty:5.0.7.RELEASE"
+//    compile "com.fasterxml.jackson.core:jackson-databind:2.8.11"
+//    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.11"
+//    testCompile "junit:junit:4.12"
+
+//    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-webflux
+//    compile "org.springframework.boot:spring-boot-starter-webflux"
+//    compile("org.springframework.boot:spring-boot-starter-log4j2")
+//    compile 'org.springframework.shell:spring-shell-starter:2.0.1.BUILD-SNAPSHOT'
+//    compile "io.gsonfire:gson-fire:1.8.3"
+//    compile "com.google.code.gson:gson:2.8.1"
+//    // https://mvnrepository.com/artifact/io.swagger/swagger-annotations
+//    compile group: 'io.swagger', name: 'swagger-annotations', version: '1.5.22'
+//    compile 'commons-lang:commons-lang:2.6'
+//
+//    // https://mvnrepository.com/artifact/com.google.guava/guava
+//    compile group: 'com.google.guava', name: 'guava', version: '27.0.1-jre'
+//
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile "io.swagger:swagger-annotations:1.5.18"
+    compile "com.squareup.okhttp:okhttp:2.7.5"
+    compile "com.squareup.okhttp:logging-interceptor:2.7.5"
+    compile "com.google.code.gson:gson:2.8.1"
+    compile "io.gsonfire:gson-fire:1.8.0"
+    compile "org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.1"
+}
+
+springBoot {
+    mainClassName = 'com.mera.borisgk98.autoshowroom.client.Application'
+}
+
+crudGenerationSetting {
+    srcRoot = "$projectDir/src/main/java"
+    modelPackage = "/home/boris/progs/autoshowroom/abstract_client/src/main/java/com/mera/borisgk98/autoshowroom/client/model"
+    generationRoot = "$projectDir/src/main/java"
+    generationPackages = [
+//            "com.mera.borisgk98.autoshowroom.client.services",
+//            "com.mera.borisgk98.autoshowroom.client.services.impldefault",
+            "com.mera.borisgk98.autoshowroom.client.service"
+    ]
+    generationTemplates = [
+//            "$projectDir/src/main/resources/templates/Service".toString(),
+//            "$projectDir/src/main/resources/templates/DefaultImpl".toString(),
+            "$projectDir/src/main/resources/templates/ServiceImpl".toString()
+
+    ]
+    generationConcatOuts = [
+    ]
+    generationConcatTemplates = [
+    ]
+    excludeModels = [
+            "OrderStatus",
+            "HasId"
+    ]
+}
+
+
+openApiGenerate {
+    generatorName = "java"
+    // TODO обращаться к спецификации по url
+    inputSpec = "$projectDir/../server/src/main/resources/autoshowroom.yaml".toString()
+    outputDir = "$projectDir".toString()
+    apiPackage = ("com.mera.borisgk98.autoshowroom.client.rest.api").toString()
+    skipOverwrite = true
+    invokerPackage = ("com.mera.borisgk98.autoshowroom.client.rest.invoker").toString()
+    modelPackage = ("com.mera.borisgk98.autoshowroom.client.rest.model").toString()
+//    groupId = ("com.mera.borisgk98.autoshowroom.server").toString()
+//    configPackage = ("com.mera.borisgk98.autoshowroom.server.config.openapi").toString()
+    modelFilesConstrainedTo = [
+            "Error"
+    ]
+    configOptions = [
+            dateLibrary: "java8"
+//            ,library: "google-api-client"
+//            ,library: "okhttp-gson"
+//            ,library: "webclient"
+    ]
+    systemProperties = [
+            apis           : "",
+            models         : "",
+            supportingFiles: ""
+    ]
+}

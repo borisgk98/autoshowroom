@@ -1,0 +1,65 @@
+apply plugin: 'groovy'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'com.google.protobuf'
+
+group = 'mera.com.borisgk98.autoshowroom'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.3.RELEASE")
+	}
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-cassandra'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.kafka:spring-kafka'
+	implementation 'org.codehaus.groovy:groovy'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
+
+	compile 'io.github.lognet:grpc-spring-boot-starter:3.3.0'
+}
+
+protobuf {
+	protoc {
+		artifact = "com.google.protobuf:protoc:3.7.1"
+	}
+	plugins {
+		grpc {
+			artifact = 'io.grpc:protoc-gen-grpc-java:1.21.0'
+		}
+	}
+	generateProtoTasks {
+		all()*.plugins {
+			grpc {}
+		}
+	}
+}
+
+sourceSets {
+	main {
+		groovy {
+			srcDirs += "build/generated/source/proto"
+		}
+	}
+}

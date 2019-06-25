@@ -20,37 +20,37 @@ public class SellerWebServiceImpl implements SellerWebService {
     protected SellerService service;
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public Seller createSeller(Seller m) {
         return service.create(m);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public Seller readSeller(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public Seller updateSeller(Seller m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public void deleteSeller(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public List<Seller> getAllSeller() {
         return service.getAll();
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public List<Seller> getRangeSeller(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }

@@ -39,7 +39,7 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Seller> sellerSellerIdGet(Integer sellerId) {
         try {
             Seller seller = sellerService.read(sellerId);
@@ -51,13 +51,13 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Seller> sellerPost(@Valid Seller seller) {
         return ResponseEntity.ok(sellerService.create(seller));
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Void> sellerSellerIdDelete(Integer sellerId) {
         try {
             sellerService.delete(sellerId);
@@ -69,7 +69,7 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Seller> sellerSellerIdPut(@Valid Seller seller) {
         try {
             Seller newSeller = sellerService.update(seller);
@@ -81,7 +81,7 @@ public class SellerApiController implements SellerApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<List<Seller>> sellerGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(sellerService.getAll());

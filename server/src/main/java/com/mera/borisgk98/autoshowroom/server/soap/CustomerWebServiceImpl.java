@@ -20,37 +20,37 @@ public class CustomerWebServiceImpl implements CustomerWebService {
     protected CustomerService service;
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public Customer createCustomer(Customer m) {
         return service.create(m);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public Customer readCustomer(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public Customer updateCustomer(Customer m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public void deleteCustomer(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public List<Customer> getAllCustomer() {
         return service.getAll();
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public List<Customer> getRangeCustomer(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }

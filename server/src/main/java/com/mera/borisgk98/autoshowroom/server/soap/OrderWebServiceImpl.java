@@ -21,43 +21,43 @@ public class OrderWebServiceImpl implements OrderWebService {
     protected OrderService service;
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public Order createOrder(Order m) {
         return service.create(m);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public Order readOrder(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public Order updateOrder(Order m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public void deleteOrder(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public List<Order> getAllOrder() {
         return service.getAll();
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public List<Order> getRangeOrder(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public List<Order> filterByOrderStatus(OrderStatus status) {
         return service.filterByOrderStatus(status);
     }

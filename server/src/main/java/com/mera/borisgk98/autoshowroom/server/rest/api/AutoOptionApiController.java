@@ -39,7 +39,7 @@ public class AutoOptionApiController implements AutooptionApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<AutoOption> autooptionAutooptionIdGet(Integer autooptionId) {
         try {
             AutoOption autooption = autooptionService.read(autooptionId);
@@ -51,13 +51,13 @@ public class AutoOptionApiController implements AutooptionApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<AutoOption> autooptionPost(@Valid AutoOption autooption) {
         return ResponseEntity.ok(autooptionService.create(autooption));
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Void> autooptionAutooptionIdDelete(Integer autooptionId) {
         try {
             autooptionService.delete(autooptionId);
@@ -69,7 +69,7 @@ public class AutoOptionApiController implements AutooptionApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<AutoOption> autooptionAutooptionIdPut(@Valid AutoOption autooption) {
         try {
             AutoOption newAutoOption = autooptionService.update(autooption);
@@ -81,7 +81,7 @@ public class AutoOptionApiController implements AutooptionApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<List<AutoOption>> autooptionGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(autooptionService.getAll());

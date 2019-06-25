@@ -39,7 +39,7 @@ public class AutoMarkApiController implements AutomarkApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<AutoMark> automarkAutomarkIdGet(Integer automarkId) {
         try {
             AutoMark automark = automarkService.read(automarkId);
@@ -51,13 +51,13 @@ public class AutoMarkApiController implements AutomarkApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<AutoMark> automarkPost(@Valid AutoMark automark) {
         return ResponseEntity.ok(automarkService.create(automark));
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Void> automarkAutomarkIdDelete(Integer automarkId) {
         try {
             automarkService.delete(automarkId);
@@ -69,7 +69,7 @@ public class AutoMarkApiController implements AutomarkApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<AutoMark> automarkAutomarkIdPut(@Valid AutoMark automark) {
         try {
             AutoMark newAutoMark = automarkService.update(automark);
@@ -81,7 +81,7 @@ public class AutoMarkApiController implements AutomarkApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<List<AutoMark>> automarkGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(automarkService.getAll());

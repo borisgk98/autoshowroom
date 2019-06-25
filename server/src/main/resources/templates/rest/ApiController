@@ -39,7 +39,7 @@ public class $Model$ApiController implements $Modelufl$Api {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<$Model$> $model$$Modelufl$IdGet(Integer $model$Id) {
         try {
             $Model$ $model$ = $model$Service.read($model$Id);
@@ -51,13 +51,13 @@ public class $Model$ApiController implements $Modelufl$Api {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<$Model$> $model$Post(@Valid $Model$ $model$) {
         return ResponseEntity.ok($model$Service.create($model$));
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Void> $model$$Modelufl$IdDelete(Integer $model$Id) {
         try {
             $model$Service.delete($model$Id);
@@ -69,7 +69,7 @@ public class $Model$ApiController implements $Modelufl$Api {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<$Model$> $model$$Modelufl$IdPut(@Valid $Model$ $model$) {
         try {
             $Model$ new$Model$ = $model$Service.update($model$);
@@ -81,7 +81,7 @@ public class $Model$ApiController implements $Modelufl$Api {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<List<$Model$>> $model$Get(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok($model$Service.getAll());

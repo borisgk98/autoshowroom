@@ -1,12 +1,23 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: autoshowroom-d2-monitor
+  labels:
+    app: prometheus-operator-grafana
+    chart: prometheus-operator-5.12.3
+    heritage: Tiller
+    release: prometheus-operator
+  name: autoshowroom-monitor
+  namespace: default
 spec:
-  #jobLabel: autoshowroom-java-server
-  selector:
-    matchLabels:
-      app: autoshowroom
+  jobLabel: autoshowroom-java-server
   endpoints:
   - path: /actuator/prometheus
+    port: api
     interval: 5s
+  namespaceSelector:
+    matchNames:
+    - default
+  selector:
+    matchLabels:
+      monitoring: autoshowroom-monitor
+

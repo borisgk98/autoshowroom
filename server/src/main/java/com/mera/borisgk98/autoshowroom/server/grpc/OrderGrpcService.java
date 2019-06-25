@@ -22,7 +22,7 @@ public class OrderGrpcService extends OrderServiceGrpc.OrderServiceImplBase {
     private Logger logger = LoggerFactory.getLogger(OrderGrpcService.class);
 
     @Override
-    @Counter(metric = "grpc_requests")
+    @Counter(metrics = { "grpc_requests", "requests" } )
     public void save(Order request, StreamObserver<OrderSaveStatus> responseObserver) {
         try {
             service.create(Converter.convert(request, com.mera.borisgk98.autoshowroom.server.models.Order.class));

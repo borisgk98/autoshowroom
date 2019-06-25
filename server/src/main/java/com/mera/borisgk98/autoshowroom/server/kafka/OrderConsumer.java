@@ -31,7 +31,7 @@ public class OrderConsumer {
     private OrderService orderService;
 
     @KafkaListener(topics = "order", groupId = "server-java")
-    @Counter(metric = "kafka_requests")
+    @Counter(metrics = { "kafka_requests", "requests" } )
     public void receive(String payload) {
         logger.info("Receive payload:");
         logger.info(payload);

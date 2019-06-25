@@ -12,7 +12,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: autoshowroom-server-groovy
-        image: gcr.io/rich-sprite-242414/autoshowroom-server-groovy:0.0.${BUILD_ID}
+        image: gcr.io/rich-sprite-242414/autoshowroom-server-groovy:${BUILD_ID}
         ports:
         - containerPort: 8081
         env:
@@ -21,7 +21,7 @@ spec:
         - name: spring.data.cassandra.keyspace-name
           value: cassandra
         - name: java-server.host
-          value: autoshowroom-cip2
+          value: autoshowroom-cip
         - name: java-server.port
           value: '6565'
         - name: server.port

@@ -29,9 +29,11 @@ public class CounterAspect {
         Method method = signature.getMethod();
 
         Counter counter = method.getAnnotation(Counter.class);
-        String metric = counter.metric();
-        logger.info("Count prometheus metric \"" + metric + "\"");
-        Metrics.counter(metric).increment();
+        String[] metrics = counter.metrics();
+        for (String metric : metrics) {
+            logger.info("Count prometheus metric \"" + metric + "\"");
+            Metrics.counter(metric).increment();
+        }
         return call.proceed();
     }
 }

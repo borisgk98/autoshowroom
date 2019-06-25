@@ -3,8 +3,8 @@ FROM gradle:5.2.1-jdk8-slim as builder
 COPY --chown=gradle:gradle . /home/gradle/builddir
 WORKDIR /home/gradle/builddir
 WORKDIR src/main/resources
-RUN rm application.properties
-RUN cp deploy.properties application.properties
+#RUN rm application.properties
+#RUN cp deploy.properties application.properties
 WORKDIR ../../..
 RUN gradle bootJar
 

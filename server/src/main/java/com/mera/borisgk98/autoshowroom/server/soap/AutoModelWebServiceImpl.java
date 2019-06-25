@@ -20,37 +20,37 @@ public class AutoModelWebServiceImpl implements AutoModelWebService {
     protected AutoModelService service;
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public AutoModel createAutoModel(AutoModel m) {
         return service.create(m);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public AutoModel readAutoModel(Integer id) throws ModelNotFound {
         return service.read(id);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public AutoModel updateAutoModel(AutoModel m) throws ModelNotFound {
         return service.update(m);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public void deleteAutoModel(Integer id) throws ModelNotFound {
         service.delete(id);
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public List<AutoModel> getAllAutoModel() {
         return service.getAll();
     }
 
     @Override
-    @Counter(metric = "soap_requests")
+    @Counter(metrics = { "soap_requests", "requests" } )
     public List<AutoModel> getRangeAutoModel(Integer offset, Integer limit) {
         return service.getRange(offset, limit);
     }

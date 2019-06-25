@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: autoshowroom-d2
+  name: autoshowroom-d
 spec:
   replicas: 1
   template:
@@ -21,6 +21,10 @@ spec:
           value: jdbc:sqlserver://mssql-clusterip
         - name: spring.datasource.username
           value: sa
+        - name: spring.kafka.bootstrap-servers
+          value: kafka:9092
+        - name: management.endpoints.web.exposure.include
+          value: prometheus
         - name: spring.datasource.password        
           valueFrom:
             secretKeyRef:
@@ -30,7 +34,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: autoshowroom-lb2
+  name: autoshowroom-lb
+  labels:
+    app: autoshowroom
 spec:
   selector:
     app: autoshowroom
@@ -48,7 +54,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: autoshowroom-cip2
+  name: autoshowroom-cip
+  labels:
+    app: autoshowroom
+    monitoring: autoshowroom-monitor
 spec:
   selector:
     app: autoshowroom

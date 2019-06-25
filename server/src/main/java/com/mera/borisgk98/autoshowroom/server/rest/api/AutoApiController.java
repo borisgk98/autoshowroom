@@ -39,7 +39,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Auto> autoAutoIdGet(Integer autoId) {
         try {
             Auto auto = autoService.read(autoId);
@@ -51,13 +51,13 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Auto> autoPost(@Valid Auto auto) {
         return ResponseEntity.ok(autoService.create(auto));
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Void> autoAutoIdDelete(Integer autoId) {
         try {
             autoService.delete(autoId);
@@ -69,7 +69,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<Auto> autoAutoIdPut(@Valid Auto auto) {
         try {
             Auto newAuto = autoService.update(auto);
@@ -81,7 +81,7 @@ public class AutoApiController implements AutoApi {
     }
 
     @Override
-    @Counter(metric = "rest_requests")
+    @Counter(metrics = { "rest_requests", "requests" } )
     public ResponseEntity<List<Auto>> autoGet(Integer limit, Integer offset) {
         if (limit == null) {
             return ResponseEntity.ok(autoService.getAll());

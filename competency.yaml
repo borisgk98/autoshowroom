@@ -1,0 +1,114 @@
+task1:
+  programming:
+    - type: java
+      tech:
+        - Spring
+        - Spring Boot
+        - Spring Data JPA
+        - Hibernate
+        - Swagger OpenApiv3
+        - Apache CXF + XSD
+        - liquibase
+        - Class loaders
+        - Gradle plugins
+        - Spring Shell
+    - type: groovy
+      tech:
+        - JUnit
+        - Mockito
+        - Spring Boot test
+    - MS SQL
+    - Gradle  
+    - Github Maven Repos
+    - type: protocols
+      tech:
+        - SOAP
+        - REST
+  devops:
+    - Linux
+    - Docker
+    - Docker compose
+
+task2:
+  devops:
+    - Linux
+    - Docker
+    - Google Cloud
+    - Kubernetes
+    - Helm
+
+task3:
+  programming:
+    - Bash
+    - Groovy
+  devops:
+    - Linux
+    - Docker
+    - Google Cloud
+    - Kubernetes
+    - Helm
+    - Jenkins
+
+task4:
+  programming:
+    - type: groovy
+      tech:
+        - Spring
+        - Spring Boot
+        - Spring Data
+        - Protobuf
+    - type: java
+      tech:
+        - Spring
+        - Spring Boot
+        - Spring Data
+        - Protobuf
+    - Cassandra
+    - Gradle
+    - type: protocols
+      tech:
+        - gRPC
+  devops:
+    - Linux
+    - Docker
+    - Kubernetes
+
+task5:
+  programming:
+    - type: groovy
+      tech:
+        - Spring
+        - Spring Boot
+        - Spring Kafka
+    - type: java
+      tech:
+        - Spring
+        - Spring Boot
+        - Spring Kafka
+    - Kafka
+    - Gradle
+  devops:
+    - Linux
+    - Docker
+    - Kubernetes
+    - Helm
+
+task6:
+  programming:
+    - type: java
+      tech:
+        - Spring
+        - Spring Boot
+        - Spring Aspects
+        - Micrometer
+    - Gradle
+  devops:
+    - Linux
+    - Docker
+    - Google Cloud
+    - Kubernetes
+    - Helm
+    - Prometheus
+    - Grafana
+    - Prometheus operator
+

@@ -1,4 +1,17 @@
 task1:
+  desc: >
+    Main java application
+
+    Request schema: 
+    User write console  ->
+    SOAP/REST client send request ->
+    Server accept request in REST controller or SOAP web services ->
+    Controller proccess request and send it to service ->
+    Service call repository ->
+    Repository save data or get it from database -> 
+    Service proccess data and send it to controller or web service ->
+    Controller or web service send response to SOAP/REST client ->
+    Client proccess response and print result for User
   programming:
     - type: java
       tech:
@@ -30,6 +43,8 @@ task1:
     - Docker compose
 
 task2:
+  desc: >
+    Deploy application to Kubernetes cluster
   devops:
     - Linux
     - Docker
@@ -38,6 +53,8 @@ task2:
     - Helm
 
 task3:
+  desc: >
+    Configure CI/CD pipeline with Jenkins using Kubernetes plugin
   programming:
     - Bash
     - Groovy
@@ -50,6 +67,8 @@ task3:
     - Jenkins
 
 task4:
+  desc: >
+    Add communication between java server and groovy server using gRPC protocol
   programming:
     - type: groovy
       tech:
@@ -74,6 +93,8 @@ task4:
     - Kubernetes
 
 task5:
+  desc: >
+    Add communication between java server and groovy server with Kafka message queue
   programming:
     - type: groovy
       tech:
@@ -94,6 +115,9 @@ task5:
     - Helm
 
 task6:
+  desc: >
+    Add monitoring with Prometheus using Micrometer and AspectJ on java side 
+    and Prometheus operator services in cluster with ServiceMonitor object
   programming:
     - type: java
       tech:
@@ -112,3 +136,36 @@ task6:
     - Grafana
     - Prometheus operator
 
+task7:
+  desc: >
+    Fix gravana dashboard
+  devops:
+    - Grafana
+    - Prometheus
+
+task8:
+  desc: >
+    Load testing java server
+  programming:
+    - type: scala
+      tech:
+        - sbt
+        - Gatling
+  - SoapUI
+
+task9:
+  desc: >
+    Find memory leak in java application
+  devops:
+    - Grafana
+    - Prometheus
+  - VisualVM
+
+task10:
+  desc: >
+    Writing unit tests
+  programming:
+    - type: java
+      tech:
+        - JUnit
+        - Mockito

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.mera.borisgk98.autoshowroom.grpc;
+
+import "Auto.proto";
+import "Seller.proto";
+import "Customer.proto";
+import "OrderStatus.proto";
+
+message Order {
+    int32 id = 1;
+
+    OrderStatus status = 2;
+    Seller seller = 3;
+    Auto auto = 4;
+    Customer customer = 5;
+}
+
+message OrderSaveStatus {
+    Order order = 1;
+
+    enum Status {
+        SUCCESS = 0;
+        FAIL = 1;
+    }
+
+    Status status = 2;
+}
+
+service OrderService {
+    rpc save (Order) returns (OrderSaveStatus);
+}

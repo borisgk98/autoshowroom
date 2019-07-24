@@ -14,11 +14,9 @@ public class OrderServiceImpl
         extends AbstractCrudService<Order>
         implements OrderService {
 
-    private OrderRepository repository;
-
     @Autowired
     public OrderServiceImpl(OrderRepository repository) {
-        this.repository = repository;
+        super.repository = repository;
     }
 
     @Override

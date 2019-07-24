@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.mera.borisgk98.autoshowroom.grpc;
+
+
+message AutoModel {
+    int32 id = 1;
+    string name = 2;
+}

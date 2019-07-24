@@ -19,16 +19,6 @@
     }
 
         @Bean
-    public Endpoint orderEndpoint(
-            @Autowired SpringBus springBus,
-            @Autowired OrderWebService service
-    ) {
-        EndpointImpl endpoint = new EndpointImpl(springBus, service);
-        endpoint.publish("/order");
-        return endpoint;
-    }
-
-        @Bean
     public Endpoint customerEndpoint(
             @Autowired SpringBus springBus,
             @Autowired CustomerWebService service
